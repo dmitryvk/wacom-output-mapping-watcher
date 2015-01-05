@@ -1,0 +1,4 @@
+[root]
+name = "wacom-output-mapping-watcher"
+version = "0.1.0"
+
