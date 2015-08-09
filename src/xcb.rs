@@ -1,29 +1,27 @@
 use libc::*;
 use std::ptr;
 use std::mem;
+use std::ffi::CStr;
 use ffi::*;
-use std::result::{Result};
-use std::kinds::marker::ContravariantLifetime;
-use std::error::{FromError};
+use std::result::Result;
 use std::borrow::ToOwned;
 use std::fmt::Formatter;
-use std::fmt::Show;
+use std::fmt::Debug;
 use std::fmt::Error as FmtError;
 use std::vec::Vec;
-use std::num::FromPrimitive;
 use std::ops::Deref;
-use std::c_str::ToCStr;
-use std::c_str::CString;
+use std::marker::PhantomData;
+use std::str;
+use std::slice;
 
-#[derive(Show)]
-#[allow(raw_pointer_deriving)]
+#[derive(Debug)]
+#[allow(raw_pointer_derive)]
 pub struct XcbConnection {
     pub value: *mut xcb_connection_t,
     pub screen_num: c_int,
 }
 
 pub struct XcbSetup<'a> {
-    marker: ContravariantLifetime<'a>,
     value: &'a xcb_setup_t,
 }
 
@@ -41,7 +39,7 @@ impl XcbConnection {
     
     pub fn get_setup<'a, 'b: 'a>(&'a self) -> XcbSetup<'a> {
       let s = unsafe { mem::transmute(xcb_get_setup(self.value)) };
-      XcbSetup { marker: ContravariantLifetime, value: s }
+      XcbSetup { value: s }
     }
     
     pub fn wait_for_event(&self) -> Result<LibcPtr<xcb_generic_event_t>, XcbError> {
@@ -57,18 +55,6 @@ impl XcbConnection {
         let cookie = unsafe { xcb_intern_atom(self.value, only_if_exists as uint8_t, name.len() as uint16_t, name.as_ptr() as *const _) };
         let reply = try!(get_reply(self, cookie, xcb_intern_atom_reply));
         Ok(reply.atom)
-    }
-    
-    pub fn get_atom(&self, atom: xcb_atom_t) -> Result<String, XcbError> {
-        let cookie = unsafe { xcb_get_atom_name(self.value, atom) };
-        let reply = try!(get_reply(self, cookie, xcb_get_atom_name_reply));
-        let result = unsafe {
-            String::from_raw_buf_len(
-                xcb_get_atom_name_name(reply.value) as *const u8,
-                xcb_get_atom_name_name_length(reply.value) as uint
-            )
-        };
-        Ok(result)
     }
 }
 
@@ -86,7 +72,8 @@ impl Drop for XcbConnection {
 }
 
 pub struct XcbIterator<'a, XcbIteratorType, ItemType> {
-    marker: ContravariantLifetime<'a>,
+    marker: PhantomData<&'a XcbSetup<'a>>,
+    marker2: PhantomData<ItemType>,
     iter: XcbIteratorType,
     iter_fn: unsafe extern "C" fn(*mut XcbIteratorType),
 }
@@ -94,14 +81,16 @@ pub struct XcbIterator<'a, XcbIteratorType, ItemType> {
 impl <'a, XcbIteratorType, ItemType> XcbIterator<'a, XcbIteratorType, ItemType> {
     pub fn new(iterator: XcbIteratorType, step_fn: unsafe extern "C" fn(*mut XcbIteratorType)) -> XcbIterator<'a, XcbIteratorType, ItemType> {
         XcbIterator {
-            marker: ContravariantLifetime,
+            marker: PhantomData,
+            marker2: PhantomData,
             iter: iterator,
             iter_fn: step_fn
         }
     }
 }
 
-impl <'a, XcbIteratorType, ItemType> Iterator<&'a ItemType> for XcbIterator<'a, XcbIteratorType, ItemType> {
+impl <'a, XcbIteratorType, ItemType> Iterator for XcbIterator<'a, XcbIteratorType, ItemType> {
+    type Item = &'a ItemType;
     fn next(&mut self) -> Option<&'a ItemType> {
         let cur;
         let rem;
@@ -133,7 +122,7 @@ impl<T> LibcPtr<T> {
     }
 }
 
-#[unsafe_destructor]
+// #[unsafe_destructor]
 impl<T> Drop for LibcPtr<T> {
     fn drop(&mut self) {
         unsafe { free(self.value as *mut c_void) };
@@ -177,7 +166,7 @@ pub fn wait_for_cookie(connection: &XcbConnection, cookie: xcb_void_cookie_t) ->
     }
 }
 
-impl Show for xcb_generic_error_t {
+impl Debug for xcb_generic_error_t {
     fn fmt(&self, fmt: &mut Formatter) -> Result<(), FmtError> {
         write!(
             fmt,
@@ -190,22 +179,22 @@ impl Show for xcb_generic_error_t {
 }
 
 
-#[derive(Show)]
+#[derive(Debug)]
 pub enum XcbError {
     ProtoError(xcb_generic_error_t),
     LogicError(String),
     IOError,
 }
 
-impl FromError<xcb_generic_error_t> for XcbError {
-    fn from_error(err: xcb_generic_error_t) -> XcbError {
+impl From<xcb_generic_error_t> for XcbError {
+    fn from(err: xcb_generic_error_t) -> XcbError {
         XcbError::ProtoError(err)
     }
 }
 
 impl <'a> XcbRandr<'a> {
     pub fn init(connection: &'a XcbConnection) -> Result<XcbRandr<'a>, XcbError> {
-        let cookie = unsafe { xcb_query_extension(connection.value, 5, "RANDR".to_c_str().as_ptr()) };
+        let cookie = unsafe { xcb_query_extension(connection.value, 5, "RANDR".as_ptr() as *const c_char) };
         let reply = *try!(get_reply(connection, cookie, xcb_query_extension_reply));
         if reply.present == 0 {
             Err(XcbError::LogicError("RANDR extension is not present".to_owned()))
@@ -218,23 +207,23 @@ impl <'a> XcbRandr<'a> {
         let cookie = unsafe { xcb_randr_get_screen_resources(self.connection.value, root_window_id) };
         let reply = try!(get_reply(self.connection, cookie, xcb_randr_get_screen_resources_reply));
         let crtcs = unsafe {
-            Vec::from_raw_buf(
+            slice::from_raw_parts(
                 xcb_randr_get_screen_resources_crtcs(reply.value),
-                xcb_randr_get_screen_resources_crtcs_length(reply.value) as uint
+                xcb_randr_get_screen_resources_crtcs_length(reply.value) as usize
             )
-        };
+        }.to_vec();
         let outputs = unsafe {
-            Vec::from_raw_buf(
+            slice::from_raw_parts(
                 xcb_randr_get_screen_resources_outputs(reply.value),
-                xcb_randr_get_screen_resources_outputs_length(reply.value) as uint
+                xcb_randr_get_screen_resources_outputs_length(reply.value) as usize
             )
-        };
+        }.to_vec();
         let modes = unsafe {
-            Vec::from_raw_buf(
+            slice::from_raw_parts(
                 xcb_randr_get_screen_resources_modes(reply.value),
-                xcb_randr_get_screen_resources_modes_length(reply.value) as uint
+                xcb_randr_get_screen_resources_modes_length(reply.value) as usize
             )
-        };
+        }.to_vec();
         Ok(XcbScreenResources {
             config_timestamp: reply.config_timestamp,
             crtcs: crtcs,
@@ -247,18 +236,20 @@ impl <'a> XcbRandr<'a> {
     pub fn get_output_info(&self, resources: &XcbScreenResources, output_id: xcb_randr_output_t) -> Result<XcbRandrOutputInfo, XcbError> {
         let cookie = unsafe { xcb_randr_get_output_info(self.connection.value, output_id, resources.config_timestamp) };
         let reply = try!(get_reply(self.connection, cookie, xcb_randr_get_output_info_reply));
-        let name = unsafe {
-            String::from_raw_buf_len(
-                xcb_randr_get_output_info_name(reply.value),
-                xcb_randr_get_output_info_name_length(reply.value) as uint
-            )
-        };
+        let name = String::from_utf8(
+            unsafe {
+                slice::from_raw_parts(
+                    xcb_randr_get_output_info_name(reply.value) as *const u8,
+                    xcb_randr_get_output_info_name_length(reply.value) as usize
+                )
+            }.to_vec()
+        ).unwrap();
         Ok(XcbRandrOutputInfo {
             id: output_id,
             crtc: reply.crtc,
             mm_width: reply.mm_width,
             mm_height: reply.mm_height,
-            connection: FromPrimitive::from_u8(reply.connection).expect("Invalid connection status"),
+            connection: XcbRandrOutputConnectionStatus::from_u8(reply.connection).expect("Invalid connection status"),
             subpixel_order: reply.subpixel_order,
             name: name
         })
@@ -295,10 +286,10 @@ impl <'a> XcbRandr<'a> {
     }
 }
 
-#[derive(Show)]
+#[derive(Debug)]
 pub struct XcbXcreenResourceName;
 
-#[derive(Show)]
+#[derive(Debug)]
 pub struct XcbScreenResources {
     pub config_timestamp: xcb_timestamp_t,
     pub crtcs: Vec<xcb_randr_crtc_t>,
@@ -307,7 +298,7 @@ pub struct XcbScreenResources {
     pub names: Vec<XcbXcreenResourceName>,
 }
 
-impl Show for xcb_randr_mode_info_t {
+impl Debug for xcb_randr_mode_info_t {
     fn fmt(&self, fmt: &mut Formatter) -> Result<(), FmtError> {
         write!(
             fmt,
@@ -329,14 +320,25 @@ impl Show for xcb_randr_mode_info_t {
     }
 }
 
-#[derive(Show, FromPrimitive)]
+#[derive(Debug)]
 pub enum XcbRandrOutputConnectionStatus {
     Connected = 0,
     Disconnected = 1,
     Unknown = 2
 }
 
-#[derive(Show)]
+impl XcbRandrOutputConnectionStatus {
+    pub fn from_u8(val: u8) -> Option<XcbRandrOutputConnectionStatus> {
+        match val {
+            0 => Some(XcbRandrOutputConnectionStatus::Connected),
+            1 => Some(XcbRandrOutputConnectionStatus::Disconnected),
+            2 => Some(XcbRandrOutputConnectionStatus::Unknown),
+            _ => None
+        }
+    }
+}
+
+#[derive(Debug)]
 pub struct XcbRandrOutputInfo {
     pub id: xcb_randr_output_t,
     pub crtc: xcb_randr_crtc_t,
@@ -347,7 +349,7 @@ pub struct XcbRandrOutputInfo {
     pub name: String
 }
 
-#[derive(Show)]
+#[derive(Debug)]
 pub struct XcbRandrCrtcInfo {
     pub id: xcb_randr_crtc_t,
     pub x: int16_t,
@@ -356,7 +358,7 @@ pub struct XcbRandrCrtcInfo {
     pub height: uint16_t,
 }
 
-#[derive(Show, FromPrimitive)]
+#[derive(Debug)]
 pub enum XcbRandrEventType {
     CrtcChange = 0,
     OutputChange = 1,
@@ -366,6 +368,20 @@ pub enum XcbRandrEventType {
     ResourceChange = 5,
 }
 
+impl XcbRandrEventType {
+    pub fn from_u8(val: u8) -> Option<XcbRandrEventType> {
+        match val {
+            0 => Some(XcbRandrEventType::CrtcChange),
+            1 => Some(XcbRandrEventType::OutputChange),
+            2 => Some(XcbRandrEventType::OutputProperty),
+            3 => Some(XcbRandrEventType::ProviderChange),
+            4 => Some(XcbRandrEventType::ProviderProperty),
+            5 => Some(XcbRandrEventType::ResourceChange),
+            _ => None
+        }
+    }
+}
+
 pub struct XcbInput<'a> {
     pub connection: &'a XcbConnection,
     pub extension: xcb_query_extension_reply_t,
@@ -373,11 +389,11 @@ pub struct XcbInput<'a> {
 
 impl <'a> XcbInput<'a> {
     pub fn init(connection: &'a XcbConnection) -> Result<XcbInput<'a>, XcbError> {
-        let xcb_input_extension_name = unsafe { CString::new(xcb_input_id.name, false) };
-        let cookie = unsafe { xcb_query_extension(connection.value, xcb_input_extension_name.len() as u16, xcb_input_extension_name.as_ptr()) };
+        let xcb_input_extension_name = unsafe { CStr::from_ptr(xcb_input_id.name) };
+        let cookie = unsafe { xcb_query_extension(connection.value, xcb_input_extension_name.to_bytes().len() as u16, xcb_input_extension_name.as_ptr()) };
         let reply = *try!(get_reply(connection, cookie, xcb_query_extension_reply));
         if reply.present == 0 {
-            return Err(XcbError::LogicError(format!("{} extension is not present", xcb_input_extension_name.as_str().unwrap())))
+            return Err(XcbError::LogicError(format!("{} extension is not present", str::from_utf8(xcb_input_extension_name.to_bytes()).unwrap())))
         }
         
         {
@@ -398,12 +414,14 @@ impl <'a> XcbInput<'a> {
         
         let devices_it = XcbIterator::new(unsafe { xcb_input_xi_query_device_infos_iterator(reply.value) }, xcb_input_xi_device_info_next);
         let devices: Vec<_> = devices_it.map(|x| {
-            let name = unsafe {
-                String::from_raw_buf_len(
-                    xcb_input_xi_device_info_name(x) as *const u8,
-                    xcb_input_xi_device_info_name_length(x) as uint
-                )
-            };
+            let name = String::from_utf8(
+                unsafe {
+                    slice::from_raw_parts(
+                        xcb_input_xi_device_info_name(x) as *const u8,
+                        xcb_input_xi_device_info_name_length(x) as usize
+                    )
+                }.to_vec()
+            ).unwrap();
             XcbInputDevice {
                 deviceid: x.deviceid,
                 _type: x._type,
@@ -423,11 +441,11 @@ impl <'a> XcbInput<'a> {
         let reply = try!(get_reply(self.connection, cookie, xcb_input_xi_list_properties_reply));
         
         let atoms = unsafe {
-            Vec::from_raw_buf(
+            slice::from_raw_parts(
                 xcb_input_xi_list_properties_properties(reply.value),
-                xcb_input_xi_list_properties_properties_length(reply.value) as uint
+                xcb_input_xi_list_properties_properties_length(reply.value) as usize
             )
-        };
+        }.to_vec();
         
         let names_wrapped: Vec<_> = atoms
             .iter()
@@ -439,47 +457,24 @@ impl <'a> XcbInput<'a> {
             let first_error = { names_wrapped.iter().filter(|x| x.is_err()).next() };
             
             match first_error {
-                Some(&Err(ref e)) => return Err(FromError::from_error(*e)),
+                Some(&Err(ref e)) => return Err(From::from(*e)),
                 _ => {}
             }
         }
         
         let names: Vec<_> = names_wrapped.into_iter().map(|x| {
             let reply = x.unwrap();
-            unsafe {
-                String::from_raw_buf_len(
-                    xcb_get_atom_name_name(reply.value) as *const u8,
-                    xcb_get_atom_name_name_length(reply.value) as uint
-                )
-            }
+            String::from_utf8(
+                unsafe {
+                    slice::from_raw_parts(
+                        xcb_get_atom_name_name(reply.value) as *const u8,
+                        xcb_get_atom_name_name_length(reply.value) as usize
+                    )
+                }.to_vec()
+            ).unwrap()
         }).collect();
         
         Ok(names)
-    }
-    
-    pub fn get_property_value<PropT>(&self, device_id: xcb_input_device_id_t, property: xcb_atom_t) -> Result<Vec<PropT>, XcbError> {
-        let cookie = unsafe {
-            xcb_input_xi_get_property(
-                self.connection.value,
-                device_id,
-                0,
-                property,
-                0 /*xcb_atom_t type*/,
-                0 /*uint32_t offset*/,
-                1024 /*uint32_t len*/
-            )
-        };
-        let reply = try!(get_reply(self.connection, cookie, xcb_input_xi_get_property_reply));
-        let items = unsafe { xcb_input_xi_get_property_items(reply.value) };
-
-        let data = unsafe {
-            Vec::from_raw_buf(
-                items as *const PropT,
-                reply.num_items as uint
-            )
-        };
-        
-        Ok(data)
     }
     
     pub fn set_property_value<PropT>(
@@ -527,26 +522,16 @@ struct XcbInputEventMask {
     pub mask_val: uint32_t,
 }
 
-#[derive(Show)]
+#[derive(Debug)]
 pub struct XcbInputDevices {
     pub devices: Vec<XcbInputDevice>,
 }
 
-#[derive(Show)]
+#[derive(Debug)]
 pub struct XcbInputDevice {
     pub deviceid: xcb_input_device_id_t,
     pub _type: uint16_t,
     pub attachment: xcb_input_device_id_t,
     pub enabled: bool,
     pub name: String,
-}
-
-#[derive(Show, FromPrimitive)]
-pub enum XcbInputEventType {
-    CrtcChange = 0,
-    OutputChange = 1,
-    OutputProperty = 2,
-    ProviderChange = 3,
-    ProviderProperty = 4,
-    ResourceChange = 5,
 }

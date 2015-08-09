@@ -9,8 +9,11 @@ pub struct Struct_Unnamed1 {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_Unnamed1 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed1 {
-    fn default() -> Struct_Unnamed1 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_generic_iterator_t = Struct_Unnamed1;
 #[repr(C)]
@@ -21,8 +24,11 @@ pub struct Struct_Unnamed2 {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed2 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed2 {
-    fn default() -> Struct_Unnamed2 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_generic_reply_t = Struct_Unnamed2;
 #[repr(C)]
@@ -31,11 +37,14 @@ pub struct Struct_Unnamed3 {
     pub response_type: uint8_t,
     pub pad0: uint8_t,
     pub sequence: uint16_t,
-    pub pad: [uint32_t; 7u],
+    pub pad: [uint32_t; 7usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed3 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed3 {
-    fn default() -> Struct_Unnamed3 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_generic_event_t = Struct_Unnamed3;
 #[repr(C)]
@@ -47,11 +56,14 @@ pub struct Struct_Unnamed4 {
     pub length: uint32_t,
     pub event_type: uint16_t,
     pub pad1: uint16_t,
-    pub pad: [uint32_t; 5u],
+    pub pad: [uint32_t; 5usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed4 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed4 {
-    fn default() -> Struct_Unnamed4 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ge_event_t = Struct_Unnamed4;
 #[repr(C)]
@@ -64,11 +76,14 @@ pub struct Struct_Unnamed5 {
     pub minor_code: uint16_t,
     pub major_code: uint8_t,
     pub pad0: uint8_t,
-    pub pad: [uint32_t; 5u],
+    pub pad: [uint32_t; 5usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed5 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed5 {
-    fn default() -> Struct_Unnamed5 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_generic_error_t = Struct_Unnamed5;
 #[repr(C)]
@@ -76,8 +91,11 @@ pub type xcb_generic_error_t = Struct_Unnamed5;
 pub struct Struct_Unnamed6 {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_Unnamed6 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed6 {
-    fn default() -> Struct_Unnamed6 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_void_cookie_t = Struct_Unnamed6;
 #[repr(C)]
@@ -86,8 +104,11 @@ pub struct Struct_xcb_char2b_t {
     pub byte1: uint8_t,
     pub byte2: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_char2b_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_char2b_t {
-    fn default() -> Struct_xcb_char2b_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_char2b_t = Struct_xcb_char2b_t;
 #[repr(C)]
@@ -97,10 +118,11 @@ pub struct Struct_xcb_char2b_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_char2b_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_char2b_iterator_t {
-    fn default() -> Struct_xcb_char2b_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_char2b_iterator_t = Struct_xcb_char2b_iterator_t;
 pub type xcb_window_t = uint32_t;
@@ -111,10 +133,11 @@ pub struct Struct_xcb_window_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_window_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_window_iterator_t {
-    fn default() -> Struct_xcb_window_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_window_iterator_t = Struct_xcb_window_iterator_t;
 pub type xcb_pixmap_t = uint32_t;
@@ -125,10 +148,11 @@ pub struct Struct_xcb_pixmap_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_pixmap_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_pixmap_iterator_t {
-    fn default() -> Struct_xcb_pixmap_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_pixmap_iterator_t = Struct_xcb_pixmap_iterator_t;
 pub type xcb_cursor_t = uint32_t;
@@ -139,10 +163,11 @@ pub struct Struct_xcb_cursor_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_cursor_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_cursor_iterator_t {
-    fn default() -> Struct_xcb_cursor_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_cursor_iterator_t = Struct_xcb_cursor_iterator_t;
 pub type xcb_font_t = uint32_t;
@@ -153,10 +178,11 @@ pub struct Struct_xcb_font_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_font_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_font_iterator_t {
-    fn default() -> Struct_xcb_font_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_font_iterator_t = Struct_xcb_font_iterator_t;
 pub type xcb_gcontext_t = uint32_t;
@@ -167,10 +193,11 @@ pub struct Struct_xcb_gcontext_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_gcontext_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_gcontext_iterator_t {
-    fn default() -> Struct_xcb_gcontext_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_gcontext_iterator_t = Struct_xcb_gcontext_iterator_t;
 pub type xcb_colormap_t = uint32_t;
@@ -181,10 +208,11 @@ pub struct Struct_xcb_colormap_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_colormap_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_colormap_iterator_t {
-    fn default() -> Struct_xcb_colormap_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_colormap_iterator_t = Struct_xcb_colormap_iterator_t;
 pub type xcb_atom_t = uint32_t;
@@ -195,10 +223,11 @@ pub struct Struct_xcb_atom_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_atom_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_atom_iterator_t {
-    fn default() -> Struct_xcb_atom_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_atom_iterator_t = Struct_xcb_atom_iterator_t;
 pub type xcb_drawable_t = uint32_t;
@@ -209,10 +238,11 @@ pub struct Struct_xcb_drawable_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_drawable_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_drawable_iterator_t {
-    fn default() -> Struct_xcb_drawable_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_drawable_iterator_t = Struct_xcb_drawable_iterator_t;
 pub type xcb_fontable_t = uint32_t;
@@ -223,10 +253,11 @@ pub struct Struct_xcb_fontable_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_fontable_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_fontable_iterator_t {
-    fn default() -> Struct_xcb_fontable_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_fontable_iterator_t = Struct_xcb_fontable_iterator_t;
 pub type xcb_visualid_t = uint32_t;
@@ -237,10 +268,11 @@ pub struct Struct_xcb_visualid_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_visualid_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_visualid_iterator_t {
-    fn default() -> Struct_xcb_visualid_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_visualid_iterator_t = Struct_xcb_visualid_iterator_t;
 pub type xcb_timestamp_t = uint32_t;
@@ -251,10 +283,11 @@ pub struct Struct_xcb_timestamp_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_timestamp_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_timestamp_iterator_t {
-    fn default() -> Struct_xcb_timestamp_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_timestamp_iterator_t = Struct_xcb_timestamp_iterator_t;
 pub type xcb_keysym_t = uint32_t;
@@ -265,10 +298,11 @@ pub struct Struct_xcb_keysym_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_keysym_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_keysym_iterator_t {
-    fn default() -> Struct_xcb_keysym_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_keysym_iterator_t = Struct_xcb_keysym_iterator_t;
 pub type xcb_keycode_t = uint8_t;
@@ -279,10 +313,11 @@ pub struct Struct_xcb_keycode_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_keycode_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_keycode_iterator_t {
-    fn default() -> Struct_xcb_keycode_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_keycode_iterator_t = Struct_xcb_keycode_iterator_t;
 pub type xcb_button_t = uint8_t;
@@ -293,10 +328,11 @@ pub struct Struct_xcb_button_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_button_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_button_iterator_t {
-    fn default() -> Struct_xcb_button_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_button_iterator_t = Struct_xcb_button_iterator_t;
 #[repr(C)]
@@ -305,8 +341,11 @@ pub struct Struct_xcb_point_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_point_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_point_t {
-    fn default() -> Struct_xcb_point_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_point_t = Struct_xcb_point_t;
 #[repr(C)]
@@ -316,10 +355,11 @@ pub struct Struct_xcb_point_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_point_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_point_iterator_t {
-    fn default() -> Struct_xcb_point_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_point_iterator_t = Struct_xcb_point_iterator_t;
 #[repr(C)]
@@ -330,8 +370,11 @@ pub struct Struct_xcb_rectangle_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_rectangle_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_rectangle_t {
-    fn default() -> Struct_xcb_rectangle_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_rectangle_t = Struct_xcb_rectangle_t;
 #[repr(C)]
@@ -341,10 +384,11 @@ pub struct Struct_xcb_rectangle_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_rectangle_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_rectangle_iterator_t {
-    fn default() -> Struct_xcb_rectangle_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_rectangle_iterator_t = Struct_xcb_rectangle_iterator_t;
 #[repr(C)]
@@ -357,8 +401,11 @@ pub struct Struct_xcb_arc_t {
     pub angle1: int16_t,
     pub angle2: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_arc_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_arc_t {
-    fn default() -> Struct_xcb_arc_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_arc_t = Struct_xcb_arc_t;
 #[repr(C)]
@@ -368,10 +415,11 @@ pub struct Struct_xcb_arc_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_arc_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_arc_iterator_t {
-    fn default() -> Struct_xcb_arc_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_arc_iterator_t = Struct_xcb_arc_iterator_t;
 #[repr(C)]
@@ -380,10 +428,13 @@ pub struct Struct_xcb_format_t {
     pub depth: uint8_t,
     pub bits_per_pixel: uint8_t,
     pub scanline_pad: uint8_t,
-    pub pad0: [uint8_t; 5u],
+    pub pad0: [uint8_t; 5usize],
+}
+impl ::std::clone::Clone for Struct_xcb_format_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_format_t {
-    fn default() -> Struct_xcb_format_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_format_t = Struct_xcb_format_t;
 #[repr(C)]
@@ -393,10 +444,11 @@ pub struct Struct_xcb_format_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_format_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_format_iterator_t {
-    fn default() -> Struct_xcb_format_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_format_iterator_t = Struct_xcb_format_iterator_t;
 pub type Enum_xcb_visual_class_t = ::libc::c_uint;
@@ -417,12 +469,13 @@ pub struct Struct_xcb_visualtype_t {
     pub red_mask: uint32_t,
     pub green_mask: uint32_t,
     pub blue_mask: uint32_t,
-    pub pad0: [uint8_t; 4u],
+    pub pad0: [uint8_t; 4usize],
+}
+impl ::std::clone::Clone for Struct_xcb_visualtype_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_visualtype_t {
-    fn default() -> Struct_xcb_visualtype_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_visualtype_t = Struct_xcb_visualtype_t;
 #[repr(C)]
@@ -432,10 +485,11 @@ pub struct Struct_xcb_visualtype_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_visualtype_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_visualtype_iterator_t {
-    fn default() -> Struct_xcb_visualtype_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_visualtype_iterator_t = Struct_xcb_visualtype_iterator_t;
 #[repr(C)]
@@ -444,10 +498,13 @@ pub struct Struct_xcb_depth_t {
     pub depth: uint8_t,
     pub pad0: uint8_t,
     pub visuals_len: uint16_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
+}
+impl ::std::clone::Clone for Struct_xcb_depth_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_depth_t {
-    fn default() -> Struct_xcb_depth_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_depth_t = Struct_xcb_depth_t;
 #[repr(C)]
@@ -457,10 +514,11 @@ pub struct Struct_xcb_depth_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_depth_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_depth_iterator_t {
-    fn default() -> Struct_xcb_depth_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_depth_iterator_t = Struct_xcb_depth_iterator_t;
 pub type Enum_xcb_event_mask_t = ::libc::c_uint;
@@ -516,8 +574,11 @@ pub struct Struct_xcb_screen_t {
     pub root_depth: uint8_t,
     pub allowed_depths_len: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_screen_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_screen_t {
-    fn default() -> Struct_xcb_screen_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_screen_t = Struct_xcb_screen_t;
 #[repr(C)]
@@ -527,10 +588,11 @@ pub struct Struct_xcb_screen_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_screen_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_screen_iterator_t {
-    fn default() -> Struct_xcb_screen_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_screen_iterator_t = Struct_xcb_screen_iterator_t;
 #[repr(C)]
@@ -542,12 +604,13 @@ pub struct Struct_xcb_setup_request_t {
     pub protocol_minor_version: uint16_t,
     pub authorization_protocol_name_len: uint16_t,
     pub authorization_protocol_data_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_setup_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_setup_request_t {
-    fn default() -> Struct_xcb_setup_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_request_t = Struct_xcb_setup_request_t;
 #[repr(C)]
@@ -557,10 +620,11 @@ pub struct Struct_xcb_setup_request_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_request_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_request_iterator_t {
-    fn default() -> Struct_xcb_setup_request_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_request_iterator_t = Struct_xcb_setup_request_iterator_t;
 #[repr(C)]
@@ -572,10 +636,11 @@ pub struct Struct_xcb_setup_failed_t {
     pub protocol_minor_version: uint16_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_failed_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_failed_t {
-    fn default() -> Struct_xcb_setup_failed_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_failed_t = Struct_xcb_setup_failed_t;
 #[repr(C)]
@@ -585,23 +650,25 @@ pub struct Struct_xcb_setup_failed_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_failed_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_failed_iterator_t {
-    fn default() -> Struct_xcb_setup_failed_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_failed_iterator_t = Struct_xcb_setup_failed_iterator_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_xcb_setup_authenticate_t {
     pub status: uint8_t,
-    pub pad0: [uint8_t; 5u],
+    pub pad0: [uint8_t; 5usize],
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_authenticate_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_authenticate_t {
-    fn default() -> Struct_xcb_setup_authenticate_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_authenticate_t = Struct_xcb_setup_authenticate_t;
 #[repr(C)]
@@ -611,10 +678,11 @@ pub struct Struct_xcb_setup_authenticate_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_authenticate_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_authenticate_iterator_t {
-    fn default() -> Struct_xcb_setup_authenticate_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_authenticate_iterator_t =
     Struct_xcb_setup_authenticate_iterator_t;
@@ -644,10 +712,13 @@ pub struct Struct_xcb_setup_t {
     pub bitmap_format_scanline_pad: uint8_t,
     pub min_keycode: xcb_keycode_t,
     pub max_keycode: xcb_keycode_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
+}
+impl ::std::clone::Clone for Struct_xcb_setup_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_setup_t {
-    fn default() -> Struct_xcb_setup_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_t = Struct_xcb_setup_t;
 #[repr(C)]
@@ -657,10 +728,11 @@ pub struct Struct_xcb_setup_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_setup_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_setup_iterator_t {
-    fn default() -> Struct_xcb_setup_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_setup_iterator_t = Struct_xcb_setup_iterator_t;
 pub type Enum_xcb_mod_mask_t = ::libc::c_uint;
@@ -710,10 +782,11 @@ pub struct Struct_xcb_key_press_event_t {
     pub same_screen: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_key_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_key_press_event_t {
-    fn default() -> Struct_xcb_key_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_key_press_event_t = Struct_xcb_key_press_event_t;
 pub type xcb_key_release_event_t = xcb_key_press_event_t;
@@ -743,10 +816,11 @@ pub struct Struct_xcb_button_press_event_t {
     pub same_screen: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_button_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_button_press_event_t {
-    fn default() -> Struct_xcb_button_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_button_press_event_t = Struct_xcb_button_press_event_t;
 pub type xcb_button_release_event_t = xcb_button_press_event_t;
@@ -772,10 +846,11 @@ pub struct Struct_xcb_motion_notify_event_t {
     pub same_screen: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_motion_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_motion_notify_event_t {
-    fn default() -> Struct_xcb_motion_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_motion_notify_event_t = Struct_xcb_motion_notify_event_t;
 pub type Enum_xcb_notify_detail_t = ::libc::c_uint;
@@ -812,10 +887,11 @@ pub struct Struct_xcb_enter_notify_event_t {
     pub mode: uint8_t,
     pub same_screen_focus: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_enter_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_enter_notify_event_t {
-    fn default() -> Struct_xcb_enter_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_enter_notify_event_t = Struct_xcb_enter_notify_event_t;
 pub type xcb_leave_notify_event_t = xcb_enter_notify_event_t;
@@ -827,12 +903,13 @@ pub struct Struct_xcb_focus_in_event_t {
     pub sequence: uint16_t,
     pub event: xcb_window_t,
     pub mode: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_focus_in_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_focus_in_event_t {
-    fn default() -> Struct_xcb_focus_in_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_focus_in_event_t = Struct_xcb_focus_in_event_t;
 pub type xcb_focus_out_event_t = xcb_focus_in_event_t;
@@ -840,12 +917,13 @@ pub type xcb_focus_out_event_t = xcb_focus_in_event_t;
 #[derive(Copy)]
 pub struct Struct_xcb_keymap_notify_event_t {
     pub response_type: uint8_t,
-    pub keys: [uint8_t; 31u],
+    pub keys: [uint8_t; 31usize],
+}
+impl ::std::clone::Clone for Struct_xcb_keymap_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_keymap_notify_event_t {
-    fn default() -> Struct_xcb_keymap_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_keymap_notify_event_t = Struct_xcb_keymap_notify_event_t;
 #[repr(C)]
@@ -860,12 +938,13 @@ pub struct Struct_xcb_expose_event_t {
     pub width: uint16_t,
     pub height: uint16_t,
     pub count: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_expose_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_expose_event_t {
-    fn default() -> Struct_xcb_expose_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_expose_event_t = Struct_xcb_expose_event_t;
 #[repr(C)]
@@ -882,12 +961,13 @@ pub struct Struct_xcb_graphics_exposure_event_t {
     pub minor_opcode: uint16_t,
     pub count: uint16_t,
     pub major_opcode: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_graphics_exposure_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_graphics_exposure_event_t {
-    fn default() -> Struct_xcb_graphics_exposure_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_graphics_exposure_event_t = Struct_xcb_graphics_exposure_event_t;
 #[repr(C)]
@@ -901,10 +981,11 @@ pub struct Struct_xcb_no_exposure_event_t {
     pub major_opcode: uint8_t,
     pub pad1: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_no_exposure_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_no_exposure_event_t {
-    fn default() -> Struct_xcb_no_exposure_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_no_exposure_event_t = Struct_xcb_no_exposure_event_t;
 pub type Enum_xcb_visibility_t = ::libc::c_uint;
@@ -920,12 +1001,13 @@ pub struct Struct_xcb_visibility_notify_event_t {
     pub sequence: uint16_t,
     pub window: xcb_window_t,
     pub state: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_visibility_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_visibility_notify_event_t {
-    fn default() -> Struct_xcb_visibility_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_visibility_notify_event_t = Struct_xcb_visibility_notify_event_t;
 #[repr(C)]
@@ -944,10 +1026,11 @@ pub struct Struct_xcb_create_notify_event_t {
     pub override_redirect: uint8_t,
     pub pad1: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_notify_event_t {
-    fn default() -> Struct_xcb_create_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_notify_event_t = Struct_xcb_create_notify_event_t;
 #[repr(C)]
@@ -959,10 +1042,11 @@ pub struct Struct_xcb_destroy_notify_event_t {
     pub event: xcb_window_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_destroy_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_destroy_notify_event_t {
-    fn default() -> Struct_xcb_destroy_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_destroy_notify_event_t = Struct_xcb_destroy_notify_event_t;
 #[repr(C)]
@@ -974,12 +1058,13 @@ pub struct Struct_xcb_unmap_notify_event_t {
     pub event: xcb_window_t,
     pub window: xcb_window_t,
     pub from_configure: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_unmap_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_unmap_notify_event_t {
-    fn default() -> Struct_xcb_unmap_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_unmap_notify_event_t = Struct_xcb_unmap_notify_event_t;
 #[repr(C)]
@@ -991,12 +1076,13 @@ pub struct Struct_xcb_map_notify_event_t {
     pub event: xcb_window_t,
     pub window: xcb_window_t,
     pub override_redirect: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_map_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_map_notify_event_t {
-    fn default() -> Struct_xcb_map_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_map_notify_event_t = Struct_xcb_map_notify_event_t;
 #[repr(C)]
@@ -1008,10 +1094,11 @@ pub struct Struct_xcb_map_request_event_t {
     pub parent: xcb_window_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_map_request_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_map_request_event_t {
-    fn default() -> Struct_xcb_map_request_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_map_request_event_t = Struct_xcb_map_request_event_t;
 #[repr(C)]
@@ -1026,12 +1113,13 @@ pub struct Struct_xcb_reparent_notify_event_t {
     pub x: int16_t,
     pub y: int16_t,
     pub override_redirect: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_reparent_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_reparent_notify_event_t {
-    fn default() -> Struct_xcb_reparent_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_reparent_notify_event_t = Struct_xcb_reparent_notify_event_t;
 #[repr(C)]
@@ -1051,10 +1139,11 @@ pub struct Struct_xcb_configure_notify_event_t {
     pub override_redirect: uint8_t,
     pub pad1: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_configure_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_configure_notify_event_t {
-    fn default() -> Struct_xcb_configure_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_configure_notify_event_t = Struct_xcb_configure_notify_event_t;
 #[repr(C)]
@@ -1073,10 +1162,11 @@ pub struct Struct_xcb_configure_request_event_t {
     pub border_width: uint16_t,
     pub value_mask: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_configure_request_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_configure_request_event_t {
-    fn default() -> Struct_xcb_configure_request_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_configure_request_event_t = Struct_xcb_configure_request_event_t;
 #[repr(C)]
@@ -1090,10 +1180,11 @@ pub struct Struct_xcb_gravity_notify_event_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_gravity_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_gravity_notify_event_t {
-    fn default() -> Struct_xcb_gravity_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_gravity_notify_event_t = Struct_xcb_gravity_notify_event_t;
 #[repr(C)]
@@ -1106,10 +1197,11 @@ pub struct Struct_xcb_resize_request_event_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_resize_request_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_resize_request_event_t {
-    fn default() -> Struct_xcb_resize_request_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_resize_request_event_t = Struct_xcb_resize_request_event_t;
 pub type Enum_xcb_place_t = ::libc::c_uint;
@@ -1124,14 +1216,15 @@ pub struct Struct_xcb_circulate_notify_event_t {
     pub sequence: uint16_t,
     pub event: xcb_window_t,
     pub window: xcb_window_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
     pub place: uint8_t,
-    pub pad2: [uint8_t; 3u],
+    pub pad2: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_circulate_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_circulate_notify_event_t {
-    fn default() -> Struct_xcb_circulate_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_circulate_notify_event_t = Struct_xcb_circulate_notify_event_t;
 pub type xcb_circulate_request_event_t = xcb_circulate_notify_event_t;
@@ -1149,12 +1242,13 @@ pub struct Struct_xcb_property_notify_event_t {
     pub atom: xcb_atom_t,
     pub time: xcb_timestamp_t,
     pub state: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_property_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_property_notify_event_t {
-    fn default() -> Struct_xcb_property_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_property_notify_event_t = Struct_xcb_property_notify_event_t;
 #[repr(C)]
@@ -1167,10 +1261,11 @@ pub struct Struct_xcb_selection_clear_event_t {
     pub owner: xcb_window_t,
     pub selection: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_selection_clear_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_selection_clear_event_t {
-    fn default() -> Struct_xcb_selection_clear_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_selection_clear_event_t = Struct_xcb_selection_clear_event_t;
 pub type Enum_xcb_time_t = ::libc::c_uint;
@@ -1261,10 +1356,11 @@ pub struct Struct_xcb_selection_request_event_t {
     pub target: xcb_atom_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_selection_request_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_selection_request_event_t {
-    fn default() -> Struct_xcb_selection_request_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_selection_request_event_t = Struct_xcb_selection_request_event_t;
 #[repr(C)]
@@ -1279,10 +1375,11 @@ pub struct Struct_xcb_selection_notify_event_t {
     pub target: xcb_atom_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_selection_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_selection_notify_event_t {
-    fn default() -> Struct_xcb_selection_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_selection_notify_event_t = Struct_xcb_selection_notify_event_t;
 pub type Enum_xcb_colormap_state_t = ::libc::c_uint;
@@ -1302,34 +1399,39 @@ pub struct Struct_xcb_colormap_notify_event_t {
     pub colormap: xcb_colormap_t,
     pub _new: uint8_t,
     pub state: uint8_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_colormap_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_colormap_notify_event_t {
-    fn default() -> Struct_xcb_colormap_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_colormap_notify_event_t = Struct_xcb_colormap_notify_event_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Union_xcb_client_message_data_t {
-    pub _bindgen_data_: [u32; 5u],
+    pub _bindgen_data_: [u32; 5usize],
 }
 impl Union_xcb_client_message_data_t {
-    pub unsafe fn data8(&mut self) -> *mut [uint8_t; 20u] {
-        ::std::mem::transmute(&self._bindgen_data_)
+    pub unsafe fn data8(&mut self) -> *mut [uint8_t; 20usize] {
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn data16(&mut self) -> *mut [uint16_t; 10u] {
-        ::std::mem::transmute(&self._bindgen_data_)
+    pub unsafe fn data16(&mut self) -> *mut [uint16_t; 10usize] {
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn data32(&mut self) -> *mut [uint32_t; 5u] {
-        ::std::mem::transmute(&self._bindgen_data_)
+    pub unsafe fn data32(&mut self) -> *mut [uint32_t; 5usize] {
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
 }
+impl ::std::clone::Clone for Union_xcb_client_message_data_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Union_xcb_client_message_data_t {
-    fn default() -> Union_xcb_client_message_data_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_client_message_data_t = Union_xcb_client_message_data_t;
 #[repr(C)]
@@ -1339,10 +1441,11 @@ pub struct Struct_xcb_client_message_data_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_client_message_data_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_client_message_data_iterator_t {
-    fn default() -> Struct_xcb_client_message_data_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_client_message_data_iterator_t =
     Struct_xcb_client_message_data_iterator_t;
@@ -1356,10 +1459,11 @@ pub struct Struct_xcb_client_message_event_t {
     pub _type: xcb_atom_t,
     pub data: xcb_client_message_data_t,
 }
+impl ::std::clone::Clone for Struct_xcb_client_message_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_client_message_event_t {
-    fn default() -> Struct_xcb_client_message_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_client_message_event_t = Struct_xcb_client_message_event_t;
 pub type Enum_xcb_mapping_t = ::libc::c_uint;
@@ -1378,10 +1482,11 @@ pub struct Struct_xcb_mapping_notify_event_t {
     pub count: uint8_t,
     pub pad1: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_mapping_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_mapping_notify_event_t {
-    fn default() -> Struct_xcb_mapping_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_mapping_notify_event_t = Struct_xcb_mapping_notify_event_t;
 #[repr(C)]
@@ -1392,13 +1497,14 @@ pub struct Struct_xcb_ge_generic_event_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub event_type: uint16_t,
-    pub pad0: [uint8_t; 22u],
+    pub pad0: [uint8_t; 22usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_ge_generic_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_ge_generic_event_t {
-    fn default() -> Struct_xcb_ge_generic_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ge_generic_event_t = Struct_xcb_ge_generic_event_t;
 #[repr(C)]
@@ -1412,10 +1518,11 @@ pub struct Struct_xcb_request_error_t {
     pub major_opcode: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_request_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_request_error_t {
-    fn default() -> Struct_xcb_request_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_request_error_t = Struct_xcb_request_error_t;
 #[repr(C)]
@@ -1429,10 +1536,11 @@ pub struct Struct_xcb_value_error_t {
     pub major_opcode: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_value_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_value_error_t {
-    fn default() -> Struct_xcb_value_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_value_error_t = Struct_xcb_value_error_t;
 pub type xcb_window_error_t = xcb_value_error_t;
@@ -1507,10 +1615,11 @@ pub struct Struct_xcb_create_window_request_t {
     pub visual: xcb_visualid_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_window_request_t {
-    fn default() -> Struct_xcb_create_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_window_request_t = Struct_xcb_create_window_request_t;
 #[repr(C)]
@@ -1522,11 +1631,12 @@ pub struct Struct_xcb_change_window_attributes_request_t {
     pub window: xcb_window_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_window_attributes_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_window_attributes_request_t
  {
-    fn default() -> Struct_xcb_change_window_attributes_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_window_attributes_request_t =
     Struct_xcb_change_window_attributes_request_t;
@@ -1540,10 +1650,11 @@ pub type xcb_map_state_t = Enum_xcb_map_state_t;
 pub struct Struct_xcb_get_window_attributes_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_window_attributes_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_window_attributes_cookie_t {
-    fn default() -> Struct_xcb_get_window_attributes_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_window_attributes_cookie_t =
     Struct_xcb_get_window_attributes_cookie_t;
@@ -1555,10 +1666,11 @@ pub struct Struct_xcb_get_window_attributes_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_window_attributes_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_window_attributes_request_t {
-    fn default() -> Struct_xcb_get_window_attributes_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_window_attributes_request_t =
     Struct_xcb_get_window_attributes_request_t;
@@ -1583,12 +1695,13 @@ pub struct Struct_xcb_get_window_attributes_reply_t {
     pub all_event_masks: uint32_t,
     pub your_event_mask: uint32_t,
     pub do_not_propagate_mask: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_window_attributes_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_window_attributes_reply_t {
-    fn default() -> Struct_xcb_get_window_attributes_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_window_attributes_reply_t =
     Struct_xcb_get_window_attributes_reply_t;
@@ -1600,10 +1713,11 @@ pub struct Struct_xcb_destroy_window_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_destroy_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_destroy_window_request_t {
-    fn default() -> Struct_xcb_destroy_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_destroy_window_request_t = Struct_xcb_destroy_window_request_t;
 #[repr(C)]
@@ -1614,10 +1728,11 @@ pub struct Struct_xcb_destroy_subwindows_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_destroy_subwindows_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_destroy_subwindows_request_t {
-    fn default() -> Struct_xcb_destroy_subwindows_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_destroy_subwindows_request_t =
     Struct_xcb_destroy_subwindows_request_t;
@@ -1633,10 +1748,11 @@ pub struct Struct_xcb_change_save_set_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_save_set_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_save_set_request_t {
-    fn default() -> Struct_xcb_change_save_set_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_save_set_request_t = Struct_xcb_change_save_set_request_t;
 #[repr(C)]
@@ -1650,10 +1766,11 @@ pub struct Struct_xcb_reparent_window_request_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_reparent_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_reparent_window_request_t {
-    fn default() -> Struct_xcb_reparent_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_reparent_window_request_t = Struct_xcb_reparent_window_request_t;
 #[repr(C)]
@@ -1664,10 +1781,11 @@ pub struct Struct_xcb_map_window_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_map_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_map_window_request_t {
-    fn default() -> Struct_xcb_map_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_map_window_request_t = Struct_xcb_map_window_request_t;
 #[repr(C)]
@@ -1678,10 +1796,11 @@ pub struct Struct_xcb_map_subwindows_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_map_subwindows_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_map_subwindows_request_t {
-    fn default() -> Struct_xcb_map_subwindows_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_map_subwindows_request_t = Struct_xcb_map_subwindows_request_t;
 #[repr(C)]
@@ -1692,10 +1811,11 @@ pub struct Struct_xcb_unmap_window_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_unmap_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_unmap_window_request_t {
-    fn default() -> Struct_xcb_unmap_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_unmap_window_request_t = Struct_xcb_unmap_window_request_t;
 #[repr(C)]
@@ -1706,10 +1826,11 @@ pub struct Struct_xcb_unmap_subwindows_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_unmap_subwindows_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_unmap_subwindows_request_t {
-    fn default() -> Struct_xcb_unmap_subwindows_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_unmap_subwindows_request_t =
     Struct_xcb_unmap_subwindows_request_t;
@@ -1737,12 +1858,13 @@ pub struct Struct_xcb_configure_window_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub value_mask: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_configure_window_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_configure_window_request_t {
-    fn default() -> Struct_xcb_configure_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_configure_window_request_t =
     Struct_xcb_configure_window_request_t;
@@ -1758,10 +1880,11 @@ pub struct Struct_xcb_circulate_window_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_circulate_window_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_circulate_window_request_t {
-    fn default() -> Struct_xcb_circulate_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_circulate_window_request_t =
     Struct_xcb_circulate_window_request_t;
@@ -1770,10 +1893,11 @@ pub type xcb_circulate_window_request_t =
 pub struct Struct_xcb_get_geometry_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_geometry_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_geometry_cookie_t {
-    fn default() -> Struct_xcb_get_geometry_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_geometry_cookie_t = Struct_xcb_get_geometry_cookie_t;
 #[repr(C)]
@@ -1784,10 +1908,11 @@ pub struct Struct_xcb_get_geometry_request_t {
     pub length: uint16_t,
     pub drawable: xcb_drawable_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_geometry_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_geometry_request_t {
-    fn default() -> Struct_xcb_get_geometry_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_geometry_request_t = Struct_xcb_get_geometry_request_t;
 #[repr(C)]
@@ -1803,12 +1928,13 @@ pub struct Struct_xcb_get_geometry_reply_t {
     pub width: uint16_t,
     pub height: uint16_t,
     pub border_width: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_geometry_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_geometry_reply_t {
-    fn default() -> Struct_xcb_get_geometry_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_geometry_reply_t = Struct_xcb_get_geometry_reply_t;
 #[repr(C)]
@@ -1816,10 +1942,11 @@ pub type xcb_get_geometry_reply_t = Struct_xcb_get_geometry_reply_t;
 pub struct Struct_xcb_query_tree_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_tree_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_tree_cookie_t {
-    fn default() -> Struct_xcb_query_tree_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_tree_cookie_t = Struct_xcb_query_tree_cookie_t;
 #[repr(C)]
@@ -1830,10 +1957,11 @@ pub struct Struct_xcb_query_tree_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_tree_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_tree_request_t {
-    fn default() -> Struct_xcb_query_tree_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_tree_request_t = Struct_xcb_query_tree_request_t;
 #[repr(C)]
@@ -1846,12 +1974,13 @@ pub struct Struct_xcb_query_tree_reply_t {
     pub root: xcb_window_t,
     pub parent: xcb_window_t,
     pub children_len: uint16_t,
-    pub pad1: [uint8_t; 14u],
+    pub pad1: [uint8_t; 14usize],
+}
+impl ::std::clone::Clone for Struct_xcb_query_tree_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_query_tree_reply_t {
-    fn default() -> Struct_xcb_query_tree_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_tree_reply_t = Struct_xcb_query_tree_reply_t;
 #[repr(C)]
@@ -1859,10 +1988,11 @@ pub type xcb_query_tree_reply_t = Struct_xcb_query_tree_reply_t;
 pub struct Struct_xcb_intern_atom_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_intern_atom_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_intern_atom_cookie_t {
-    fn default() -> Struct_xcb_intern_atom_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_intern_atom_cookie_t = Struct_xcb_intern_atom_cookie_t;
 #[repr(C)]
@@ -1872,12 +2002,13 @@ pub struct Struct_xcb_intern_atom_request_t {
     pub only_if_exists: uint8_t,
     pub length: uint16_t,
     pub name_len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_intern_atom_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_intern_atom_request_t {
-    fn default() -> Struct_xcb_intern_atom_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_intern_atom_request_t = Struct_xcb_intern_atom_request_t;
 #[repr(C)]
@@ -1889,10 +2020,11 @@ pub struct Struct_xcb_intern_atom_reply_t {
     pub length: uint32_t,
     pub atom: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_intern_atom_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_intern_atom_reply_t {
-    fn default() -> Struct_xcb_intern_atom_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_intern_atom_reply_t = Struct_xcb_intern_atom_reply_t;
 #[repr(C)]
@@ -1900,10 +2032,11 @@ pub type xcb_intern_atom_reply_t = Struct_xcb_intern_atom_reply_t;
 pub struct Struct_xcb_get_atom_name_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_atom_name_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_atom_name_cookie_t {
-    fn default() -> Struct_xcb_get_atom_name_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_atom_name_cookie_t = Struct_xcb_get_atom_name_cookie_t;
 #[repr(C)]
@@ -1914,10 +2047,11 @@ pub struct Struct_xcb_get_atom_name_request_t {
     pub length: uint16_t,
     pub atom: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_atom_name_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_atom_name_request_t {
-    fn default() -> Struct_xcb_get_atom_name_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_atom_name_request_t = Struct_xcb_get_atom_name_request_t;
 #[repr(C)]
@@ -1928,12 +2062,13 @@ pub struct Struct_xcb_get_atom_name_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub name_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_atom_name_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_atom_name_reply_t {
-    fn default() -> Struct_xcb_get_atom_name_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_atom_name_reply_t = Struct_xcb_get_atom_name_reply_t;
 pub type Enum_xcb_prop_mode_t = ::libc::c_uint;
@@ -1951,13 +2086,14 @@ pub struct Struct_xcb_change_property_request_t {
     pub property: xcb_atom_t,
     pub _type: xcb_atom_t,
     pub format: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub data_len: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_property_request_t {
-    fn default() -> Struct_xcb_change_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_property_request_t = Struct_xcb_change_property_request_t;
 #[repr(C)]
@@ -1969,10 +2105,11 @@ pub struct Struct_xcb_delete_property_request_t {
     pub window: xcb_window_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_delete_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_delete_property_request_t {
-    fn default() -> Struct_xcb_delete_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_delete_property_request_t = Struct_xcb_delete_property_request_t;
 pub type Enum_xcb_get_property_type_t = ::libc::c_uint;
@@ -1983,10 +2120,11 @@ pub type xcb_get_property_type_t = Enum_xcb_get_property_type_t;
 pub struct Struct_xcb_get_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_property_cookie_t {
-    fn default() -> Struct_xcb_get_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_property_cookie_t = Struct_xcb_get_property_cookie_t;
 #[repr(C)]
@@ -2001,10 +2139,11 @@ pub struct Struct_xcb_get_property_request_t {
     pub long_offset: uint32_t,
     pub long_length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_property_request_t {
-    fn default() -> Struct_xcb_get_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_property_request_t = Struct_xcb_get_property_request_t;
 #[repr(C)]
@@ -2017,12 +2156,13 @@ pub struct Struct_xcb_get_property_reply_t {
     pub _type: xcb_atom_t,
     pub bytes_after: uint32_t,
     pub value_len: uint32_t,
-    pub pad0: [uint8_t; 12u],
+    pub pad0: [uint8_t; 12usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_property_reply_t {
-    fn default() -> Struct_xcb_get_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_property_reply_t = Struct_xcb_get_property_reply_t;
 #[repr(C)]
@@ -2030,10 +2170,11 @@ pub type xcb_get_property_reply_t = Struct_xcb_get_property_reply_t;
 pub struct Struct_xcb_list_properties_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_properties_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_properties_cookie_t {
-    fn default() -> Struct_xcb_list_properties_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_properties_cookie_t = Struct_xcb_list_properties_cookie_t;
 #[repr(C)]
@@ -2044,10 +2185,11 @@ pub struct Struct_xcb_list_properties_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_properties_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_properties_request_t {
-    fn default() -> Struct_xcb_list_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_properties_request_t = Struct_xcb_list_properties_request_t;
 #[repr(C)]
@@ -2058,12 +2200,13 @@ pub struct Struct_xcb_list_properties_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub atoms_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_list_properties_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_list_properties_reply_t {
-    fn default() -> Struct_xcb_list_properties_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_properties_reply_t = Struct_xcb_list_properties_reply_t;
 #[repr(C)]
@@ -2076,10 +2219,11 @@ pub struct Struct_xcb_set_selection_owner_request_t {
     pub selection: xcb_atom_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_selection_owner_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_selection_owner_request_t {
-    fn default() -> Struct_xcb_set_selection_owner_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_selection_owner_request_t =
     Struct_xcb_set_selection_owner_request_t;
@@ -2088,10 +2232,11 @@ pub type xcb_set_selection_owner_request_t =
 pub struct Struct_xcb_get_selection_owner_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_selection_owner_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_selection_owner_cookie_t {
-    fn default() -> Struct_xcb_get_selection_owner_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_selection_owner_cookie_t =
     Struct_xcb_get_selection_owner_cookie_t;
@@ -2103,10 +2248,11 @@ pub struct Struct_xcb_get_selection_owner_request_t {
     pub length: uint16_t,
     pub selection: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_selection_owner_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_selection_owner_request_t {
-    fn default() -> Struct_xcb_get_selection_owner_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_selection_owner_request_t =
     Struct_xcb_get_selection_owner_request_t;
@@ -2119,10 +2265,11 @@ pub struct Struct_xcb_get_selection_owner_reply_t {
     pub length: uint32_t,
     pub owner: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_selection_owner_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_selection_owner_reply_t {
-    fn default() -> Struct_xcb_get_selection_owner_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_selection_owner_reply_t =
     Struct_xcb_get_selection_owner_reply_t;
@@ -2138,10 +2285,11 @@ pub struct Struct_xcb_convert_selection_request_t {
     pub property: xcb_atom_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_convert_selection_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_convert_selection_request_t {
-    fn default() -> Struct_xcb_convert_selection_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_convert_selection_request_t =
     Struct_xcb_convert_selection_request_t;
@@ -2157,12 +2305,13 @@ pub struct Struct_xcb_send_event_request_t {
     pub length: uint16_t,
     pub destination: xcb_window_t,
     pub event_mask: uint32_t,
-    pub event: [::libc::c_char; 32u],
+    pub event: [::libc::c_char; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_send_event_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_send_event_request_t {
-    fn default() -> Struct_xcb_send_event_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_send_event_request_t = Struct_xcb_send_event_request_t;
 pub type Enum_xcb_grab_mode_t = ::libc::c_uint;
@@ -2184,10 +2333,11 @@ pub type xcb_cursor_enum_t = Enum_xcb_cursor_enum_t;
 pub struct Struct_xcb_grab_pointer_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_pointer_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_pointer_cookie_t {
-    fn default() -> Struct_xcb_grab_pointer_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_pointer_cookie_t = Struct_xcb_grab_pointer_cookie_t;
 #[repr(C)]
@@ -2204,10 +2354,11 @@ pub struct Struct_xcb_grab_pointer_request_t {
     pub cursor: xcb_cursor_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_pointer_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_pointer_request_t {
-    fn default() -> Struct_xcb_grab_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_pointer_request_t = Struct_xcb_grab_pointer_request_t;
 #[repr(C)]
@@ -2218,10 +2369,11 @@ pub struct Struct_xcb_grab_pointer_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_pointer_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_pointer_reply_t {
-    fn default() -> Struct_xcb_grab_pointer_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_pointer_reply_t = Struct_xcb_grab_pointer_reply_t;
 #[repr(C)]
@@ -2232,10 +2384,11 @@ pub struct Struct_xcb_ungrab_pointer_request_t {
     pub length: uint16_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_ungrab_pointer_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_ungrab_pointer_request_t {
-    fn default() -> Struct_xcb_ungrab_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ungrab_pointer_request_t = Struct_xcb_ungrab_pointer_request_t;
 pub type Enum_xcb_button_index_t = ::libc::c_uint;
@@ -2262,10 +2415,11 @@ pub struct Struct_xcb_grab_button_request_t {
     pub pad0: uint8_t,
     pub modifiers: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_button_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_button_request_t {
-    fn default() -> Struct_xcb_grab_button_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_button_request_t = Struct_xcb_grab_button_request_t;
 #[repr(C)]
@@ -2276,12 +2430,13 @@ pub struct Struct_xcb_ungrab_button_request_t {
     pub length: uint16_t,
     pub grab_window: xcb_window_t,
     pub modifiers: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_ungrab_button_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_ungrab_button_request_t {
-    fn default() -> Struct_xcb_ungrab_button_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ungrab_button_request_t = Struct_xcb_ungrab_button_request_t;
 #[repr(C)]
@@ -2293,13 +2448,14 @@ pub struct Struct_xcb_change_active_pointer_grab_request_t {
     pub cursor: xcb_cursor_t,
     pub time: xcb_timestamp_t,
     pub event_mask: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_change_active_pointer_grab_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_change_active_pointer_grab_request_t {
-    fn default() -> Struct_xcb_change_active_pointer_grab_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_active_pointer_grab_request_t =
     Struct_xcb_change_active_pointer_grab_request_t;
@@ -2308,10 +2464,11 @@ pub type xcb_change_active_pointer_grab_request_t =
 pub struct Struct_xcb_grab_keyboard_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_keyboard_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_keyboard_cookie_t {
-    fn default() -> Struct_xcb_grab_keyboard_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_keyboard_cookie_t = Struct_xcb_grab_keyboard_cookie_t;
 #[repr(C)]
@@ -2324,12 +2481,13 @@ pub struct Struct_xcb_grab_keyboard_request_t {
     pub time: xcb_timestamp_t,
     pub pointer_mode: uint8_t,
     pub keyboard_mode: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_grab_keyboard_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_grab_keyboard_request_t {
-    fn default() -> Struct_xcb_grab_keyboard_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_keyboard_request_t = Struct_xcb_grab_keyboard_request_t;
 #[repr(C)]
@@ -2340,10 +2498,11 @@ pub struct Struct_xcb_grab_keyboard_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_keyboard_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_keyboard_reply_t {
-    fn default() -> Struct_xcb_grab_keyboard_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_keyboard_reply_t = Struct_xcb_grab_keyboard_reply_t;
 #[repr(C)]
@@ -2354,10 +2513,11 @@ pub struct Struct_xcb_ungrab_keyboard_request_t {
     pub length: uint16_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_ungrab_keyboard_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_ungrab_keyboard_request_t {
-    fn default() -> Struct_xcb_ungrab_keyboard_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ungrab_keyboard_request_t = Struct_xcb_ungrab_keyboard_request_t;
 pub type Enum_xcb_grab_t = ::libc::c_uint;
@@ -2374,12 +2534,13 @@ pub struct Struct_xcb_grab_key_request_t {
     pub key: xcb_keycode_t,
     pub pointer_mode: uint8_t,
     pub keyboard_mode: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_grab_key_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_grab_key_request_t {
-    fn default() -> Struct_xcb_grab_key_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_key_request_t = Struct_xcb_grab_key_request_t;
 #[repr(C)]
@@ -2390,12 +2551,13 @@ pub struct Struct_xcb_ungrab_key_request_t {
     pub length: uint16_t,
     pub grab_window: xcb_window_t,
     pub modifiers: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_ungrab_key_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_ungrab_key_request_t {
-    fn default() -> Struct_xcb_ungrab_key_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ungrab_key_request_t = Struct_xcb_ungrab_key_request_t;
 pub type Enum_xcb_allow_t = ::libc::c_uint;
@@ -2416,10 +2578,11 @@ pub struct Struct_xcb_allow_events_request_t {
     pub length: uint16_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_allow_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_allow_events_request_t {
-    fn default() -> Struct_xcb_allow_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_allow_events_request_t = Struct_xcb_allow_events_request_t;
 #[repr(C)]
@@ -2429,10 +2592,11 @@ pub struct Struct_xcb_grab_server_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_grab_server_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_grab_server_request_t {
-    fn default() -> Struct_xcb_grab_server_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_grab_server_request_t = Struct_xcb_grab_server_request_t;
 #[repr(C)]
@@ -2442,10 +2606,11 @@ pub struct Struct_xcb_ungrab_server_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_ungrab_server_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_ungrab_server_request_t {
-    fn default() -> Struct_xcb_ungrab_server_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_ungrab_server_request_t = Struct_xcb_ungrab_server_request_t;
 #[repr(C)]
@@ -2453,10 +2618,11 @@ pub type xcb_ungrab_server_request_t = Struct_xcb_ungrab_server_request_t;
 pub struct Struct_xcb_query_pointer_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_pointer_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_pointer_cookie_t {
-    fn default() -> Struct_xcb_query_pointer_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_pointer_cookie_t = Struct_xcb_query_pointer_cookie_t;
 #[repr(C)]
@@ -2467,10 +2633,11 @@ pub struct Struct_xcb_query_pointer_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_pointer_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_pointer_request_t {
-    fn default() -> Struct_xcb_query_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_pointer_request_t = Struct_xcb_query_pointer_request_t;
 #[repr(C)]
@@ -2487,12 +2654,13 @@ pub struct Struct_xcb_query_pointer_reply_t {
     pub win_x: int16_t,
     pub win_y: int16_t,
     pub mask: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_query_pointer_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_query_pointer_reply_t {
-    fn default() -> Struct_xcb_query_pointer_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_pointer_reply_t = Struct_xcb_query_pointer_reply_t;
 #[repr(C)]
@@ -2502,8 +2670,11 @@ pub struct Struct_xcb_timecoord_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_timecoord_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_timecoord_t {
-    fn default() -> Struct_xcb_timecoord_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_timecoord_t = Struct_xcb_timecoord_t;
 #[repr(C)]
@@ -2513,10 +2684,11 @@ pub struct Struct_xcb_timecoord_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_timecoord_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_timecoord_iterator_t {
-    fn default() -> Struct_xcb_timecoord_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_timecoord_iterator_t = Struct_xcb_timecoord_iterator_t;
 #[repr(C)]
@@ -2524,10 +2696,11 @@ pub type xcb_timecoord_iterator_t = Struct_xcb_timecoord_iterator_t;
 pub struct Struct_xcb_get_motion_events_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_motion_events_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_motion_events_cookie_t {
-    fn default() -> Struct_xcb_get_motion_events_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_motion_events_cookie_t =
     Struct_xcb_get_motion_events_cookie_t;
@@ -2541,10 +2714,11 @@ pub struct Struct_xcb_get_motion_events_request_t {
     pub start: xcb_timestamp_t,
     pub stop: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_motion_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_motion_events_request_t {
-    fn default() -> Struct_xcb_get_motion_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_motion_events_request_t =
     Struct_xcb_get_motion_events_request_t;
@@ -2556,12 +2730,13 @@ pub struct Struct_xcb_get_motion_events_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub events_len: uint32_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_motion_events_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_motion_events_reply_t {
-    fn default() -> Struct_xcb_get_motion_events_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_motion_events_reply_t = Struct_xcb_get_motion_events_reply_t;
 #[repr(C)]
@@ -2569,10 +2744,11 @@ pub type xcb_get_motion_events_reply_t = Struct_xcb_get_motion_events_reply_t;
 pub struct Struct_xcb_translate_coordinates_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_translate_coordinates_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_translate_coordinates_cookie_t {
-    fn default() -> Struct_xcb_translate_coordinates_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_translate_coordinates_cookie_t =
     Struct_xcb_translate_coordinates_cookie_t;
@@ -2587,10 +2763,11 @@ pub struct Struct_xcb_translate_coordinates_request_t {
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_translate_coordinates_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_translate_coordinates_request_t {
-    fn default() -> Struct_xcb_translate_coordinates_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_translate_coordinates_request_t =
     Struct_xcb_translate_coordinates_request_t;
@@ -2605,10 +2782,11 @@ pub struct Struct_xcb_translate_coordinates_reply_t {
     pub dst_x: int16_t,
     pub dst_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_translate_coordinates_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_translate_coordinates_reply_t {
-    fn default() -> Struct_xcb_translate_coordinates_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_translate_coordinates_reply_t =
     Struct_xcb_translate_coordinates_reply_t;
@@ -2627,10 +2805,11 @@ pub struct Struct_xcb_warp_pointer_request_t {
     pub dst_x: int16_t,
     pub dst_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_warp_pointer_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_warp_pointer_request_t {
-    fn default() -> Struct_xcb_warp_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_warp_pointer_request_t = Struct_xcb_warp_pointer_request_t;
 pub type Enum_xcb_input_focus_t = ::libc::c_uint;
@@ -2648,10 +2827,11 @@ pub struct Struct_xcb_set_input_focus_request_t {
     pub focus: xcb_window_t,
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_input_focus_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_input_focus_request_t {
-    fn default() -> Struct_xcb_set_input_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_input_focus_request_t = Struct_xcb_set_input_focus_request_t;
 #[repr(C)]
@@ -2659,10 +2839,11 @@ pub type xcb_set_input_focus_request_t = Struct_xcb_set_input_focus_request_t;
 pub struct Struct_xcb_get_input_focus_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_input_focus_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_input_focus_cookie_t {
-    fn default() -> Struct_xcb_get_input_focus_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_input_focus_cookie_t = Struct_xcb_get_input_focus_cookie_t;
 #[repr(C)]
@@ -2672,10 +2853,11 @@ pub struct Struct_xcb_get_input_focus_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_input_focus_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_input_focus_request_t {
-    fn default() -> Struct_xcb_get_input_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_input_focus_request_t = Struct_xcb_get_input_focus_request_t;
 #[repr(C)]
@@ -2687,10 +2869,11 @@ pub struct Struct_xcb_get_input_focus_reply_t {
     pub length: uint32_t,
     pub focus: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_input_focus_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_input_focus_reply_t {
-    fn default() -> Struct_xcb_get_input_focus_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_input_focus_reply_t = Struct_xcb_get_input_focus_reply_t;
 #[repr(C)]
@@ -2698,10 +2881,11 @@ pub type xcb_get_input_focus_reply_t = Struct_xcb_get_input_focus_reply_t;
 pub struct Struct_xcb_query_keymap_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_keymap_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_keymap_cookie_t {
-    fn default() -> Struct_xcb_query_keymap_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_keymap_cookie_t = Struct_xcb_query_keymap_cookie_t;
 #[repr(C)]
@@ -2711,10 +2895,11 @@ pub struct Struct_xcb_query_keymap_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_keymap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_keymap_request_t {
-    fn default() -> Struct_xcb_query_keymap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_keymap_request_t = Struct_xcb_query_keymap_request_t;
 #[repr(C)]
@@ -2724,12 +2909,13 @@ pub struct Struct_xcb_query_keymap_reply_t {
     pub pad0: uint8_t,
     pub sequence: uint16_t,
     pub length: uint32_t,
-    pub keys: [uint8_t; 32u],
+    pub keys: [uint8_t; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_query_keymap_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_query_keymap_reply_t {
-    fn default() -> Struct_xcb_query_keymap_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_keymap_reply_t = Struct_xcb_query_keymap_reply_t;
 #[repr(C)]
@@ -2740,12 +2926,13 @@ pub struct Struct_xcb_open_font_request_t {
     pub length: uint16_t,
     pub fid: xcb_font_t,
     pub name_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_open_font_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_open_font_request_t {
-    fn default() -> Struct_xcb_open_font_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_open_font_request_t = Struct_xcb_open_font_request_t;
 #[repr(C)]
@@ -2756,10 +2943,11 @@ pub struct Struct_xcb_close_font_request_t {
     pub length: uint16_t,
     pub font: xcb_font_t,
 }
+impl ::std::clone::Clone for Struct_xcb_close_font_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_close_font_request_t {
-    fn default() -> Struct_xcb_close_font_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_close_font_request_t = Struct_xcb_close_font_request_t;
 pub type Enum_xcb_font_draw_t = ::libc::c_uint;
@@ -2772,8 +2960,11 @@ pub struct Struct_xcb_fontprop_t {
     pub name: xcb_atom_t,
     pub value: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_fontprop_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_fontprop_t {
-    fn default() -> Struct_xcb_fontprop_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_fontprop_t = Struct_xcb_fontprop_t;
 #[repr(C)]
@@ -2783,10 +2974,11 @@ pub struct Struct_xcb_fontprop_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_fontprop_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_fontprop_iterator_t {
-    fn default() -> Struct_xcb_fontprop_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_fontprop_iterator_t = Struct_xcb_fontprop_iterator_t;
 #[repr(C)]
@@ -2799,8 +2991,11 @@ pub struct Struct_xcb_charinfo_t {
     pub descent: int16_t,
     pub attributes: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_charinfo_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_charinfo_t {
-    fn default() -> Struct_xcb_charinfo_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_charinfo_t = Struct_xcb_charinfo_t;
 #[repr(C)]
@@ -2810,10 +3005,11 @@ pub struct Struct_xcb_charinfo_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_charinfo_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_charinfo_iterator_t {
-    fn default() -> Struct_xcb_charinfo_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_charinfo_iterator_t = Struct_xcb_charinfo_iterator_t;
 #[repr(C)]
@@ -2821,10 +3017,11 @@ pub type xcb_charinfo_iterator_t = Struct_xcb_charinfo_iterator_t;
 pub struct Struct_xcb_query_font_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_font_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_font_cookie_t {
-    fn default() -> Struct_xcb_query_font_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_font_cookie_t = Struct_xcb_query_font_cookie_t;
 #[repr(C)]
@@ -2835,10 +3032,11 @@ pub struct Struct_xcb_query_font_request_t {
     pub length: uint16_t,
     pub font: xcb_fontable_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_font_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_font_request_t {
-    fn default() -> Struct_xcb_query_font_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_font_request_t = Struct_xcb_query_font_request_t;
 #[repr(C)]
@@ -2849,9 +3047,9 @@ pub struct Struct_xcb_query_font_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub min_bounds: xcb_charinfo_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
     pub max_bounds: xcb_charinfo_t,
-    pub pad2: [uint8_t; 4u],
+    pub pad2: [uint8_t; 4usize],
     pub min_char_or_byte2: uint16_t,
     pub max_char_or_byte2: uint16_t,
     pub default_char: uint16_t,
@@ -2864,10 +3062,11 @@ pub struct Struct_xcb_query_font_reply_t {
     pub font_descent: int16_t,
     pub char_infos_len: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_font_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_font_reply_t {
-    fn default() -> Struct_xcb_query_font_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_font_reply_t = Struct_xcb_query_font_reply_t;
 #[repr(C)]
@@ -2875,10 +3074,11 @@ pub type xcb_query_font_reply_t = Struct_xcb_query_font_reply_t;
 pub struct Struct_xcb_query_text_extents_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_text_extents_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_text_extents_cookie_t {
-    fn default() -> Struct_xcb_query_text_extents_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_text_extents_cookie_t =
     Struct_xcb_query_text_extents_cookie_t;
@@ -2890,10 +3090,11 @@ pub struct Struct_xcb_query_text_extents_request_t {
     pub length: uint16_t,
     pub font: xcb_fontable_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_text_extents_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_text_extents_request_t {
-    fn default() -> Struct_xcb_query_text_extents_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_text_extents_request_t =
     Struct_xcb_query_text_extents_request_t;
@@ -2912,10 +3113,11 @@ pub struct Struct_xcb_query_text_extents_reply_t {
     pub overall_left: int32_t,
     pub overall_right: int32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_text_extents_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_text_extents_reply_t {
-    fn default() -> Struct_xcb_query_text_extents_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_text_extents_reply_t =
     Struct_xcb_query_text_extents_reply_t;
@@ -2924,8 +3126,11 @@ pub type xcb_query_text_extents_reply_t =
 pub struct Struct_xcb_str_t {
     pub name_len: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_str_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_str_t {
-    fn default() -> Struct_xcb_str_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_str_t = Struct_xcb_str_t;
 #[repr(C)]
@@ -2935,10 +3140,11 @@ pub struct Struct_xcb_str_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_str_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_str_iterator_t {
-    fn default() -> Struct_xcb_str_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_str_iterator_t = Struct_xcb_str_iterator_t;
 #[repr(C)]
@@ -2946,10 +3152,11 @@ pub type xcb_str_iterator_t = Struct_xcb_str_iterator_t;
 pub struct Struct_xcb_list_fonts_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_fonts_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_fonts_cookie_t {
-    fn default() -> Struct_xcb_list_fonts_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_cookie_t = Struct_xcb_list_fonts_cookie_t;
 #[repr(C)]
@@ -2961,10 +3168,11 @@ pub struct Struct_xcb_list_fonts_request_t {
     pub max_names: uint16_t,
     pub pattern_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_fonts_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_fonts_request_t {
-    fn default() -> Struct_xcb_list_fonts_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_request_t = Struct_xcb_list_fonts_request_t;
 #[repr(C)]
@@ -2975,12 +3183,13 @@ pub struct Struct_xcb_list_fonts_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub names_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_list_fonts_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_list_fonts_reply_t {
-    fn default() -> Struct_xcb_list_fonts_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_reply_t = Struct_xcb_list_fonts_reply_t;
 #[repr(C)]
@@ -2988,10 +3197,11 @@ pub type xcb_list_fonts_reply_t = Struct_xcb_list_fonts_reply_t;
 pub struct Struct_xcb_list_fonts_with_info_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_fonts_with_info_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_fonts_with_info_cookie_t {
-    fn default() -> Struct_xcb_list_fonts_with_info_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_with_info_cookie_t =
     Struct_xcb_list_fonts_with_info_cookie_t;
@@ -3004,10 +3214,11 @@ pub struct Struct_xcb_list_fonts_with_info_request_t {
     pub max_names: uint16_t,
     pub pattern_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_fonts_with_info_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_fonts_with_info_request_t {
-    fn default() -> Struct_xcb_list_fonts_with_info_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_with_info_request_t =
     Struct_xcb_list_fonts_with_info_request_t;
@@ -3019,9 +3230,9 @@ pub struct Struct_xcb_list_fonts_with_info_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub min_bounds: xcb_charinfo_t,
-    pub pad0: [uint8_t; 4u],
+    pub pad0: [uint8_t; 4usize],
     pub max_bounds: xcb_charinfo_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
     pub min_char_or_byte2: uint16_t,
     pub max_char_or_byte2: uint16_t,
     pub default_char: uint16_t,
@@ -3034,10 +3245,11 @@ pub struct Struct_xcb_list_fonts_with_info_reply_t {
     pub font_descent: int16_t,
     pub replies_hint: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_fonts_with_info_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_fonts_with_info_reply_t {
-    fn default() -> Struct_xcb_list_fonts_with_info_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_fonts_with_info_reply_t =
     Struct_xcb_list_fonts_with_info_reply_t;
@@ -3048,12 +3260,13 @@ pub struct Struct_xcb_set_font_path_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
     pub font_qty: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_set_font_path_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_set_font_path_request_t {
-    fn default() -> Struct_xcb_set_font_path_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_font_path_request_t = Struct_xcb_set_font_path_request_t;
 #[repr(C)]
@@ -3061,10 +3274,11 @@ pub type xcb_set_font_path_request_t = Struct_xcb_set_font_path_request_t;
 pub struct Struct_xcb_get_font_path_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_font_path_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_font_path_cookie_t {
-    fn default() -> Struct_xcb_get_font_path_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_font_path_cookie_t = Struct_xcb_get_font_path_cookie_t;
 #[repr(C)]
@@ -3074,10 +3288,11 @@ pub struct Struct_xcb_get_font_path_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_font_path_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_font_path_request_t {
-    fn default() -> Struct_xcb_get_font_path_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_font_path_request_t = Struct_xcb_get_font_path_request_t;
 #[repr(C)]
@@ -3088,12 +3303,13 @@ pub struct Struct_xcb_get_font_path_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub path_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_font_path_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_font_path_reply_t {
-    fn default() -> Struct_xcb_get_font_path_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_font_path_reply_t = Struct_xcb_get_font_path_reply_t;
 #[repr(C)]
@@ -3107,10 +3323,11 @@ pub struct Struct_xcb_create_pixmap_request_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_pixmap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_pixmap_request_t {
-    fn default() -> Struct_xcb_create_pixmap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_pixmap_request_t = Struct_xcb_create_pixmap_request_t;
 #[repr(C)]
@@ -3121,10 +3338,11 @@ pub struct Struct_xcb_free_pixmap_request_t {
     pub length: uint16_t,
     pub pixmap: xcb_pixmap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_free_pixmap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_free_pixmap_request_t {
-    fn default() -> Struct_xcb_free_pixmap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_free_pixmap_request_t = Struct_xcb_free_pixmap_request_t;
 pub type Enum_xcb_gc_t = ::libc::c_uint;
@@ -3214,10 +3432,11 @@ pub struct Struct_xcb_create_gc_request_t {
     pub drawable: xcb_drawable_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_gc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_gc_request_t {
-    fn default() -> Struct_xcb_create_gc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_gc_request_t = Struct_xcb_create_gc_request_t;
 #[repr(C)]
@@ -3229,10 +3448,11 @@ pub struct Struct_xcb_change_gc_request_t {
     pub gc: xcb_gcontext_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_gc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_gc_request_t {
-    fn default() -> Struct_xcb_change_gc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_gc_request_t = Struct_xcb_change_gc_request_t;
 #[repr(C)]
@@ -3245,10 +3465,11 @@ pub struct Struct_xcb_copy_gc_request_t {
     pub dst_gc: xcb_gcontext_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_copy_gc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_copy_gc_request_t {
-    fn default() -> Struct_xcb_copy_gc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_copy_gc_request_t = Struct_xcb_copy_gc_request_t;
 #[repr(C)]
@@ -3261,10 +3482,11 @@ pub struct Struct_xcb_set_dashes_request_t {
     pub dash_offset: uint16_t,
     pub dashes_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_dashes_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_dashes_request_t {
-    fn default() -> Struct_xcb_set_dashes_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_dashes_request_t = Struct_xcb_set_dashes_request_t;
 pub type Enum_xcb_clip_ordering_t = ::libc::c_uint;
@@ -3283,10 +3505,11 @@ pub struct Struct_xcb_set_clip_rectangles_request_t {
     pub clip_x_origin: int16_t,
     pub clip_y_origin: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_clip_rectangles_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_clip_rectangles_request_t {
-    fn default() -> Struct_xcb_set_clip_rectangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_clip_rectangles_request_t =
     Struct_xcb_set_clip_rectangles_request_t;
@@ -3298,10 +3521,11 @@ pub struct Struct_xcb_free_gc_request_t {
     pub length: uint16_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_free_gc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_free_gc_request_t {
-    fn default() -> Struct_xcb_free_gc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_free_gc_request_t = Struct_xcb_free_gc_request_t;
 #[repr(C)]
@@ -3316,10 +3540,11 @@ pub struct Struct_xcb_clear_area_request_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_clear_area_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_clear_area_request_t {
-    fn default() -> Struct_xcb_clear_area_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_clear_area_request_t = Struct_xcb_clear_area_request_t;
 #[repr(C)]
@@ -3338,10 +3563,11 @@ pub struct Struct_xcb_copy_area_request_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_copy_area_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_copy_area_request_t {
-    fn default() -> Struct_xcb_copy_area_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_copy_area_request_t = Struct_xcb_copy_area_request_t;
 #[repr(C)]
@@ -3361,10 +3587,11 @@ pub struct Struct_xcb_copy_plane_request_t {
     pub height: uint16_t,
     pub bit_plane: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_copy_plane_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_copy_plane_request_t {
-    fn default() -> Struct_xcb_copy_plane_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_copy_plane_request_t = Struct_xcb_copy_plane_request_t;
 pub type Enum_xcb_coord_mode_t = ::libc::c_uint;
@@ -3380,10 +3607,11 @@ pub struct Struct_xcb_poly_point_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_point_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_point_request_t {
-    fn default() -> Struct_xcb_poly_point_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_point_request_t = Struct_xcb_poly_point_request_t;
 #[repr(C)]
@@ -3395,10 +3623,11 @@ pub struct Struct_xcb_poly_line_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_line_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_line_request_t {
-    fn default() -> Struct_xcb_poly_line_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_line_request_t = Struct_xcb_poly_line_request_t;
 #[repr(C)]
@@ -3409,8 +3638,11 @@ pub struct Struct_xcb_segment_t {
     pub x2: int16_t,
     pub y2: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_segment_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_segment_t {
-    fn default() -> Struct_xcb_segment_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_segment_t = Struct_xcb_segment_t;
 #[repr(C)]
@@ -3420,10 +3652,11 @@ pub struct Struct_xcb_segment_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_segment_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_segment_iterator_t {
-    fn default() -> Struct_xcb_segment_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_segment_iterator_t = Struct_xcb_segment_iterator_t;
 #[repr(C)]
@@ -3435,10 +3668,11 @@ pub struct Struct_xcb_poly_segment_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_segment_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_segment_request_t {
-    fn default() -> Struct_xcb_poly_segment_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_segment_request_t = Struct_xcb_poly_segment_request_t;
 #[repr(C)]
@@ -3450,10 +3684,11 @@ pub struct Struct_xcb_poly_rectangle_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_rectangle_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_rectangle_request_t {
-    fn default() -> Struct_xcb_poly_rectangle_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_rectangle_request_t = Struct_xcb_poly_rectangle_request_t;
 #[repr(C)]
@@ -3465,10 +3700,11 @@ pub struct Struct_xcb_poly_arc_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_arc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_arc_request_t {
-    fn default() -> Struct_xcb_poly_arc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_arc_request_t = Struct_xcb_poly_arc_request_t;
 pub type Enum_xcb_poly_shape_t = ::libc::c_uint;
@@ -3486,12 +3722,13 @@ pub struct Struct_xcb_fill_poly_request_t {
     pub gc: xcb_gcontext_t,
     pub shape: uint8_t,
     pub coordinate_mode: uint8_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_fill_poly_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_fill_poly_request_t {
-    fn default() -> Struct_xcb_fill_poly_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_fill_poly_request_t = Struct_xcb_fill_poly_request_t;
 #[repr(C)]
@@ -3503,10 +3740,11 @@ pub struct Struct_xcb_poly_fill_rectangle_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_fill_rectangle_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_fill_rectangle_request_t {
-    fn default() -> Struct_xcb_poly_fill_rectangle_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_fill_rectangle_request_t =
     Struct_xcb_poly_fill_rectangle_request_t;
@@ -3519,10 +3757,11 @@ pub struct Struct_xcb_poly_fill_arc_request_t {
     pub drawable: xcb_drawable_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_fill_arc_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_fill_arc_request_t {
-    fn default() -> Struct_xcb_poly_fill_arc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_fill_arc_request_t = Struct_xcb_poly_fill_arc_request_t;
 pub type Enum_xcb_image_format_t = ::libc::c_uint;
@@ -3544,12 +3783,13 @@ pub struct Struct_xcb_put_image_request_t {
     pub dst_y: int16_t,
     pub left_pad: uint8_t,
     pub depth: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_put_image_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_put_image_request_t {
-    fn default() -> Struct_xcb_put_image_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_put_image_request_t = Struct_xcb_put_image_request_t;
 #[repr(C)]
@@ -3557,10 +3797,11 @@ pub type xcb_put_image_request_t = Struct_xcb_put_image_request_t;
 pub struct Struct_xcb_get_image_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_image_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_image_cookie_t {
-    fn default() -> Struct_xcb_get_image_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_image_cookie_t = Struct_xcb_get_image_cookie_t;
 #[repr(C)]
@@ -3576,10 +3817,11 @@ pub struct Struct_xcb_get_image_request_t {
     pub height: uint16_t,
     pub plane_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_image_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_image_request_t {
-    fn default() -> Struct_xcb_get_image_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_image_request_t = Struct_xcb_get_image_request_t;
 #[repr(C)]
@@ -3590,12 +3832,13 @@ pub struct Struct_xcb_get_image_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub visual: xcb_visualid_t,
-    pub pad0: [uint8_t; 20u],
+    pub pad0: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_image_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_image_reply_t {
-    fn default() -> Struct_xcb_get_image_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_image_reply_t = Struct_xcb_get_image_reply_t;
 #[repr(C)]
@@ -3609,10 +3852,11 @@ pub struct Struct_xcb_poly_text_8_request_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_text_8_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_text_8_request_t {
-    fn default() -> Struct_xcb_poly_text_8_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_text_8_request_t = Struct_xcb_poly_text_8_request_t;
 #[repr(C)]
@@ -3626,10 +3870,11 @@ pub struct Struct_xcb_poly_text_16_request_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_poly_text_16_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_poly_text_16_request_t {
-    fn default() -> Struct_xcb_poly_text_16_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_poly_text_16_request_t = Struct_xcb_poly_text_16_request_t;
 #[repr(C)]
@@ -3643,10 +3888,11 @@ pub struct Struct_xcb_image_text_8_request_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_image_text_8_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_image_text_8_request_t {
-    fn default() -> Struct_xcb_image_text_8_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_image_text_8_request_t = Struct_xcb_image_text_8_request_t;
 #[repr(C)]
@@ -3660,10 +3906,11 @@ pub struct Struct_xcb_image_text_16_request_t {
     pub x: int16_t,
     pub y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_image_text_16_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_image_text_16_request_t {
-    fn default() -> Struct_xcb_image_text_16_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_image_text_16_request_t = Struct_xcb_image_text_16_request_t;
 pub type Enum_xcb_colormap_alloc_t = ::libc::c_uint;
@@ -3680,10 +3927,11 @@ pub struct Struct_xcb_create_colormap_request_t {
     pub window: xcb_window_t,
     pub visual: xcb_visualid_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_colormap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_colormap_request_t {
-    fn default() -> Struct_xcb_create_colormap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_colormap_request_t = Struct_xcb_create_colormap_request_t;
 #[repr(C)]
@@ -3694,10 +3942,11 @@ pub struct Struct_xcb_free_colormap_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_free_colormap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_free_colormap_request_t {
-    fn default() -> Struct_xcb_free_colormap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_free_colormap_request_t = Struct_xcb_free_colormap_request_t;
 #[repr(C)]
@@ -3709,10 +3958,11 @@ pub struct Struct_xcb_copy_colormap_and_free_request_t {
     pub mid: xcb_colormap_t,
     pub src_cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_copy_colormap_and_free_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_copy_colormap_and_free_request_t {
-    fn default() -> Struct_xcb_copy_colormap_and_free_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_copy_colormap_and_free_request_t =
     Struct_xcb_copy_colormap_and_free_request_t;
@@ -3724,10 +3974,11 @@ pub struct Struct_xcb_install_colormap_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_install_colormap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_install_colormap_request_t {
-    fn default() -> Struct_xcb_install_colormap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_install_colormap_request_t =
     Struct_xcb_install_colormap_request_t;
@@ -3739,10 +3990,11 @@ pub struct Struct_xcb_uninstall_colormap_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_uninstall_colormap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_uninstall_colormap_request_t {
-    fn default() -> Struct_xcb_uninstall_colormap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_uninstall_colormap_request_t =
     Struct_xcb_uninstall_colormap_request_t;
@@ -3751,11 +4003,12 @@ pub type xcb_uninstall_colormap_request_t =
 pub struct Struct_xcb_list_installed_colormaps_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_installed_colormaps_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_installed_colormaps_cookie_t
  {
-    fn default() -> Struct_xcb_list_installed_colormaps_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_installed_colormaps_cookie_t =
     Struct_xcb_list_installed_colormaps_cookie_t;
@@ -3767,11 +4020,12 @@ pub struct Struct_xcb_list_installed_colormaps_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_installed_colormaps_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_installed_colormaps_request_t
  {
-    fn default() -> Struct_xcb_list_installed_colormaps_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_installed_colormaps_request_t =
     Struct_xcb_list_installed_colormaps_request_t;
@@ -3783,12 +4037,13 @@ pub struct Struct_xcb_list_installed_colormaps_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub cmaps_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_list_installed_colormaps_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_list_installed_colormaps_reply_t {
-    fn default() -> Struct_xcb_list_installed_colormaps_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_installed_colormaps_reply_t =
     Struct_xcb_list_installed_colormaps_reply_t;
@@ -3797,10 +4052,11 @@ pub type xcb_list_installed_colormaps_reply_t =
 pub struct Struct_xcb_alloc_color_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_cookie_t {
-    fn default() -> Struct_xcb_alloc_color_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_cookie_t = Struct_xcb_alloc_color_cookie_t;
 #[repr(C)]
@@ -3813,12 +4069,13 @@ pub struct Struct_xcb_alloc_color_request_t {
     pub red: uint16_t,
     pub green: uint16_t,
     pub blue: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_alloc_color_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_alloc_color_request_t {
-    fn default() -> Struct_xcb_alloc_color_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_request_t = Struct_xcb_alloc_color_request_t;
 #[repr(C)]
@@ -3831,13 +4088,14 @@ pub struct Struct_xcb_alloc_color_reply_t {
     pub red: uint16_t,
     pub green: uint16_t,
     pub blue: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
     pub pixel: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_reply_t {
-    fn default() -> Struct_xcb_alloc_color_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_reply_t = Struct_xcb_alloc_color_reply_t;
 #[repr(C)]
@@ -3845,10 +4103,11 @@ pub type xcb_alloc_color_reply_t = Struct_xcb_alloc_color_reply_t;
 pub struct Struct_xcb_alloc_named_color_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_named_color_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_named_color_cookie_t {
-    fn default() -> Struct_xcb_alloc_named_color_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_named_color_cookie_t =
     Struct_xcb_alloc_named_color_cookie_t;
@@ -3860,12 +4119,13 @@ pub struct Struct_xcb_alloc_named_color_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
     pub name_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_alloc_named_color_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_alloc_named_color_request_t {
-    fn default() -> Struct_xcb_alloc_named_color_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_named_color_request_t =
     Struct_xcb_alloc_named_color_request_t;
@@ -3884,10 +4144,11 @@ pub struct Struct_xcb_alloc_named_color_reply_t {
     pub visual_green: uint16_t,
     pub visual_blue: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_named_color_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_named_color_reply_t {
-    fn default() -> Struct_xcb_alloc_named_color_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_named_color_reply_t = Struct_xcb_alloc_named_color_reply_t;
 #[repr(C)]
@@ -3895,10 +4156,11 @@ pub type xcb_alloc_named_color_reply_t = Struct_xcb_alloc_named_color_reply_t;
 pub struct Struct_xcb_alloc_color_cells_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_cells_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_cells_cookie_t {
-    fn default() -> Struct_xcb_alloc_color_cells_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_cells_cookie_t =
     Struct_xcb_alloc_color_cells_cookie_t;
@@ -3912,10 +4174,11 @@ pub struct Struct_xcb_alloc_color_cells_request_t {
     pub colors: uint16_t,
     pub planes: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_cells_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_cells_request_t {
-    fn default() -> Struct_xcb_alloc_color_cells_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_cells_request_t =
     Struct_xcb_alloc_color_cells_request_t;
@@ -3928,12 +4191,13 @@ pub struct Struct_xcb_alloc_color_cells_reply_t {
     pub length: uint32_t,
     pub pixels_len: uint16_t,
     pub masks_len: uint16_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_alloc_color_cells_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_alloc_color_cells_reply_t {
-    fn default() -> Struct_xcb_alloc_color_cells_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_cells_reply_t = Struct_xcb_alloc_color_cells_reply_t;
 #[repr(C)]
@@ -3941,10 +4205,11 @@ pub type xcb_alloc_color_cells_reply_t = Struct_xcb_alloc_color_cells_reply_t;
 pub struct Struct_xcb_alloc_color_planes_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_planes_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_planes_cookie_t {
-    fn default() -> Struct_xcb_alloc_color_planes_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_planes_cookie_t =
     Struct_xcb_alloc_color_planes_cookie_t;
@@ -3960,10 +4225,11 @@ pub struct Struct_xcb_alloc_color_planes_request_t {
     pub greens: uint16_t,
     pub blues: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_alloc_color_planes_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_alloc_color_planes_request_t {
-    fn default() -> Struct_xcb_alloc_color_planes_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_planes_request_t =
     Struct_xcb_alloc_color_planes_request_t;
@@ -3975,16 +4241,17 @@ pub struct Struct_xcb_alloc_color_planes_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub pixels_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
     pub red_mask: uint32_t,
     pub green_mask: uint32_t,
     pub blue_mask: uint32_t,
-    pub pad2: [uint8_t; 8u],
+    pub pad2: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_alloc_color_planes_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_alloc_color_planes_reply_t {
-    fn default() -> Struct_xcb_alloc_color_planes_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_alloc_color_planes_reply_t =
     Struct_xcb_alloc_color_planes_reply_t;
@@ -3997,10 +4264,11 @@ pub struct Struct_xcb_free_colors_request_t {
     pub cmap: xcb_colormap_t,
     pub plane_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_free_colors_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_free_colors_request_t {
-    fn default() -> Struct_xcb_free_colors_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_free_colors_request_t = Struct_xcb_free_colors_request_t;
 pub type Enum_xcb_color_flag_t = ::libc::c_uint;
@@ -4018,8 +4286,11 @@ pub struct Struct_xcb_coloritem_t {
     pub flags: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_coloritem_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_coloritem_t {
-    fn default() -> Struct_xcb_coloritem_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_coloritem_t = Struct_xcb_coloritem_t;
 #[repr(C)]
@@ -4029,10 +4300,11 @@ pub struct Struct_xcb_coloritem_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_coloritem_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_coloritem_iterator_t {
-    fn default() -> Struct_xcb_coloritem_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_coloritem_iterator_t = Struct_xcb_coloritem_iterator_t;
 #[repr(C)]
@@ -4043,10 +4315,11 @@ pub struct Struct_xcb_store_colors_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_store_colors_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_store_colors_request_t {
-    fn default() -> Struct_xcb_store_colors_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_store_colors_request_t = Struct_xcb_store_colors_request_t;
 #[repr(C)]
@@ -4058,12 +4331,13 @@ pub struct Struct_xcb_store_named_color_request_t {
     pub cmap: xcb_colormap_t,
     pub pixel: uint32_t,
     pub name_len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_store_named_color_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_store_named_color_request_t {
-    fn default() -> Struct_xcb_store_named_color_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_store_named_color_request_t =
     Struct_xcb_store_named_color_request_t;
@@ -4073,10 +4347,13 @@ pub struct Struct_xcb_rgb_t {
     pub red: uint16_t,
     pub green: uint16_t,
     pub blue: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_rgb_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_rgb_t {
-    fn default() -> Struct_xcb_rgb_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_rgb_t = Struct_xcb_rgb_t;
 #[repr(C)]
@@ -4086,10 +4363,11 @@ pub struct Struct_xcb_rgb_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_rgb_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_rgb_iterator_t {
-    fn default() -> Struct_xcb_rgb_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_rgb_iterator_t = Struct_xcb_rgb_iterator_t;
 #[repr(C)]
@@ -4097,10 +4375,11 @@ pub type xcb_rgb_iterator_t = Struct_xcb_rgb_iterator_t;
 pub struct Struct_xcb_query_colors_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_colors_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_colors_cookie_t {
-    fn default() -> Struct_xcb_query_colors_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_colors_cookie_t = Struct_xcb_query_colors_cookie_t;
 #[repr(C)]
@@ -4111,10 +4390,11 @@ pub struct Struct_xcb_query_colors_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_colors_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_colors_request_t {
-    fn default() -> Struct_xcb_query_colors_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_colors_request_t = Struct_xcb_query_colors_request_t;
 #[repr(C)]
@@ -4125,12 +4405,13 @@ pub struct Struct_xcb_query_colors_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub colors_len: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_query_colors_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_query_colors_reply_t {
-    fn default() -> Struct_xcb_query_colors_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_colors_reply_t = Struct_xcb_query_colors_reply_t;
 #[repr(C)]
@@ -4138,10 +4419,11 @@ pub type xcb_query_colors_reply_t = Struct_xcb_query_colors_reply_t;
 pub struct Struct_xcb_lookup_color_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_lookup_color_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_lookup_color_cookie_t {
-    fn default() -> Struct_xcb_lookup_color_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_lookup_color_cookie_t = Struct_xcb_lookup_color_cookie_t;
 #[repr(C)]
@@ -4152,12 +4434,13 @@ pub struct Struct_xcb_lookup_color_request_t {
     pub length: uint16_t,
     pub cmap: xcb_colormap_t,
     pub name_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_lookup_color_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_lookup_color_request_t {
-    fn default() -> Struct_xcb_lookup_color_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_lookup_color_request_t = Struct_xcb_lookup_color_request_t;
 #[repr(C)]
@@ -4174,10 +4457,11 @@ pub struct Struct_xcb_lookup_color_reply_t {
     pub visual_green: uint16_t,
     pub visual_blue: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_lookup_color_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_lookup_color_reply_t {
-    fn default() -> Struct_xcb_lookup_color_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_lookup_color_reply_t = Struct_xcb_lookup_color_reply_t;
 pub type Enum_xcb_pixmap_enum_t = ::libc::c_uint;
@@ -4201,10 +4485,11 @@ pub struct Struct_xcb_create_cursor_request_t {
     pub x: uint16_t,
     pub y: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_cursor_request_t {
-    fn default() -> Struct_xcb_create_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_cursor_request_t = Struct_xcb_create_cursor_request_t;
 pub type Enum_xcb_font_enum_t = ::libc::c_uint;
@@ -4228,10 +4513,11 @@ pub struct Struct_xcb_create_glyph_cursor_request_t {
     pub back_green: uint16_t,
     pub back_blue: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_create_glyph_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_create_glyph_cursor_request_t {
-    fn default() -> Struct_xcb_create_glyph_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_create_glyph_cursor_request_t =
     Struct_xcb_create_glyph_cursor_request_t;
@@ -4243,10 +4529,11 @@ pub struct Struct_xcb_free_cursor_request_t {
     pub length: uint16_t,
     pub cursor: xcb_cursor_t,
 }
+impl ::std::clone::Clone for Struct_xcb_free_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_free_cursor_request_t {
-    fn default() -> Struct_xcb_free_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_free_cursor_request_t = Struct_xcb_free_cursor_request_t;
 #[repr(C)]
@@ -4263,10 +4550,11 @@ pub struct Struct_xcb_recolor_cursor_request_t {
     pub back_green: uint16_t,
     pub back_blue: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_recolor_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_recolor_cursor_request_t {
-    fn default() -> Struct_xcb_recolor_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_recolor_cursor_request_t = Struct_xcb_recolor_cursor_request_t;
 pub type Enum_xcb_query_shape_of_t = ::libc::c_uint;
@@ -4279,10 +4567,11 @@ pub type xcb_query_shape_of_t = Enum_xcb_query_shape_of_t;
 pub struct Struct_xcb_query_best_size_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_best_size_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_best_size_cookie_t {
-    fn default() -> Struct_xcb_query_best_size_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_best_size_cookie_t = Struct_xcb_query_best_size_cookie_t;
 #[repr(C)]
@@ -4295,10 +4584,11 @@ pub struct Struct_xcb_query_best_size_request_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_best_size_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_best_size_request_t {
-    fn default() -> Struct_xcb_query_best_size_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_best_size_request_t = Struct_xcb_query_best_size_request_t;
 #[repr(C)]
@@ -4311,10 +4601,11 @@ pub struct Struct_xcb_query_best_size_reply_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_best_size_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_best_size_reply_t {
-    fn default() -> Struct_xcb_query_best_size_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_best_size_reply_t = Struct_xcb_query_best_size_reply_t;
 #[repr(C)]
@@ -4322,10 +4613,11 @@ pub type xcb_query_best_size_reply_t = Struct_xcb_query_best_size_reply_t;
 pub struct Struct_xcb_query_extension_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_query_extension_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_extension_cookie_t {
-    fn default() -> Struct_xcb_query_extension_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_extension_cookie_t = Struct_xcb_query_extension_cookie_t;
 #[repr(C)]
@@ -4335,12 +4627,13 @@ pub struct Struct_xcb_query_extension_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
     pub name_len: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_query_extension_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_query_extension_request_t {
-    fn default() -> Struct_xcb_query_extension_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_extension_request_t = Struct_xcb_query_extension_request_t;
 #[repr(C)]
@@ -4355,10 +4648,11 @@ pub struct Struct_xcb_query_extension_reply_t {
     pub first_event: uint8_t,
     pub first_error: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_query_extension_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_query_extension_reply_t {
-    fn default() -> Struct_xcb_query_extension_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_query_extension_reply_t = Struct_xcb_query_extension_reply_t;
 #[repr(C)]
@@ -4366,10 +4660,11 @@ pub type xcb_query_extension_reply_t = Struct_xcb_query_extension_reply_t;
 pub struct Struct_xcb_list_extensions_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_extensions_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_extensions_cookie_t {
-    fn default() -> Struct_xcb_list_extensions_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_extensions_cookie_t = Struct_xcb_list_extensions_cookie_t;
 #[repr(C)]
@@ -4379,10 +4674,11 @@ pub struct Struct_xcb_list_extensions_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_extensions_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_extensions_request_t {
-    fn default() -> Struct_xcb_list_extensions_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_extensions_request_t = Struct_xcb_list_extensions_request_t;
 #[repr(C)]
@@ -4392,12 +4688,13 @@ pub struct Struct_xcb_list_extensions_reply_t {
     pub names_len: uint8_t,
     pub sequence: uint16_t,
     pub length: uint32_t,
-    pub pad0: [uint8_t; 24u],
+    pub pad0: [uint8_t; 24usize],
+}
+impl ::std::clone::Clone for Struct_xcb_list_extensions_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_list_extensions_reply_t {
-    fn default() -> Struct_xcb_list_extensions_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_extensions_reply_t = Struct_xcb_list_extensions_reply_t;
 #[repr(C)]
@@ -4408,13 +4705,14 @@ pub struct Struct_xcb_change_keyboard_mapping_request_t {
     pub length: uint16_t,
     pub first_keycode: xcb_keycode_t,
     pub keysyms_per_keycode: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_change_keyboard_mapping_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_change_keyboard_mapping_request_t
  {
-    fn default() -> Struct_xcb_change_keyboard_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_keyboard_mapping_request_t =
     Struct_xcb_change_keyboard_mapping_request_t;
@@ -4423,10 +4721,11 @@ pub type xcb_change_keyboard_mapping_request_t =
 pub struct Struct_xcb_get_keyboard_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_keyboard_mapping_cookie_t {
-    fn default() -> Struct_xcb_get_keyboard_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_mapping_cookie_t =
     Struct_xcb_get_keyboard_mapping_cookie_t;
@@ -4439,10 +4738,11 @@ pub struct Struct_xcb_get_keyboard_mapping_request_t {
     pub first_keycode: xcb_keycode_t,
     pub count: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_keyboard_mapping_request_t {
-    fn default() -> Struct_xcb_get_keyboard_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_mapping_request_t =
     Struct_xcb_get_keyboard_mapping_request_t;
@@ -4453,12 +4753,13 @@ pub struct Struct_xcb_get_keyboard_mapping_reply_t {
     pub keysyms_per_keycode: uint8_t,
     pub sequence: uint16_t,
     pub length: uint32_t,
-    pub pad0: [uint8_t; 24u],
+    pub pad0: [uint8_t; 24usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_keyboard_mapping_reply_t {
-    fn default() -> Struct_xcb_get_keyboard_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_mapping_reply_t =
     Struct_xcb_get_keyboard_mapping_reply_t;
@@ -4489,11 +4790,12 @@ pub struct Struct_xcb_change_keyboard_control_request_t {
     pub length: uint16_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_keyboard_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_keyboard_control_request_t
  {
-    fn default() -> Struct_xcb_change_keyboard_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_keyboard_control_request_t =
     Struct_xcb_change_keyboard_control_request_t;
@@ -4502,10 +4804,11 @@ pub type xcb_change_keyboard_control_request_t =
 pub struct Struct_xcb_get_keyboard_control_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_control_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_keyboard_control_cookie_t {
-    fn default() -> Struct_xcb_get_keyboard_control_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_control_cookie_t =
     Struct_xcb_get_keyboard_control_cookie_t;
@@ -4516,10 +4819,11 @@ pub struct Struct_xcb_get_keyboard_control_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_keyboard_control_request_t {
-    fn default() -> Struct_xcb_get_keyboard_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_control_request_t =
     Struct_xcb_get_keyboard_control_request_t;
@@ -4535,13 +4839,14 @@ pub struct Struct_xcb_get_keyboard_control_reply_t {
     pub bell_percent: uint8_t,
     pub bell_pitch: uint16_t,
     pub bell_duration: uint16_t,
-    pub pad0: [uint8_t; 2u],
-    pub auto_repeats: [uint8_t; 32u],
+    pub pad0: [uint8_t; 2usize],
+    pub auto_repeats: [uint8_t; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_keyboard_control_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_keyboard_control_reply_t {
-    fn default() -> Struct_xcb_get_keyboard_control_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_keyboard_control_reply_t =
     Struct_xcb_get_keyboard_control_reply_t;
@@ -4552,10 +4857,11 @@ pub struct Struct_xcb_bell_request_t {
     pub percent: int8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_bell_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_bell_request_t {
-    fn default() -> Struct_xcb_bell_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_bell_request_t = Struct_xcb_bell_request_t;
 #[repr(C)]
@@ -4570,10 +4876,11 @@ pub struct Struct_xcb_change_pointer_control_request_t {
     pub do_acceleration: uint8_t,
     pub do_threshold: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_pointer_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_pointer_control_request_t {
-    fn default() -> Struct_xcb_change_pointer_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_pointer_control_request_t =
     Struct_xcb_change_pointer_control_request_t;
@@ -4582,10 +4889,11 @@ pub type xcb_change_pointer_control_request_t =
 pub struct Struct_xcb_get_pointer_control_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_pointer_control_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_pointer_control_cookie_t {
-    fn default() -> Struct_xcb_get_pointer_control_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_control_cookie_t =
     Struct_xcb_get_pointer_control_cookie_t;
@@ -4596,10 +4904,11 @@ pub struct Struct_xcb_get_pointer_control_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_pointer_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_pointer_control_request_t {
-    fn default() -> Struct_xcb_get_pointer_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_control_request_t =
     Struct_xcb_get_pointer_control_request_t;
@@ -4613,12 +4922,13 @@ pub struct Struct_xcb_get_pointer_control_reply_t {
     pub acceleration_numerator: uint16_t,
     pub acceleration_denominator: uint16_t,
     pub threshold: uint16_t,
-    pub pad1: [uint8_t; 18u],
+    pub pad1: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_pointer_control_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_pointer_control_reply_t {
-    fn default() -> Struct_xcb_get_pointer_control_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_control_reply_t =
     Struct_xcb_get_pointer_control_reply_t;
@@ -4643,10 +4953,11 @@ pub struct Struct_xcb_set_screen_saver_request_t {
     pub prefer_blanking: uint8_t,
     pub allow_exposures: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_screen_saver_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_screen_saver_request_t {
-    fn default() -> Struct_xcb_set_screen_saver_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_screen_saver_request_t =
     Struct_xcb_set_screen_saver_request_t;
@@ -4655,10 +4966,11 @@ pub type xcb_set_screen_saver_request_t =
 pub struct Struct_xcb_get_screen_saver_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_screen_saver_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_screen_saver_cookie_t {
-    fn default() -> Struct_xcb_get_screen_saver_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_screen_saver_cookie_t = Struct_xcb_get_screen_saver_cookie_t;
 #[repr(C)]
@@ -4668,10 +4980,11 @@ pub struct Struct_xcb_get_screen_saver_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_screen_saver_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_screen_saver_request_t {
-    fn default() -> Struct_xcb_get_screen_saver_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_screen_saver_request_t =
     Struct_xcb_get_screen_saver_request_t;
@@ -4686,12 +4999,13 @@ pub struct Struct_xcb_get_screen_saver_reply_t {
     pub interval: uint16_t,
     pub prefer_blanking: uint8_t,
     pub allow_exposures: uint8_t,
-    pub pad1: [uint8_t; 18u],
+    pub pad1: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_screen_saver_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_screen_saver_reply_t {
-    fn default() -> Struct_xcb_get_screen_saver_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_screen_saver_reply_t = Struct_xcb_get_screen_saver_reply_t;
 pub type Enum_xcb_host_mode_t = ::libc::c_uint;
@@ -4715,10 +5029,11 @@ pub struct Struct_xcb_change_hosts_request_t {
     pub pad0: uint8_t,
     pub address_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_change_hosts_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_change_hosts_request_t {
-    fn default() -> Struct_xcb_change_hosts_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_change_hosts_request_t = Struct_xcb_change_hosts_request_t;
 #[repr(C)]
@@ -4728,8 +5043,11 @@ pub struct Struct_xcb_host_t {
     pub pad0: uint8_t,
     pub address_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_host_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_host_t {
-    fn default() -> Struct_xcb_host_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_host_t = Struct_xcb_host_t;
 #[repr(C)]
@@ -4739,10 +5057,11 @@ pub struct Struct_xcb_host_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_host_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_host_iterator_t {
-    fn default() -> Struct_xcb_host_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_host_iterator_t = Struct_xcb_host_iterator_t;
 #[repr(C)]
@@ -4750,10 +5069,11 @@ pub type xcb_host_iterator_t = Struct_xcb_host_iterator_t;
 pub struct Struct_xcb_list_hosts_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_list_hosts_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_hosts_cookie_t {
-    fn default() -> Struct_xcb_list_hosts_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_hosts_cookie_t = Struct_xcb_list_hosts_cookie_t;
 #[repr(C)]
@@ -4763,10 +5083,11 @@ pub struct Struct_xcb_list_hosts_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_list_hosts_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_list_hosts_request_t {
-    fn default() -> Struct_xcb_list_hosts_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_hosts_request_t = Struct_xcb_list_hosts_request_t;
 #[repr(C)]
@@ -4777,12 +5098,13 @@ pub struct Struct_xcb_list_hosts_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub hosts_len: uint16_t,
-    pub pad0: [uint8_t; 22u],
+    pub pad0: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_list_hosts_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_list_hosts_reply_t {
-    fn default() -> Struct_xcb_list_hosts_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_list_hosts_reply_t = Struct_xcb_list_hosts_reply_t;
 pub type Enum_xcb_access_control_t = ::libc::c_uint;
@@ -4796,10 +5118,11 @@ pub struct Struct_xcb_set_access_control_request_t {
     pub mode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_access_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_access_control_request_t {
-    fn default() -> Struct_xcb_set_access_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_access_control_request_t =
     Struct_xcb_set_access_control_request_t;
@@ -4815,10 +5138,11 @@ pub struct Struct_xcb_set_close_down_mode_request_t {
     pub mode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_close_down_mode_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_close_down_mode_request_t {
-    fn default() -> Struct_xcb_set_close_down_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_close_down_mode_request_t =
     Struct_xcb_set_close_down_mode_request_t;
@@ -4833,10 +5157,11 @@ pub struct Struct_xcb_kill_client_request_t {
     pub length: uint16_t,
     pub resource: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_kill_client_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_kill_client_request_t {
-    fn default() -> Struct_xcb_kill_client_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_kill_client_request_t = Struct_xcb_kill_client_request_t;
 #[repr(C)]
@@ -4849,10 +5174,11 @@ pub struct Struct_xcb_rotate_properties_request_t {
     pub atoms_len: uint16_t,
     pub delta: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_rotate_properties_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_rotate_properties_request_t {
-    fn default() -> Struct_xcb_rotate_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_rotate_properties_request_t =
     Struct_xcb_rotate_properties_request_t;
@@ -4867,10 +5193,11 @@ pub struct Struct_xcb_force_screen_saver_request_t {
     pub mode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_force_screen_saver_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_force_screen_saver_request_t {
-    fn default() -> Struct_xcb_force_screen_saver_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_force_screen_saver_request_t =
     Struct_xcb_force_screen_saver_request_t;
@@ -4884,10 +5211,11 @@ pub type xcb_mapping_status_t = Enum_xcb_mapping_status_t;
 pub struct Struct_xcb_set_pointer_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_set_pointer_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_pointer_mapping_cookie_t {
-    fn default() -> Struct_xcb_set_pointer_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_pointer_mapping_cookie_t =
     Struct_xcb_set_pointer_mapping_cookie_t;
@@ -4898,10 +5226,11 @@ pub struct Struct_xcb_set_pointer_mapping_request_t {
     pub map_len: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_pointer_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_pointer_mapping_request_t {
-    fn default() -> Struct_xcb_set_pointer_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_pointer_mapping_request_t =
     Struct_xcb_set_pointer_mapping_request_t;
@@ -4913,10 +5242,11 @@ pub struct Struct_xcb_set_pointer_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_pointer_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_pointer_mapping_reply_t {
-    fn default() -> Struct_xcb_set_pointer_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_pointer_mapping_reply_t =
     Struct_xcb_set_pointer_mapping_reply_t;
@@ -4925,10 +5255,11 @@ pub type xcb_set_pointer_mapping_reply_t =
 pub struct Struct_xcb_get_pointer_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_pointer_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_pointer_mapping_cookie_t {
-    fn default() -> Struct_xcb_get_pointer_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_mapping_cookie_t =
     Struct_xcb_get_pointer_mapping_cookie_t;
@@ -4939,10 +5270,11 @@ pub struct Struct_xcb_get_pointer_mapping_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_pointer_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_pointer_mapping_request_t {
-    fn default() -> Struct_xcb_get_pointer_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_mapping_request_t =
     Struct_xcb_get_pointer_mapping_request_t;
@@ -4953,12 +5285,13 @@ pub struct Struct_xcb_get_pointer_mapping_reply_t {
     pub map_len: uint8_t,
     pub sequence: uint16_t,
     pub length: uint32_t,
-    pub pad0: [uint8_t; 24u],
+    pub pad0: [uint8_t; 24usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_pointer_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_pointer_mapping_reply_t {
-    fn default() -> Struct_xcb_get_pointer_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_pointer_mapping_reply_t =
     Struct_xcb_get_pointer_mapping_reply_t;
@@ -4977,10 +5310,11 @@ pub type xcb_map_index_t = Enum_xcb_map_index_t;
 pub struct Struct_xcb_set_modifier_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_set_modifier_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_modifier_mapping_cookie_t {
-    fn default() -> Struct_xcb_set_modifier_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_modifier_mapping_cookie_t =
     Struct_xcb_set_modifier_mapping_cookie_t;
@@ -4991,10 +5325,11 @@ pub struct Struct_xcb_set_modifier_mapping_request_t {
     pub keycodes_per_modifier: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_modifier_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_modifier_mapping_request_t {
-    fn default() -> Struct_xcb_set_modifier_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_modifier_mapping_request_t =
     Struct_xcb_set_modifier_mapping_request_t;
@@ -5006,10 +5341,11 @@ pub struct Struct_xcb_set_modifier_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_set_modifier_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_set_modifier_mapping_reply_t {
-    fn default() -> Struct_xcb_set_modifier_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_set_modifier_mapping_reply_t =
     Struct_xcb_set_modifier_mapping_reply_t;
@@ -5018,10 +5354,11 @@ pub type xcb_set_modifier_mapping_reply_t =
 pub struct Struct_xcb_get_modifier_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_get_modifier_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_modifier_mapping_cookie_t {
-    fn default() -> Struct_xcb_get_modifier_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_modifier_mapping_cookie_t =
     Struct_xcb_get_modifier_mapping_cookie_t;
@@ -5032,10 +5369,11 @@ pub struct Struct_xcb_get_modifier_mapping_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_get_modifier_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_get_modifier_mapping_request_t {
-    fn default() -> Struct_xcb_get_modifier_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_modifier_mapping_request_t =
     Struct_xcb_get_modifier_mapping_request_t;
@@ -5046,12 +5384,13 @@ pub struct Struct_xcb_get_modifier_mapping_reply_t {
     pub keycodes_per_modifier: uint8_t,
     pub sequence: uint16_t,
     pub length: uint32_t,
-    pub pad0: [uint8_t; 24u],
+    pub pad0: [uint8_t; 24usize],
+}
+impl ::std::clone::Clone for Struct_xcb_get_modifier_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_get_modifier_mapping_reply_t {
-    fn default() -> Struct_xcb_get_modifier_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_get_modifier_mapping_reply_t =
     Struct_xcb_get_modifier_mapping_reply_t;
@@ -5062,10 +5401,11 @@ pub struct Struct_xcb_no_operation_request_t {
     pub pad0: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_no_operation_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_no_operation_request_t {
-    fn default() -> Struct_xcb_no_operation_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_no_operation_request_t = Struct_xcb_no_operation_request_t;
 #[repr(C)]
@@ -5076,8 +5416,11 @@ pub struct Struct_xcb_auth_info_t {
     pub datalen: ::libc::c_int,
     pub data: *mut ::libc::c_char,
 }
+impl ::std::clone::Clone for Struct_xcb_auth_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_auth_info_t {
-    fn default() -> Struct_xcb_auth_info_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_auth_info_t = Struct_xcb_auth_info_t;
 pub enum Struct_xcb_special_event { }
@@ -5089,8 +5432,11 @@ pub struct Struct_xcb_extension_t {
     pub name: *const ::libc::c_char,
     pub global_id: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_extension_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_extension_t {
-    fn default() -> Struct_xcb_extension_t { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5100,8 +5446,11 @@ pub struct Struct_Unnamed7 {
     pub opcode: uint8_t,
     pub isvoid: uint8_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed7 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed7 {
-    fn default() -> Struct_Unnamed7 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_protocol_request_t = Struct_Unnamed7;
 pub type Enum_xcb_send_request_flags_t = ::libc::c_uint;
@@ -5216,10 +5565,11 @@ pub struct Struct_xcb_render_glyph_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyph_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyph_iterator_t {
-    fn default() -> Struct_xcb_render_glyph_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyph_iterator_t = Struct_xcb_render_glyph_iterator_t;
 pub type xcb_render_glyphset_t = uint32_t;
@@ -5230,10 +5580,11 @@ pub struct Struct_xcb_render_glyphset_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyphset_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyphset_iterator_t {
-    fn default() -> Struct_xcb_render_glyphset_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyphset_iterator_t =
     Struct_xcb_render_glyphset_iterator_t;
@@ -5245,10 +5596,11 @@ pub struct Struct_xcb_render_picture_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_picture_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_picture_iterator_t {
-    fn default() -> Struct_xcb_render_picture_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_picture_iterator_t = Struct_xcb_render_picture_iterator_t;
 pub type xcb_render_pictformat_t = uint32_t;
@@ -5259,10 +5611,11 @@ pub struct Struct_xcb_render_pictformat_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictformat_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictformat_iterator_t {
-    fn default() -> Struct_xcb_render_pictformat_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictformat_iterator_t =
     Struct_xcb_render_pictformat_iterator_t;
@@ -5274,10 +5627,11 @@ pub struct Struct_xcb_render_fixed_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_fixed_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_fixed_iterator_t {
-    fn default() -> Struct_xcb_render_fixed_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_fixed_iterator_t = Struct_xcb_render_fixed_iterator_t;
 #[repr(C)]
@@ -5287,10 +5641,11 @@ pub struct Struct_xcb_render_pict_format_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pict_format_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pict_format_error_t {
-    fn default() -> Struct_xcb_render_pict_format_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pict_format_error_t =
     Struct_xcb_render_pict_format_error_t;
@@ -5301,10 +5656,11 @@ pub struct Struct_xcb_render_picture_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_picture_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_picture_error_t {
-    fn default() -> Struct_xcb_render_picture_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_picture_error_t = Struct_xcb_render_picture_error_t;
 #[repr(C)]
@@ -5314,10 +5670,11 @@ pub struct Struct_xcb_render_pict_op_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pict_op_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pict_op_error_t {
-    fn default() -> Struct_xcb_render_pict_op_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pict_op_error_t = Struct_xcb_render_pict_op_error_t;
 #[repr(C)]
@@ -5327,10 +5684,11 @@ pub struct Struct_xcb_render_glyph_set_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyph_set_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyph_set_error_t {
-    fn default() -> Struct_xcb_render_glyph_set_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyph_set_error_t = Struct_xcb_render_glyph_set_error_t;
 #[repr(C)]
@@ -5340,10 +5698,11 @@ pub struct Struct_xcb_render_glyph_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyph_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyph_error_t {
-    fn default() -> Struct_xcb_render_glyph_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyph_error_t = Struct_xcb_render_glyph_error_t;
 #[repr(C)]
@@ -5358,10 +5717,11 @@ pub struct Struct_xcb_render_directformat_t {
     pub alpha_shift: uint16_t,
     pub alpha_mask: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_directformat_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_directformat_t {
-    fn default() -> Struct_xcb_render_directformat_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_directformat_t = Struct_xcb_render_directformat_t;
 #[repr(C)]
@@ -5371,10 +5731,11 @@ pub struct Struct_xcb_render_directformat_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_directformat_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_directformat_iterator_t {
-    fn default() -> Struct_xcb_render_directformat_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_directformat_iterator_t =
     Struct_xcb_render_directformat_iterator_t;
@@ -5384,14 +5745,15 @@ pub struct Struct_xcb_render_pictforminfo_t {
     pub id: xcb_render_pictformat_t,
     pub _type: uint8_t,
     pub depth: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub direct: xcb_render_directformat_t,
     pub colormap: xcb_colormap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictforminfo_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictforminfo_t {
-    fn default() -> Struct_xcb_render_pictforminfo_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictforminfo_t = Struct_xcb_render_pictforminfo_t;
 #[repr(C)]
@@ -5401,10 +5763,11 @@ pub struct Struct_xcb_render_pictforminfo_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictforminfo_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictforminfo_iterator_t {
-    fn default() -> Struct_xcb_render_pictforminfo_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictforminfo_iterator_t =
     Struct_xcb_render_pictforminfo_iterator_t;
@@ -5414,10 +5777,11 @@ pub struct Struct_xcb_render_pictvisual_t {
     pub visual: xcb_visualid_t,
     pub format: xcb_render_pictformat_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictvisual_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictvisual_t {
-    fn default() -> Struct_xcb_render_pictvisual_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictvisual_t = Struct_xcb_render_pictvisual_t;
 #[repr(C)]
@@ -5427,10 +5791,11 @@ pub struct Struct_xcb_render_pictvisual_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictvisual_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictvisual_iterator_t {
-    fn default() -> Struct_xcb_render_pictvisual_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictvisual_iterator_t =
     Struct_xcb_render_pictvisual_iterator_t;
@@ -5440,12 +5805,13 @@ pub struct Struct_xcb_render_pictdepth_t {
     pub depth: uint8_t,
     pub pad0: uint8_t,
     pub num_visuals: uint16_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_pictdepth_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_render_pictdepth_t {
-    fn default() -> Struct_xcb_render_pictdepth_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictdepth_t = Struct_xcb_render_pictdepth_t;
 #[repr(C)]
@@ -5455,10 +5821,11 @@ pub struct Struct_xcb_render_pictdepth_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictdepth_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictdepth_iterator_t {
-    fn default() -> Struct_xcb_render_pictdepth_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictdepth_iterator_t =
     Struct_xcb_render_pictdepth_iterator_t;
@@ -5468,10 +5835,11 @@ pub struct Struct_xcb_render_pictscreen_t {
     pub num_depths: uint32_t,
     pub fallback: xcb_render_pictformat_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictscreen_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictscreen_t {
-    fn default() -> Struct_xcb_render_pictscreen_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictscreen_t = Struct_xcb_render_pictscreen_t;
 #[repr(C)]
@@ -5481,10 +5849,11 @@ pub struct Struct_xcb_render_pictscreen_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pictscreen_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pictscreen_iterator_t {
-    fn default() -> Struct_xcb_render_pictscreen_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pictscreen_iterator_t =
     Struct_xcb_render_pictscreen_iterator_t;
@@ -5497,10 +5866,11 @@ pub struct Struct_xcb_render_indexvalue_t {
     pub blue: uint16_t,
     pub alpha: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_indexvalue_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_indexvalue_t {
-    fn default() -> Struct_xcb_render_indexvalue_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_indexvalue_t = Struct_xcb_render_indexvalue_t;
 #[repr(C)]
@@ -5510,10 +5880,11 @@ pub struct Struct_xcb_render_indexvalue_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_indexvalue_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_indexvalue_iterator_t {
-    fn default() -> Struct_xcb_render_indexvalue_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_indexvalue_iterator_t =
     Struct_xcb_render_indexvalue_iterator_t;
@@ -5525,10 +5896,11 @@ pub struct Struct_xcb_render_color_t {
     pub blue: uint16_t,
     pub alpha: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_color_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_color_t {
-    fn default() -> Struct_xcb_render_color_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_color_t = Struct_xcb_render_color_t;
 #[repr(C)]
@@ -5538,10 +5910,11 @@ pub struct Struct_xcb_render_color_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_color_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_color_iterator_t {
-    fn default() -> Struct_xcb_render_color_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_color_iterator_t = Struct_xcb_render_color_iterator_t;
 #[repr(C)]
@@ -5550,10 +5923,11 @@ pub struct Struct_xcb_render_pointfix_t {
     pub x: xcb_render_fixed_t,
     pub y: xcb_render_fixed_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pointfix_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pointfix_t {
-    fn default() -> Struct_xcb_render_pointfix_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pointfix_t = Struct_xcb_render_pointfix_t;
 #[repr(C)]
@@ -5563,10 +5937,11 @@ pub struct Struct_xcb_render_pointfix_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_pointfix_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_pointfix_iterator_t {
-    fn default() -> Struct_xcb_render_pointfix_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_pointfix_iterator_t =
     Struct_xcb_render_pointfix_iterator_t;
@@ -5576,10 +5951,11 @@ pub struct Struct_xcb_render_linefix_t {
     pub p1: xcb_render_pointfix_t,
     pub p2: xcb_render_pointfix_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_linefix_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_linefix_t {
-    fn default() -> Struct_xcb_render_linefix_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_linefix_t = Struct_xcb_render_linefix_t;
 #[repr(C)]
@@ -5589,10 +5965,11 @@ pub struct Struct_xcb_render_linefix_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_linefix_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_linefix_iterator_t {
-    fn default() -> Struct_xcb_render_linefix_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_linefix_iterator_t = Struct_xcb_render_linefix_iterator_t;
 #[repr(C)]
@@ -5602,10 +5979,11 @@ pub struct Struct_xcb_render_triangle_t {
     pub p2: xcb_render_pointfix_t,
     pub p3: xcb_render_pointfix_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_triangle_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_triangle_t {
-    fn default() -> Struct_xcb_render_triangle_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_triangle_t = Struct_xcb_render_triangle_t;
 #[repr(C)]
@@ -5615,10 +5993,11 @@ pub struct Struct_xcb_render_triangle_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_triangle_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_triangle_iterator_t {
-    fn default() -> Struct_xcb_render_triangle_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_triangle_iterator_t =
     Struct_xcb_render_triangle_iterator_t;
@@ -5630,10 +6009,11 @@ pub struct Struct_xcb_render_trapezoid_t {
     pub left: xcb_render_linefix_t,
     pub right: xcb_render_linefix_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_trapezoid_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_trapezoid_t {
-    fn default() -> Struct_xcb_render_trapezoid_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_trapezoid_t = Struct_xcb_render_trapezoid_t;
 #[repr(C)]
@@ -5643,10 +6023,11 @@ pub struct Struct_xcb_render_trapezoid_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_trapezoid_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_trapezoid_iterator_t {
-    fn default() -> Struct_xcb_render_trapezoid_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_trapezoid_iterator_t =
     Struct_xcb_render_trapezoid_iterator_t;
@@ -5660,10 +6041,11 @@ pub struct Struct_xcb_render_glyphinfo_t {
     pub x_off: int16_t,
     pub y_off: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyphinfo_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyphinfo_t {
-    fn default() -> Struct_xcb_render_glyphinfo_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyphinfo_t = Struct_xcb_render_glyphinfo_t;
 #[repr(C)]
@@ -5673,10 +6055,11 @@ pub struct Struct_xcb_render_glyphinfo_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_glyphinfo_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_glyphinfo_iterator_t {
-    fn default() -> Struct_xcb_render_glyphinfo_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_glyphinfo_iterator_t =
     Struct_xcb_render_glyphinfo_iterator_t;
@@ -5685,10 +6068,11 @@ pub type xcb_render_glyphinfo_iterator_t =
 pub struct Struct_xcb_render_query_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_query_version_cookie_t {
-    fn default() -> Struct_xcb_render_query_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_version_cookie_t =
     Struct_xcb_render_query_version_cookie_t;
@@ -5701,10 +6085,11 @@ pub struct Struct_xcb_render_query_version_request_t {
     pub client_major_version: uint32_t,
     pub client_minor_version: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_version_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_query_version_request_t {
-    fn default() -> Struct_xcb_render_query_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_version_request_t =
     Struct_xcb_render_query_version_request_t;
@@ -5717,12 +6102,13 @@ pub struct Struct_xcb_render_query_version_reply_t {
     pub length: uint32_t,
     pub major_version: uint32_t,
     pub minor_version: uint32_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_query_version_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_render_query_version_reply_t {
-    fn default() -> Struct_xcb_render_query_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_version_reply_t =
     Struct_xcb_render_query_version_reply_t;
@@ -5731,11 +6117,12 @@ pub type xcb_render_query_version_reply_t =
 pub struct Struct_xcb_render_query_pict_formats_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_pict_formats_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_query_pict_formats_cookie_t
  {
-    fn default() -> Struct_xcb_render_query_pict_formats_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_formats_cookie_t =
     Struct_xcb_render_query_pict_formats_cookie_t;
@@ -5746,11 +6133,12 @@ pub struct Struct_xcb_render_query_pict_formats_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_pict_formats_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_query_pict_formats_request_t {
-    fn default() -> Struct_xcb_render_query_pict_formats_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_formats_request_t =
     Struct_xcb_render_query_pict_formats_request_t;
@@ -5766,13 +6154,14 @@ pub struct Struct_xcb_render_query_pict_formats_reply_t {
     pub num_depths: uint32_t,
     pub num_visuals: uint32_t,
     pub num_subpixel: uint32_t,
-    pub pad1: [uint8_t; 4u],
+    pub pad1: [uint8_t; 4usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_query_pict_formats_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_render_query_pict_formats_reply_t
  {
-    fn default() -> Struct_xcb_render_query_pict_formats_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_formats_reply_t =
     Struct_xcb_render_query_pict_formats_reply_t;
@@ -5781,11 +6170,13 @@ pub type xcb_render_query_pict_formats_reply_t =
 pub struct Struct_xcb_render_query_pict_index_values_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_query_pict_index_values_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_query_pict_index_values_cookie_t {
-    fn default() -> Struct_xcb_render_query_pict_index_values_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_index_values_cookie_t =
     Struct_xcb_render_query_pict_index_values_cookie_t;
@@ -5797,11 +6188,13 @@ pub struct Struct_xcb_render_query_pict_index_values_request_t {
     pub length: uint16_t,
     pub format: xcb_render_pictformat_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_query_pict_index_values_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_query_pict_index_values_request_t {
-    fn default() -> Struct_xcb_render_query_pict_index_values_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_index_values_request_t =
     Struct_xcb_render_query_pict_index_values_request_t;
@@ -5813,13 +6206,15 @@ pub struct Struct_xcb_render_query_pict_index_values_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_values: uint32_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_query_pict_index_values_reply_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_render_query_pict_index_values_reply_t {
-    fn default() -> Struct_xcb_render_query_pict_index_values_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_pict_index_values_reply_t =
     Struct_xcb_render_query_pict_index_values_reply_t;
@@ -5834,10 +6229,11 @@ pub struct Struct_xcb_render_create_picture_request_t {
     pub format: xcb_render_pictformat_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_create_picture_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_create_picture_request_t {
-    fn default() -> Struct_xcb_render_create_picture_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_picture_request_t =
     Struct_xcb_render_create_picture_request_t;
@@ -5850,10 +6246,11 @@ pub struct Struct_xcb_render_change_picture_request_t {
     pub picture: xcb_render_picture_t,
     pub value_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_change_picture_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_change_picture_request_t {
-    fn default() -> Struct_xcb_render_change_picture_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_change_picture_request_t =
     Struct_xcb_render_change_picture_request_t;
@@ -5867,11 +6264,13 @@ pub struct Struct_xcb_render_set_picture_clip_rectangles_request_t {
     pub clip_x_origin: int16_t,
     pub clip_y_origin: int16_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_set_picture_clip_rectangles_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_set_picture_clip_rectangles_request_t {
-    fn default() -> Struct_xcb_render_set_picture_clip_rectangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_set_picture_clip_rectangles_request_t =
     Struct_xcb_render_set_picture_clip_rectangles_request_t;
@@ -5883,10 +6282,11 @@ pub struct Struct_xcb_render_free_picture_request_t {
     pub length: uint16_t,
     pub picture: xcb_render_picture_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_free_picture_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_free_picture_request_t {
-    fn default() -> Struct_xcb_render_free_picture_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_free_picture_request_t =
     Struct_xcb_render_free_picture_request_t;
@@ -5897,7 +6297,7 @@ pub struct Struct_xcb_render_composite_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub mask: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
@@ -5910,10 +6310,11 @@ pub struct Struct_xcb_render_composite_request_t {
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_composite_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_composite_request_t {
-    fn default() -> Struct_xcb_render_composite_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_composite_request_t =
     Struct_xcb_render_composite_request_t;
@@ -5924,17 +6325,18 @@ pub struct Struct_xcb_render_trapezoids_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_trapezoids_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_trapezoids_request_t {
-    fn default() -> Struct_xcb_render_trapezoids_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_trapezoids_request_t =
     Struct_xcb_render_trapezoids_request_t;
@@ -5945,17 +6347,18 @@ pub struct Struct_xcb_render_triangles_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_triangles_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_triangles_request_t {
-    fn default() -> Struct_xcb_render_triangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_triangles_request_t =
     Struct_xcb_render_triangles_request_t;
@@ -5966,17 +6369,18 @@ pub struct Struct_xcb_render_tri_strip_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_tri_strip_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_tri_strip_request_t {
-    fn default() -> Struct_xcb_render_tri_strip_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_tri_strip_request_t =
     Struct_xcb_render_tri_strip_request_t;
@@ -5987,17 +6391,18 @@ pub struct Struct_xcb_render_tri_fan_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_tri_fan_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_tri_fan_request_t {
-    fn default() -> Struct_xcb_render_tri_fan_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_tri_fan_request_t = Struct_xcb_render_tri_fan_request_t;
 #[repr(C)]
@@ -6009,11 +6414,12 @@ pub struct Struct_xcb_render_create_glyph_set_request_t {
     pub gsid: xcb_render_glyphset_t,
     pub format: xcb_render_pictformat_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_create_glyph_set_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_create_glyph_set_request_t
  {
-    fn default() -> Struct_xcb_render_create_glyph_set_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_glyph_set_request_t =
     Struct_xcb_render_create_glyph_set_request_t;
@@ -6026,11 +6432,12 @@ pub struct Struct_xcb_render_reference_glyph_set_request_t {
     pub gsid: xcb_render_glyphset_t,
     pub existing: xcb_render_glyphset_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_reference_glyph_set_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_reference_glyph_set_request_t {
-    fn default() -> Struct_xcb_render_reference_glyph_set_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_reference_glyph_set_request_t =
     Struct_xcb_render_reference_glyph_set_request_t;
@@ -6042,10 +6449,11 @@ pub struct Struct_xcb_render_free_glyph_set_request_t {
     pub length: uint16_t,
     pub glyphset: xcb_render_glyphset_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_free_glyph_set_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_free_glyph_set_request_t {
-    fn default() -> Struct_xcb_render_free_glyph_set_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_free_glyph_set_request_t =
     Struct_xcb_render_free_glyph_set_request_t;
@@ -6058,10 +6466,11 @@ pub struct Struct_xcb_render_add_glyphs_request_t {
     pub glyphset: xcb_render_glyphset_t,
     pub glyphs_len: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_add_glyphs_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_add_glyphs_request_t {
-    fn default() -> Struct_xcb_render_add_glyphs_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_add_glyphs_request_t =
     Struct_xcb_render_add_glyphs_request_t;
@@ -6073,10 +6482,11 @@ pub struct Struct_xcb_render_free_glyphs_request_t {
     pub length: uint16_t,
     pub glyphset: xcb_render_glyphset_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_free_glyphs_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_free_glyphs_request_t {
-    fn default() -> Struct_xcb_render_free_glyphs_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_free_glyphs_request_t =
     Struct_xcb_render_free_glyphs_request_t;
@@ -6087,7 +6497,7 @@ pub struct Struct_xcb_render_composite_glyphs_8_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
@@ -6095,11 +6505,12 @@ pub struct Struct_xcb_render_composite_glyphs_8_request_t {
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_composite_glyphs_8_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_composite_glyphs_8_request_t {
-    fn default() -> Struct_xcb_render_composite_glyphs_8_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_composite_glyphs_8_request_t =
     Struct_xcb_render_composite_glyphs_8_request_t;
@@ -6110,7 +6521,7 @@ pub struct Struct_xcb_render_composite_glyphs_16_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
@@ -6118,11 +6529,12 @@ pub struct Struct_xcb_render_composite_glyphs_16_request_t {
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_composite_glyphs_16_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_composite_glyphs_16_request_t {
-    fn default() -> Struct_xcb_render_composite_glyphs_16_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_composite_glyphs_16_request_t =
     Struct_xcb_render_composite_glyphs_16_request_t;
@@ -6133,7 +6545,7 @@ pub struct Struct_xcb_render_composite_glyphs_32_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub src: xcb_render_picture_t,
     pub dst: xcb_render_picture_t,
     pub mask_format: xcb_render_pictformat_t,
@@ -6141,11 +6553,12 @@ pub struct Struct_xcb_render_composite_glyphs_32_request_t {
     pub src_x: int16_t,
     pub src_y: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_composite_glyphs_32_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_composite_glyphs_32_request_t {
-    fn default() -> Struct_xcb_render_composite_glyphs_32_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_composite_glyphs_32_request_t =
     Struct_xcb_render_composite_glyphs_32_request_t;
@@ -6156,14 +6569,15 @@ pub struct Struct_xcb_render_fill_rectangles_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub op: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub dst: xcb_render_picture_t,
     pub color: xcb_render_color_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_fill_rectangles_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_fill_rectangles_request_t {
-    fn default() -> Struct_xcb_render_fill_rectangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_fill_rectangles_request_t =
     Struct_xcb_render_fill_rectangles_request_t;
@@ -6178,10 +6592,11 @@ pub struct Struct_xcb_render_create_cursor_request_t {
     pub x: uint16_t,
     pub y: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_create_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_create_cursor_request_t {
-    fn default() -> Struct_xcb_render_create_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_cursor_request_t =
     Struct_xcb_render_create_cursor_request_t;
@@ -6198,10 +6613,11 @@ pub struct Struct_xcb_render_transform_t {
     pub matrix32: xcb_render_fixed_t,
     pub matrix33: xcb_render_fixed_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_transform_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_transform_t {
-    fn default() -> Struct_xcb_render_transform_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_transform_t = Struct_xcb_render_transform_t;
 #[repr(C)]
@@ -6211,10 +6627,11 @@ pub struct Struct_xcb_render_transform_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_transform_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_transform_iterator_t {
-    fn default() -> Struct_xcb_render_transform_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_transform_iterator_t =
     Struct_xcb_render_transform_iterator_t;
@@ -6227,11 +6644,13 @@ pub struct Struct_xcb_render_set_picture_transform_request_t {
     pub picture: xcb_render_picture_t,
     pub transform: xcb_render_transform_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_set_picture_transform_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_set_picture_transform_request_t {
-    fn default() -> Struct_xcb_render_set_picture_transform_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_set_picture_transform_request_t =
     Struct_xcb_render_set_picture_transform_request_t;
@@ -6240,10 +6659,11 @@ pub type xcb_render_set_picture_transform_request_t =
 pub struct Struct_xcb_render_query_filters_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_filters_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_query_filters_cookie_t {
-    fn default() -> Struct_xcb_render_query_filters_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_filters_cookie_t =
     Struct_xcb_render_query_filters_cookie_t;
@@ -6255,10 +6675,11 @@ pub struct Struct_xcb_render_query_filters_request_t {
     pub length: uint16_t,
     pub drawable: xcb_drawable_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_query_filters_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_query_filters_request_t {
-    fn default() -> Struct_xcb_render_query_filters_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_filters_request_t =
     Struct_xcb_render_query_filters_request_t;
@@ -6271,12 +6692,13 @@ pub struct Struct_xcb_render_query_filters_reply_t {
     pub length: uint32_t,
     pub num_aliases: uint32_t,
     pub num_filters: uint32_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_query_filters_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_render_query_filters_reply_t {
-    fn default() -> Struct_xcb_render_query_filters_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_query_filters_reply_t =
     Struct_xcb_render_query_filters_reply_t;
@@ -6288,13 +6710,14 @@ pub struct Struct_xcb_render_set_picture_filter_request_t {
     pub length: uint16_t,
     pub picture: xcb_render_picture_t,
     pub filter_len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_render_set_picture_filter_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_render_set_picture_filter_request_t {
-    fn default() -> Struct_xcb_render_set_picture_filter_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_set_picture_filter_request_t =
     Struct_xcb_render_set_picture_filter_request_t;
@@ -6304,10 +6727,11 @@ pub struct Struct_xcb_render_animcursorelt_t {
     pub cursor: xcb_cursor_t,
     pub delay: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_animcursorelt_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_animcursorelt_t {
-    fn default() -> Struct_xcb_render_animcursorelt_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_animcursorelt_t = Struct_xcb_render_animcursorelt_t;
 #[repr(C)]
@@ -6317,10 +6741,11 @@ pub struct Struct_xcb_render_animcursorelt_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_animcursorelt_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_animcursorelt_iterator_t {
-    fn default() -> Struct_xcb_render_animcursorelt_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_animcursorelt_iterator_t =
     Struct_xcb_render_animcursorelt_iterator_t;
@@ -6332,11 +6757,12 @@ pub struct Struct_xcb_render_create_anim_cursor_request_t {
     pub length: uint16_t,
     pub cid: xcb_cursor_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_create_anim_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_create_anim_cursor_request_t {
-    fn default() -> Struct_xcb_render_create_anim_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_anim_cursor_request_t =
     Struct_xcb_render_create_anim_cursor_request_t;
@@ -6347,10 +6773,11 @@ pub struct Struct_xcb_render_spanfix_t {
     pub r: xcb_render_fixed_t,
     pub y: xcb_render_fixed_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_spanfix_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_spanfix_t {
-    fn default() -> Struct_xcb_render_spanfix_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_spanfix_t = Struct_xcb_render_spanfix_t;
 #[repr(C)]
@@ -6360,10 +6787,11 @@ pub struct Struct_xcb_render_spanfix_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_spanfix_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_spanfix_iterator_t {
-    fn default() -> Struct_xcb_render_spanfix_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_spanfix_iterator_t = Struct_xcb_render_spanfix_iterator_t;
 #[repr(C)]
@@ -6372,10 +6800,11 @@ pub struct Struct_xcb_render_trap_t {
     pub top: xcb_render_spanfix_t,
     pub bot: xcb_render_spanfix_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_trap_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_trap_t {
-    fn default() -> Struct_xcb_render_trap_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_trap_t = Struct_xcb_render_trap_t;
 #[repr(C)]
@@ -6385,10 +6814,11 @@ pub struct Struct_xcb_render_trap_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_render_trap_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_trap_iterator_t {
-    fn default() -> Struct_xcb_render_trap_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_trap_iterator_t = Struct_xcb_render_trap_iterator_t;
 #[repr(C)]
@@ -6401,10 +6831,11 @@ pub struct Struct_xcb_render_add_traps_request_t {
     pub x_off: int16_t,
     pub y_off: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_add_traps_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_add_traps_request_t {
-    fn default() -> Struct_xcb_render_add_traps_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_add_traps_request_t =
     Struct_xcb_render_add_traps_request_t;
@@ -6417,11 +6848,12 @@ pub struct Struct_xcb_render_create_solid_fill_request_t {
     pub picture: xcb_render_picture_t,
     pub color: xcb_render_color_t,
 }
+impl ::std::clone::Clone for Struct_xcb_render_create_solid_fill_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_render_create_solid_fill_request_t
  {
-    fn default() -> Struct_xcb_render_create_solid_fill_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_solid_fill_request_t =
     Struct_xcb_render_create_solid_fill_request_t;
@@ -6436,11 +6868,13 @@ pub struct Struct_xcb_render_create_linear_gradient_request_t {
     pub p2: xcb_render_pointfix_t,
     pub num_stops: uint32_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_create_linear_gradient_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_create_linear_gradient_request_t {
-    fn default() -> Struct_xcb_render_create_linear_gradient_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_linear_gradient_request_t =
     Struct_xcb_render_create_linear_gradient_request_t;
@@ -6457,11 +6891,13 @@ pub struct Struct_xcb_render_create_radial_gradient_request_t {
     pub outer_radius: xcb_render_fixed_t,
     pub num_stops: uint32_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_create_radial_gradient_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_create_radial_gradient_request_t {
-    fn default() -> Struct_xcb_render_create_radial_gradient_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_radial_gradient_request_t =
     Struct_xcb_render_create_radial_gradient_request_t;
@@ -6476,11 +6912,13 @@ pub struct Struct_xcb_render_create_conical_gradient_request_t {
     pub angle: xcb_render_fixed_t,
     pub num_stops: uint32_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_render_create_conical_gradient_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_render_create_conical_gradient_request_t {
-    fn default() -> Struct_xcb_render_create_conical_gradient_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_render_create_conical_gradient_request_t =
     Struct_xcb_render_create_conical_gradient_request_t;
@@ -6492,10 +6930,11 @@ pub struct Struct_xcb_randr_mode_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_mode_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_mode_iterator_t {
-    fn default() -> Struct_xcb_randr_mode_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_mode_iterator_t = Struct_xcb_randr_mode_iterator_t;
 pub type xcb_randr_crtc_t = uint32_t;
@@ -6506,10 +6945,11 @@ pub struct Struct_xcb_randr_crtc_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_crtc_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_crtc_iterator_t {
-    fn default() -> Struct_xcb_randr_crtc_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_crtc_iterator_t = Struct_xcb_randr_crtc_iterator_t;
 pub type xcb_randr_output_t = uint32_t;
@@ -6520,10 +6960,11 @@ pub struct Struct_xcb_randr_output_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_output_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_output_iterator_t {
-    fn default() -> Struct_xcb_randr_output_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_output_iterator_t = Struct_xcb_randr_output_iterator_t;
 pub type xcb_randr_provider_t = uint32_t;
@@ -6534,10 +6975,11 @@ pub struct Struct_xcb_randr_provider_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_provider_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_provider_iterator_t {
-    fn default() -> Struct_xcb_randr_provider_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_provider_iterator_t = Struct_xcb_randr_provider_iterator_t;
 #[repr(C)]
@@ -6547,10 +6989,11 @@ pub struct Struct_xcb_randr_bad_output_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_bad_output_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_bad_output_error_t {
-    fn default() -> Struct_xcb_randr_bad_output_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_bad_output_error_t = Struct_xcb_randr_bad_output_error_t;
 #[repr(C)]
@@ -6560,10 +7003,11 @@ pub struct Struct_xcb_randr_bad_crtc_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_bad_crtc_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_bad_crtc_error_t {
-    fn default() -> Struct_xcb_randr_bad_crtc_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_bad_crtc_error_t = Struct_xcb_randr_bad_crtc_error_t;
 #[repr(C)]
@@ -6573,10 +7017,11 @@ pub struct Struct_xcb_randr_bad_mode_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_bad_mode_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_bad_mode_error_t {
-    fn default() -> Struct_xcb_randr_bad_mode_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_bad_mode_error_t = Struct_xcb_randr_bad_mode_error_t;
 #[repr(C)]
@@ -6586,10 +7031,11 @@ pub struct Struct_xcb_randr_bad_provider_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_bad_provider_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_bad_provider_error_t {
-    fn default() -> Struct_xcb_randr_bad_provider_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_bad_provider_error_t =
     Struct_xcb_randr_bad_provider_error_t;
@@ -6609,10 +7055,11 @@ pub struct Struct_xcb_randr_screen_size_t {
     pub mwidth: uint16_t,
     pub mheight: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_screen_size_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_screen_size_t {
-    fn default() -> Struct_xcb_randr_screen_size_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_screen_size_t = Struct_xcb_randr_screen_size_t;
 #[repr(C)]
@@ -6622,10 +7069,11 @@ pub struct Struct_xcb_randr_screen_size_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_screen_size_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_screen_size_iterator_t {
-    fn default() -> Struct_xcb_randr_screen_size_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_screen_size_iterator_t =
     Struct_xcb_randr_screen_size_iterator_t;
@@ -6634,10 +7082,11 @@ pub type xcb_randr_screen_size_iterator_t =
 pub struct Struct_xcb_randr_refresh_rates_t {
     pub nRates: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_refresh_rates_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_refresh_rates_t {
-    fn default() -> Struct_xcb_randr_refresh_rates_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_refresh_rates_t = Struct_xcb_randr_refresh_rates_t;
 #[repr(C)]
@@ -6647,10 +7096,11 @@ pub struct Struct_xcb_randr_refresh_rates_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_refresh_rates_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_refresh_rates_iterator_t {
-    fn default() -> Struct_xcb_randr_refresh_rates_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_refresh_rates_iterator_t =
     Struct_xcb_randr_refresh_rates_iterator_t;
@@ -6659,10 +7109,11 @@ pub type xcb_randr_refresh_rates_iterator_t =
 pub struct Struct_xcb_randr_query_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_query_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_query_version_cookie_t {
-    fn default() -> Struct_xcb_randr_query_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_version_cookie_t =
     Struct_xcb_randr_query_version_cookie_t;
@@ -6675,10 +7126,11 @@ pub struct Struct_xcb_randr_query_version_request_t {
     pub major_version: uint32_t,
     pub minor_version: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_query_version_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_query_version_request_t {
-    fn default() -> Struct_xcb_randr_query_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_version_request_t =
     Struct_xcb_randr_query_version_request_t;
@@ -6691,12 +7143,13 @@ pub struct Struct_xcb_randr_query_version_reply_t {
     pub length: uint32_t,
     pub major_version: uint32_t,
     pub minor_version: uint32_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_query_version_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_query_version_reply_t {
-    fn default() -> Struct_xcb_randr_query_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_version_reply_t =
     Struct_xcb_randr_query_version_reply_t;
@@ -6711,10 +7164,11 @@ pub type xcb_randr_set_config_t = Enum_xcb_randr_set_config_t;
 pub struct Struct_xcb_randr_set_screen_config_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_screen_config_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_screen_config_cookie_t {
-    fn default() -> Struct_xcb_randr_set_screen_config_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_screen_config_cookie_t =
     Struct_xcb_randr_set_screen_config_cookie_t;
@@ -6730,13 +7184,14 @@ pub struct Struct_xcb_randr_set_screen_config_request_t {
     pub sizeID: uint16_t,
     pub rotation: uint16_t,
     pub rate: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_screen_config_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_screen_config_request_t
  {
-    fn default() -> Struct_xcb_randr_set_screen_config_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_screen_config_request_t =
     Struct_xcb_randr_set_screen_config_request_t;
@@ -6751,12 +7206,13 @@ pub struct Struct_xcb_randr_set_screen_config_reply_t {
     pub config_timestamp: xcb_timestamp_t,
     pub root: xcb_window_t,
     pub subpixel_order: uint16_t,
-    pub pad0: [uint8_t; 10u],
+    pub pad0: [uint8_t; 10usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_screen_config_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_screen_config_reply_t {
-    fn default() -> Struct_xcb_randr_set_screen_config_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_screen_config_reply_t =
     Struct_xcb_randr_set_screen_config_reply_t;
@@ -6777,12 +7233,13 @@ pub struct Struct_xcb_randr_select_input_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub enable: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_select_input_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_select_input_request_t {
-    fn default() -> Struct_xcb_randr_select_input_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_select_input_request_t =
     Struct_xcb_randr_select_input_request_t;
@@ -6791,10 +7248,11 @@ pub type xcb_randr_select_input_request_t =
 pub struct Struct_xcb_randr_get_screen_info_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_info_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_screen_info_cookie_t {
-    fn default() -> Struct_xcb_randr_get_screen_info_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_info_cookie_t =
     Struct_xcb_randr_get_screen_info_cookie_t;
@@ -6806,10 +7264,11 @@ pub struct Struct_xcb_randr_get_screen_info_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_info_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_screen_info_request_t {
-    fn default() -> Struct_xcb_randr_get_screen_info_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_info_request_t =
     Struct_xcb_randr_get_screen_info_request_t;
@@ -6828,12 +7287,13 @@ pub struct Struct_xcb_randr_get_screen_info_reply_t {
     pub rotation: uint16_t,
     pub rate: uint16_t,
     pub nInfo: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_info_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_screen_info_reply_t {
-    fn default() -> Struct_xcb_randr_get_screen_info_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_info_reply_t =
     Struct_xcb_randr_get_screen_info_reply_t;
@@ -6842,11 +7302,12 @@ pub type xcb_randr_get_screen_info_reply_t =
 pub struct Struct_xcb_randr_get_screen_size_range_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_size_range_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_size_range_cookie_t {
-    fn default() -> Struct_xcb_randr_get_screen_size_range_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_size_range_cookie_t =
     Struct_xcb_randr_get_screen_size_range_cookie_t;
@@ -6858,11 +7319,13 @@ pub struct Struct_xcb_randr_get_screen_size_range_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_size_range_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_size_range_request_t {
-    fn default() -> Struct_xcb_randr_get_screen_size_range_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_size_range_request_t =
     Struct_xcb_randr_get_screen_size_range_request_t;
@@ -6877,13 +7340,14 @@ pub struct Struct_xcb_randr_get_screen_size_range_reply_t {
     pub min_height: uint16_t,
     pub max_width: uint16_t,
     pub max_height: uint16_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_size_range_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_size_range_reply_t {
-    fn default() -> Struct_xcb_randr_get_screen_size_range_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_size_range_reply_t =
     Struct_xcb_randr_get_screen_size_range_reply_t;
@@ -6899,10 +7363,11 @@ pub struct Struct_xcb_randr_set_screen_size_request_t {
     pub mm_width: uint32_t,
     pub mm_height: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_screen_size_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_screen_size_request_t {
-    fn default() -> Struct_xcb_randr_set_screen_size_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_screen_size_request_t =
     Struct_xcb_randr_set_screen_size_request_t;
@@ -6939,10 +7404,11 @@ pub struct Struct_xcb_randr_mode_info_t {
     pub name_len: uint16_t,
     pub mode_flags: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_mode_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_mode_info_t {
-    fn default() -> Struct_xcb_randr_mode_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_mode_info_t = Struct_xcb_randr_mode_info_t;
 #[repr(C)]
@@ -6952,10 +7418,11 @@ pub struct Struct_xcb_randr_mode_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_mode_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_mode_info_iterator_t {
-    fn default() -> Struct_xcb_randr_mode_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_mode_info_iterator_t =
     Struct_xcb_randr_mode_info_iterator_t;
@@ -6964,11 +7431,12 @@ pub type xcb_randr_mode_info_iterator_t =
 pub struct Struct_xcb_randr_get_screen_resources_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_resources_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_resources_cookie_t {
-    fn default() -> Struct_xcb_randr_get_screen_resources_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_cookie_t =
     Struct_xcb_randr_get_screen_resources_cookie_t;
@@ -6980,11 +7448,12 @@ pub struct Struct_xcb_randr_get_screen_resources_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_resources_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_resources_request_t {
-    fn default() -> Struct_xcb_randr_get_screen_resources_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_request_t =
     Struct_xcb_randr_get_screen_resources_request_t;
@@ -7001,13 +7470,14 @@ pub struct Struct_xcb_randr_get_screen_resources_reply_t {
     pub num_outputs: uint16_t,
     pub num_modes: uint16_t,
     pub names_len: uint16_t,
-    pub pad1: [uint8_t; 8u],
+    pub pad1: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_screen_resources_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_screen_resources_reply_t
  {
-    fn default() -> Struct_xcb_randr_get_screen_resources_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_reply_t =
     Struct_xcb_randr_get_screen_resources_reply_t;
@@ -7021,10 +7491,11 @@ pub type xcb_randr_connection_t = Enum_xcb_randr_connection_t;
 pub struct Struct_xcb_randr_get_output_info_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_info_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_info_cookie_t {
-    fn default() -> Struct_xcb_randr_get_output_info_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_info_cookie_t =
     Struct_xcb_randr_get_output_info_cookie_t;
@@ -7037,10 +7508,11 @@ pub struct Struct_xcb_randr_get_output_info_request_t {
     pub output: xcb_randr_output_t,
     pub config_timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_info_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_info_request_t {
-    fn default() -> Struct_xcb_randr_get_output_info_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_info_request_t =
     Struct_xcb_randr_get_output_info_request_t;
@@ -7063,10 +7535,11 @@ pub struct Struct_xcb_randr_get_output_info_reply_t {
     pub num_clones: uint16_t,
     pub name_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_info_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_info_reply_t {
-    fn default() -> Struct_xcb_randr_get_output_info_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_info_reply_t =
     Struct_xcb_randr_get_output_info_reply_t;
@@ -7075,11 +7548,13 @@ pub type xcb_randr_get_output_info_reply_t =
 pub struct Struct_xcb_randr_list_output_properties_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_list_output_properties_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_list_output_properties_cookie_t {
-    fn default() -> Struct_xcb_randr_list_output_properties_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_output_properties_cookie_t =
     Struct_xcb_randr_list_output_properties_cookie_t;
@@ -7091,11 +7566,13 @@ pub struct Struct_xcb_randr_list_output_properties_request_t {
     pub length: uint16_t,
     pub output: xcb_randr_output_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_list_output_properties_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_list_output_properties_request_t {
-    fn default() -> Struct_xcb_randr_list_output_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_output_properties_request_t =
     Struct_xcb_randr_list_output_properties_request_t;
@@ -7107,13 +7584,14 @@ pub struct Struct_xcb_randr_list_output_properties_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_atoms: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_list_output_properties_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_list_output_properties_reply_t {
-    fn default() -> Struct_xcb_randr_list_output_properties_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_output_properties_reply_t =
     Struct_xcb_randr_list_output_properties_reply_t;
@@ -7122,11 +7600,12 @@ pub type xcb_randr_list_output_properties_reply_t =
 pub struct Struct_xcb_randr_query_output_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_query_output_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_query_output_property_cookie_t {
-    fn default() -> Struct_xcb_randr_query_output_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_output_property_cookie_t =
     Struct_xcb_randr_query_output_property_cookie_t;
@@ -7139,11 +7618,13 @@ pub struct Struct_xcb_randr_query_output_property_request_t {
     pub output: xcb_randr_output_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_query_output_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_query_output_property_request_t {
-    fn default() -> Struct_xcb_randr_query_output_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_output_property_request_t =
     Struct_xcb_randr_query_output_property_request_t;
@@ -7157,13 +7638,14 @@ pub struct Struct_xcb_randr_query_output_property_reply_t {
     pub pending: uint8_t,
     pub range: uint8_t,
     pub immutable: uint8_t,
-    pub pad1: [uint8_t; 21u],
+    pub pad1: [uint8_t; 21usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_query_output_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_query_output_property_reply_t {
-    fn default() -> Struct_xcb_randr_query_output_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_output_property_reply_t =
     Struct_xcb_randr_query_output_property_reply_t;
@@ -7177,13 +7659,15 @@ pub struct Struct_xcb_randr_configure_output_property_request_t {
     pub property: xcb_atom_t,
     pub pending: uint8_t,
     pub range: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_randr_configure_output_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_configure_output_property_request_t {
-    fn default() -> Struct_xcb_randr_configure_output_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_configure_output_property_request_t =
     Struct_xcb_randr_configure_output_property_request_t;
@@ -7198,14 +7682,16 @@ pub struct Struct_xcb_randr_change_output_property_request_t {
     pub _type: xcb_atom_t,
     pub format: uint8_t,
     pub mode: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub num_units: uint32_t,
+}
+impl ::std::clone::Clone for Struct_xcb_randr_change_output_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_change_output_property_request_t {
-    fn default() -> Struct_xcb_randr_change_output_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_change_output_property_request_t =
     Struct_xcb_randr_change_output_property_request_t;
@@ -7218,11 +7704,13 @@ pub struct Struct_xcb_randr_delete_output_property_request_t {
     pub output: xcb_randr_output_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_delete_output_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_delete_output_property_request_t {
-    fn default() -> Struct_xcb_randr_delete_output_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_delete_output_property_request_t =
     Struct_xcb_randr_delete_output_property_request_t;
@@ -7231,11 +7719,12 @@ pub type xcb_randr_delete_output_property_request_t =
 pub struct Struct_xcb_randr_get_output_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_property_cookie_t
  {
-    fn default() -> Struct_xcb_randr_get_output_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_property_cookie_t =
     Struct_xcb_randr_get_output_property_cookie_t;
@@ -7252,13 +7741,14 @@ pub struct Struct_xcb_randr_get_output_property_request_t {
     pub long_length: uint32_t,
     pub _delete: uint8_t,
     pub pending: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_get_output_property_request_t {
-    fn default() -> Struct_xcb_randr_get_output_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_property_request_t =
     Struct_xcb_randr_get_output_property_request_t;
@@ -7272,13 +7762,14 @@ pub struct Struct_xcb_randr_get_output_property_reply_t {
     pub _type: xcb_atom_t,
     pub bytes_after: uint32_t,
     pub num_items: uint32_t,
-    pub pad0: [uint8_t; 12u],
+    pub pad0: [uint8_t; 12usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_output_property_reply_t
  {
-    fn default() -> Struct_xcb_randr_get_output_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_property_reply_t =
     Struct_xcb_randr_get_output_property_reply_t;
@@ -7287,10 +7778,11 @@ pub type xcb_randr_get_output_property_reply_t =
 pub struct Struct_xcb_randr_create_mode_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_create_mode_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_create_mode_cookie_t {
-    fn default() -> Struct_xcb_randr_create_mode_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_create_mode_cookie_t =
     Struct_xcb_randr_create_mode_cookie_t;
@@ -7303,10 +7795,11 @@ pub struct Struct_xcb_randr_create_mode_request_t {
     pub window: xcb_window_t,
     pub mode_info: xcb_randr_mode_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_create_mode_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_create_mode_request_t {
-    fn default() -> Struct_xcb_randr_create_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_create_mode_request_t =
     Struct_xcb_randr_create_mode_request_t;
@@ -7318,12 +7811,13 @@ pub struct Struct_xcb_randr_create_mode_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub mode: xcb_randr_mode_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_create_mode_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_create_mode_reply_t {
-    fn default() -> Struct_xcb_randr_create_mode_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_create_mode_reply_t = Struct_xcb_randr_create_mode_reply_t;
 #[repr(C)]
@@ -7334,10 +7828,11 @@ pub struct Struct_xcb_randr_destroy_mode_request_t {
     pub length: uint16_t,
     pub mode: xcb_randr_mode_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_destroy_mode_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_destroy_mode_request_t {
-    fn default() -> Struct_xcb_randr_destroy_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_destroy_mode_request_t =
     Struct_xcb_randr_destroy_mode_request_t;
@@ -7350,10 +7845,11 @@ pub struct Struct_xcb_randr_add_output_mode_request_t {
     pub output: xcb_randr_output_t,
     pub mode: xcb_randr_mode_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_add_output_mode_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_add_output_mode_request_t {
-    fn default() -> Struct_xcb_randr_add_output_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_add_output_mode_request_t =
     Struct_xcb_randr_add_output_mode_request_t;
@@ -7366,11 +7862,12 @@ pub struct Struct_xcb_randr_delete_output_mode_request_t {
     pub output: xcb_randr_output_t,
     pub mode: xcb_randr_mode_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_delete_output_mode_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_delete_output_mode_request_t
  {
-    fn default() -> Struct_xcb_randr_delete_output_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_delete_output_mode_request_t =
     Struct_xcb_randr_delete_output_mode_request_t;
@@ -7379,10 +7876,11 @@ pub type xcb_randr_delete_output_mode_request_t =
 pub struct Struct_xcb_randr_get_crtc_info_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_info_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_info_cookie_t {
-    fn default() -> Struct_xcb_randr_get_crtc_info_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_info_cookie_t =
     Struct_xcb_randr_get_crtc_info_cookie_t;
@@ -7395,10 +7893,11 @@ pub struct Struct_xcb_randr_get_crtc_info_request_t {
     pub crtc: xcb_randr_crtc_t,
     pub config_timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_info_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_info_request_t {
-    fn default() -> Struct_xcb_randr_get_crtc_info_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_info_request_t =
     Struct_xcb_randr_get_crtc_info_request_t;
@@ -7420,10 +7919,11 @@ pub struct Struct_xcb_randr_get_crtc_info_reply_t {
     pub num_outputs: uint16_t,
     pub num_possible_outputs: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_info_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_info_reply_t {
-    fn default() -> Struct_xcb_randr_get_crtc_info_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_info_reply_t =
     Struct_xcb_randr_get_crtc_info_reply_t;
@@ -7432,10 +7932,11 @@ pub type xcb_randr_get_crtc_info_reply_t =
 pub struct Struct_xcb_randr_set_crtc_config_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_crtc_config_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_crtc_config_cookie_t {
-    fn default() -> Struct_xcb_randr_set_crtc_config_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_crtc_config_cookie_t =
     Struct_xcb_randr_set_crtc_config_cookie_t;
@@ -7452,12 +7953,13 @@ pub struct Struct_xcb_randr_set_crtc_config_request_t {
     pub y: int16_t,
     pub mode: xcb_randr_mode_t,
     pub rotation: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_crtc_config_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_crtc_config_request_t {
-    fn default() -> Struct_xcb_randr_set_crtc_config_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_crtc_config_request_t =
     Struct_xcb_randr_set_crtc_config_request_t;
@@ -7469,12 +7971,13 @@ pub struct Struct_xcb_randr_set_crtc_config_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub timestamp: xcb_timestamp_t,
-    pub pad0: [uint8_t; 20u],
+    pub pad0: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_crtc_config_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_crtc_config_reply_t {
-    fn default() -> Struct_xcb_randr_set_crtc_config_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_crtc_config_reply_t =
     Struct_xcb_randr_set_crtc_config_reply_t;
@@ -7483,11 +7986,12 @@ pub type xcb_randr_set_crtc_config_reply_t =
 pub struct Struct_xcb_randr_get_crtc_gamma_size_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_size_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_gamma_size_cookie_t
  {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_size_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_size_cookie_t =
     Struct_xcb_randr_get_crtc_gamma_size_cookie_t;
@@ -7499,11 +8003,12 @@ pub struct Struct_xcb_randr_get_crtc_gamma_size_request_t {
     pub length: uint16_t,
     pub crtc: xcb_randr_crtc_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_size_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_crtc_gamma_size_request_t {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_size_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_size_request_t =
     Struct_xcb_randr_get_crtc_gamma_size_request_t;
@@ -7515,13 +8020,14 @@ pub struct Struct_xcb_randr_get_crtc_gamma_size_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub size: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_size_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_gamma_size_reply_t
  {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_size_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_size_reply_t =
     Struct_xcb_randr_get_crtc_gamma_size_reply_t;
@@ -7530,10 +8036,11 @@ pub type xcb_randr_get_crtc_gamma_size_reply_t =
 pub struct Struct_xcb_randr_get_crtc_gamma_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_gamma_cookie_t {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_cookie_t =
     Struct_xcb_randr_get_crtc_gamma_cookie_t;
@@ -7545,10 +8052,11 @@ pub struct Struct_xcb_randr_get_crtc_gamma_request_t {
     pub length: uint16_t,
     pub crtc: xcb_randr_crtc_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_gamma_request_t {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_request_t =
     Struct_xcb_randr_get_crtc_gamma_request_t;
@@ -7560,12 +8068,13 @@ pub struct Struct_xcb_randr_get_crtc_gamma_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub size: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_gamma_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_gamma_reply_t {
-    fn default() -> Struct_xcb_randr_get_crtc_gamma_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_gamma_reply_t =
     Struct_xcb_randr_get_crtc_gamma_reply_t;
@@ -7577,12 +8086,13 @@ pub struct Struct_xcb_randr_set_crtc_gamma_request_t {
     pub length: uint16_t,
     pub crtc: xcb_randr_crtc_t,
     pub size: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_crtc_gamma_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_crtc_gamma_request_t {
-    fn default() -> Struct_xcb_randr_set_crtc_gamma_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_crtc_gamma_request_t =
     Struct_xcb_randr_set_crtc_gamma_request_t;
@@ -7591,11 +8101,13 @@ pub type xcb_randr_set_crtc_gamma_request_t =
 pub struct Struct_xcb_randr_get_screen_resources_current_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_get_screen_resources_current_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_resources_current_cookie_t {
-    fn default() -> Struct_xcb_randr_get_screen_resources_current_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_current_cookie_t =
     Struct_xcb_randr_get_screen_resources_current_cookie_t;
@@ -7607,11 +8119,13 @@ pub struct Struct_xcb_randr_get_screen_resources_current_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_get_screen_resources_current_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_resources_current_request_t {
-    fn default() -> Struct_xcb_randr_get_screen_resources_current_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_current_request_t =
     Struct_xcb_randr_get_screen_resources_current_request_t;
@@ -7628,13 +8142,15 @@ pub struct Struct_xcb_randr_get_screen_resources_current_reply_t {
     pub num_outputs: uint16_t,
     pub num_modes: uint16_t,
     pub names_len: uint16_t,
-    pub pad1: [uint8_t; 8u],
+    pub pad1: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_randr_get_screen_resources_current_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_get_screen_resources_current_reply_t {
-    fn default() -> Struct_xcb_randr_get_screen_resources_current_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_screen_resources_current_reply_t =
     Struct_xcb_randr_get_screen_resources_current_reply_t;
@@ -7653,13 +8169,14 @@ pub struct Struct_xcb_randr_set_crtc_transform_request_t {
     pub crtc: xcb_randr_crtc_t,
     pub transform: xcb_render_transform_t,
     pub filter_len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_set_crtc_transform_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_set_crtc_transform_request_t
  {
-    fn default() -> Struct_xcb_randr_set_crtc_transform_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_crtc_transform_request_t =
     Struct_xcb_randr_set_crtc_transform_request_t;
@@ -7668,11 +8185,12 @@ pub type xcb_randr_set_crtc_transform_request_t =
 pub struct Struct_xcb_randr_get_crtc_transform_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_transform_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_transform_cookie_t
  {
-    fn default() -> Struct_xcb_randr_get_crtc_transform_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_transform_cookie_t =
     Struct_xcb_randr_get_crtc_transform_cookie_t;
@@ -7684,11 +8202,12 @@ pub struct Struct_xcb_randr_get_crtc_transform_request_t {
     pub length: uint16_t,
     pub crtc: xcb_randr_crtc_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_transform_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_transform_request_t
  {
-    fn default() -> Struct_xcb_randr_get_crtc_transform_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_transform_request_t =
     Struct_xcb_randr_get_crtc_transform_request_t;
@@ -7701,18 +8220,19 @@ pub struct Struct_xcb_randr_get_crtc_transform_reply_t {
     pub length: uint32_t,
     pub pending_transform: xcb_render_transform_t,
     pub has_transforms: uint8_t,
-    pub pad1: [uint8_t; 3u],
+    pub pad1: [uint8_t; 3usize],
     pub current_transform: xcb_render_transform_t,
-    pub pad2: [uint8_t; 4u],
+    pub pad2: [uint8_t; 4usize],
     pub pending_len: uint16_t,
     pub pending_nparams: uint16_t,
     pub current_len: uint16_t,
     pub current_nparams: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_crtc_transform_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_crtc_transform_reply_t {
-    fn default() -> Struct_xcb_randr_get_crtc_transform_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_crtc_transform_reply_t =
     Struct_xcb_randr_get_crtc_transform_reply_t;
@@ -7721,10 +8241,11 @@ pub type xcb_randr_get_crtc_transform_reply_t =
 pub struct Struct_xcb_randr_get_panning_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_panning_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_panning_cookie_t {
-    fn default() -> Struct_xcb_randr_get_panning_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_panning_cookie_t =
     Struct_xcb_randr_get_panning_cookie_t;
@@ -7736,10 +8257,11 @@ pub struct Struct_xcb_randr_get_panning_request_t {
     pub length: uint16_t,
     pub crtc: xcb_randr_crtc_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_panning_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_panning_request_t {
-    fn default() -> Struct_xcb_randr_get_panning_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_panning_request_t =
     Struct_xcb_randr_get_panning_request_t;
@@ -7764,10 +8286,11 @@ pub struct Struct_xcb_randr_get_panning_reply_t {
     pub border_right: int16_t,
     pub border_bottom: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_panning_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_panning_reply_t {
-    fn default() -> Struct_xcb_randr_get_panning_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_panning_reply_t = Struct_xcb_randr_get_panning_reply_t;
 #[repr(C)]
@@ -7775,10 +8298,11 @@ pub type xcb_randr_get_panning_reply_t = Struct_xcb_randr_get_panning_reply_t;
 pub struct Struct_xcb_randr_set_panning_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_panning_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_panning_cookie_t {
-    fn default() -> Struct_xcb_randr_set_panning_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_panning_cookie_t =
     Struct_xcb_randr_set_panning_cookie_t;
@@ -7803,10 +8327,11 @@ pub struct Struct_xcb_randr_set_panning_request_t {
     pub border_right: int16_t,
     pub border_bottom: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_panning_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_panning_request_t {
-    fn default() -> Struct_xcb_randr_set_panning_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_panning_request_t =
     Struct_xcb_randr_set_panning_request_t;
@@ -7819,10 +8344,11 @@ pub struct Struct_xcb_randr_set_panning_reply_t {
     pub length: uint32_t,
     pub timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_panning_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_panning_reply_t {
-    fn default() -> Struct_xcb_randr_set_panning_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_panning_reply_t = Struct_xcb_randr_set_panning_reply_t;
 #[repr(C)]
@@ -7834,11 +8360,12 @@ pub struct Struct_xcb_randr_set_output_primary_request_t {
     pub window: xcb_window_t,
     pub output: xcb_randr_output_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_set_output_primary_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_set_output_primary_request_t
  {
-    fn default() -> Struct_xcb_randr_set_output_primary_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_output_primary_request_t =
     Struct_xcb_randr_set_output_primary_request_t;
@@ -7847,11 +8374,12 @@ pub type xcb_randr_set_output_primary_request_t =
 pub struct Struct_xcb_randr_get_output_primary_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_primary_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_primary_cookie_t
  {
-    fn default() -> Struct_xcb_randr_get_output_primary_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_primary_cookie_t =
     Struct_xcb_randr_get_output_primary_cookie_t;
@@ -7863,11 +8391,12 @@ pub struct Struct_xcb_randr_get_output_primary_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_primary_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_primary_request_t
  {
-    fn default() -> Struct_xcb_randr_get_output_primary_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_primary_request_t =
     Struct_xcb_randr_get_output_primary_request_t;
@@ -7880,10 +8409,11 @@ pub struct Struct_xcb_randr_get_output_primary_reply_t {
     pub length: uint32_t,
     pub output: xcb_randr_output_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_output_primary_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_output_primary_reply_t {
-    fn default() -> Struct_xcb_randr_get_output_primary_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_output_primary_reply_t =
     Struct_xcb_randr_get_output_primary_reply_t;
@@ -7892,10 +8422,11 @@ pub type xcb_randr_get_output_primary_reply_t =
 pub struct Struct_xcb_randr_get_providers_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_providers_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_providers_cookie_t {
-    fn default() -> Struct_xcb_randr_get_providers_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_providers_cookie_t =
     Struct_xcb_randr_get_providers_cookie_t;
@@ -7907,10 +8438,11 @@ pub struct Struct_xcb_randr_get_providers_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_providers_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_providers_request_t {
-    fn default() -> Struct_xcb_randr_get_providers_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_providers_request_t =
     Struct_xcb_randr_get_providers_request_t;
@@ -7923,12 +8455,13 @@ pub struct Struct_xcb_randr_get_providers_reply_t {
     pub length: uint32_t,
     pub timestamp: xcb_timestamp_t,
     pub num_providers: uint16_t,
-    pub pad1: [uint8_t; 18u],
+    pub pad1: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_providers_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_providers_reply_t {
-    fn default() -> Struct_xcb_randr_get_providers_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_providers_reply_t =
     Struct_xcb_randr_get_providers_reply_t;
@@ -7944,10 +8477,11 @@ pub type xcb_randr_provider_capability_t =
 pub struct Struct_xcb_randr_get_provider_info_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_info_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_provider_info_cookie_t {
-    fn default() -> Struct_xcb_randr_get_provider_info_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_info_cookie_t =
     Struct_xcb_randr_get_provider_info_cookie_t;
@@ -7960,11 +8494,12 @@ pub struct Struct_xcb_randr_get_provider_info_request_t {
     pub provider: xcb_randr_provider_t,
     pub config_timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_info_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_get_provider_info_request_t
  {
-    fn default() -> Struct_xcb_randr_get_provider_info_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_info_request_t =
     Struct_xcb_randr_get_provider_info_request_t;
@@ -7981,12 +8516,13 @@ pub struct Struct_xcb_randr_get_provider_info_reply_t {
     pub num_outputs: uint16_t,
     pub num_associated_providers: uint16_t,
     pub name_len: uint16_t,
-    pub pad0: [uint8_t; 8u],
+    pub pad0: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_info_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_get_provider_info_reply_t {
-    fn default() -> Struct_xcb_randr_get_provider_info_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_info_reply_t =
     Struct_xcb_randr_get_provider_info_reply_t;
@@ -8000,11 +8536,13 @@ pub struct Struct_xcb_randr_set_provider_offload_sink_request_t {
     pub sink_provider: xcb_randr_provider_t,
     pub config_timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_set_provider_offload_sink_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_set_provider_offload_sink_request_t {
-    fn default() -> Struct_xcb_randr_set_provider_offload_sink_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_provider_offload_sink_request_t =
     Struct_xcb_randr_set_provider_offload_sink_request_t;
@@ -8018,11 +8556,13 @@ pub struct Struct_xcb_randr_set_provider_output_source_request_t {
     pub source_provider: xcb_randr_provider_t,
     pub config_timestamp: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_set_provider_output_source_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_set_provider_output_source_request_t {
-    fn default() -> Struct_xcb_randr_set_provider_output_source_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_set_provider_output_source_request_t =
     Struct_xcb_randr_set_provider_output_source_request_t;
@@ -8031,11 +8571,13 @@ pub type xcb_randr_set_provider_output_source_request_t =
 pub struct Struct_xcb_randr_list_provider_properties_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_list_provider_properties_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_list_provider_properties_cookie_t {
-    fn default() -> Struct_xcb_randr_list_provider_properties_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_provider_properties_cookie_t =
     Struct_xcb_randr_list_provider_properties_cookie_t;
@@ -8047,11 +8589,13 @@ pub struct Struct_xcb_randr_list_provider_properties_request_t {
     pub length: uint16_t,
     pub provider: xcb_randr_provider_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_list_provider_properties_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_list_provider_properties_request_t {
-    fn default() -> Struct_xcb_randr_list_provider_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_provider_properties_request_t =
     Struct_xcb_randr_list_provider_properties_request_t;
@@ -8063,13 +8607,15 @@ pub struct Struct_xcb_randr_list_provider_properties_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_atoms: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_list_provider_properties_reply_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_list_provider_properties_reply_t {
-    fn default() -> Struct_xcb_randr_list_provider_properties_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_list_provider_properties_reply_t =
     Struct_xcb_randr_list_provider_properties_reply_t;
@@ -8078,11 +8624,13 @@ pub type xcb_randr_list_provider_properties_reply_t =
 pub struct Struct_xcb_randr_query_provider_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_query_provider_property_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_query_provider_property_cookie_t {
-    fn default() -> Struct_xcb_randr_query_provider_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_provider_property_cookie_t =
     Struct_xcb_randr_query_provider_property_cookie_t;
@@ -8095,11 +8643,13 @@ pub struct Struct_xcb_randr_query_provider_property_request_t {
     pub provider: xcb_randr_provider_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_query_provider_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_query_provider_property_request_t {
-    fn default() -> Struct_xcb_randr_query_provider_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_provider_property_request_t =
     Struct_xcb_randr_query_provider_property_request_t;
@@ -8113,13 +8663,15 @@ pub struct Struct_xcb_randr_query_provider_property_reply_t {
     pub pending: uint8_t,
     pub range: uint8_t,
     pub immutable: uint8_t,
-    pub pad1: [uint8_t; 21u],
+    pub pad1: [uint8_t; 21usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_query_provider_property_reply_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_query_provider_property_reply_t {
-    fn default() -> Struct_xcb_randr_query_provider_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_query_provider_property_reply_t =
     Struct_xcb_randr_query_provider_property_reply_t;
@@ -8133,13 +8685,15 @@ pub struct Struct_xcb_randr_configure_provider_property_request_t {
     pub property: xcb_atom_t,
     pub pending: uint8_t,
     pub range: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_randr_configure_provider_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_configure_provider_property_request_t {
-    fn default() -> Struct_xcb_randr_configure_provider_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_configure_provider_property_request_t =
     Struct_xcb_randr_configure_provider_property_request_t;
@@ -8154,14 +8708,16 @@ pub struct Struct_xcb_randr_change_provider_property_request_t {
     pub _type: xcb_atom_t,
     pub format: uint8_t,
     pub mode: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub num_items: uint32_t,
+}
+impl ::std::clone::Clone for
+ Struct_xcb_randr_change_provider_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_change_provider_property_request_t {
-    fn default() -> Struct_xcb_randr_change_provider_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_change_provider_property_request_t =
     Struct_xcb_randr_change_provider_property_request_t;
@@ -8174,11 +8730,13 @@ pub struct Struct_xcb_randr_delete_provider_property_request_t {
     pub provider: xcb_randr_provider_t,
     pub property: xcb_atom_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_randr_delete_provider_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_delete_provider_property_request_t {
-    fn default() -> Struct_xcb_randr_delete_provider_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_delete_provider_property_request_t =
     Struct_xcb_randr_delete_provider_property_request_t;
@@ -8187,11 +8745,12 @@ pub type xcb_randr_delete_provider_property_request_t =
 pub struct Struct_xcb_randr_get_provider_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_randr_get_provider_property_cookie_t {
-    fn default() -> Struct_xcb_randr_get_provider_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_property_cookie_t =
     Struct_xcb_randr_get_provider_property_cookie_t;
@@ -8208,13 +8767,15 @@ pub struct Struct_xcb_randr_get_provider_property_request_t {
     pub long_length: uint32_t,
     pub _delete: uint8_t,
     pub pending: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_get_provider_property_request_t {
-    fn default() -> Struct_xcb_randr_get_provider_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_property_request_t =
     Struct_xcb_randr_get_provider_property_request_t;
@@ -8228,13 +8789,14 @@ pub struct Struct_xcb_randr_get_provider_property_reply_t {
     pub _type: xcb_atom_t,
     pub bytes_after: uint32_t,
     pub num_items: uint32_t,
-    pub pad0: [uint8_t; 12u],
+    pub pad0: [uint8_t; 12usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_get_provider_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_randr_get_provider_property_reply_t {
-    fn default() -> Struct_xcb_randr_get_provider_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_get_provider_property_reply_t =
     Struct_xcb_randr_get_provider_property_reply_t;
@@ -8255,11 +8817,12 @@ pub struct Struct_xcb_randr_screen_change_notify_event_t {
     pub mwidth: uint16_t,
     pub mheight: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_screen_change_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_screen_change_notify_event_t
  {
-    fn default() -> Struct_xcb_randr_screen_change_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_screen_change_notify_event_t =
     Struct_xcb_randr_screen_change_notify_event_t;
@@ -8279,16 +8842,17 @@ pub struct Struct_xcb_randr_crtc_change_t {
     pub crtc: xcb_randr_crtc_t,
     pub mode: xcb_randr_mode_t,
     pub rotation: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub x: int16_t,
     pub y: int16_t,
     pub width: uint16_t,
     pub height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_crtc_change_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_crtc_change_t {
-    fn default() -> Struct_xcb_randr_crtc_change_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_crtc_change_t = Struct_xcb_randr_crtc_change_t;
 #[repr(C)]
@@ -8298,10 +8862,11 @@ pub struct Struct_xcb_randr_crtc_change_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_crtc_change_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_crtc_change_iterator_t {
-    fn default() -> Struct_xcb_randr_crtc_change_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_crtc_change_iterator_t =
     Struct_xcb_randr_crtc_change_iterator_t;
@@ -8318,10 +8883,11 @@ pub struct Struct_xcb_randr_output_change_t {
     pub connection: uint8_t,
     pub subpixel_order: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_output_change_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_output_change_t {
-    fn default() -> Struct_xcb_randr_output_change_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_output_change_t = Struct_xcb_randr_output_change_t;
 #[repr(C)]
@@ -8331,10 +8897,11 @@ pub struct Struct_xcb_randr_output_change_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_output_change_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_output_change_iterator_t {
-    fn default() -> Struct_xcb_randr_output_change_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_output_change_iterator_t =
     Struct_xcb_randr_output_change_iterator_t;
@@ -8346,12 +8913,13 @@ pub struct Struct_xcb_randr_output_property_t {
     pub atom: xcb_atom_t,
     pub timestamp: xcb_timestamp_t,
     pub status: uint8_t,
-    pub pad0: [uint8_t; 11u],
+    pub pad0: [uint8_t; 11usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_output_property_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_output_property_t {
-    fn default() -> Struct_xcb_randr_output_property_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_output_property_t = Struct_xcb_randr_output_property_t;
 #[repr(C)]
@@ -8361,10 +8929,11 @@ pub struct Struct_xcb_randr_output_property_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_output_property_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_output_property_iterator_t {
-    fn default() -> Struct_xcb_randr_output_property_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_output_property_iterator_t =
     Struct_xcb_randr_output_property_iterator_t;
@@ -8374,12 +8943,13 @@ pub struct Struct_xcb_randr_provider_change_t {
     pub timestamp: xcb_timestamp_t,
     pub window: xcb_window_t,
     pub provider: xcb_randr_provider_t,
-    pub pad0: [uint8_t; 16u],
+    pub pad0: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_provider_change_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_provider_change_t {
-    fn default() -> Struct_xcb_randr_provider_change_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_provider_change_t = Struct_xcb_randr_provider_change_t;
 #[repr(C)]
@@ -8389,10 +8959,11 @@ pub struct Struct_xcb_randr_provider_change_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_provider_change_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_provider_change_iterator_t {
-    fn default() -> Struct_xcb_randr_provider_change_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_provider_change_iterator_t =
     Struct_xcb_randr_provider_change_iterator_t;
@@ -8404,12 +8975,13 @@ pub struct Struct_xcb_randr_provider_property_t {
     pub atom: xcb_atom_t,
     pub timestamp: xcb_timestamp_t,
     pub state: uint8_t,
-    pub pad0: [uint8_t; 11u],
+    pub pad0: [uint8_t; 11usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_provider_property_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_provider_property_t {
-    fn default() -> Struct_xcb_randr_provider_property_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_provider_property_t = Struct_xcb_randr_provider_property_t;
 #[repr(C)]
@@ -8419,11 +8991,12 @@ pub struct Struct_xcb_randr_provider_property_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_provider_property_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_provider_property_iterator_t
  {
-    fn default() -> Struct_xcb_randr_provider_property_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_provider_property_iterator_t =
     Struct_xcb_randr_provider_property_iterator_t;
@@ -8432,12 +9005,13 @@ pub type xcb_randr_provider_property_iterator_t =
 pub struct Struct_xcb_randr_resource_change_t {
     pub timestamp: xcb_timestamp_t,
     pub window: xcb_window_t,
-    pub pad0: [uint8_t; 20u],
+    pub pad0: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_randr_resource_change_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_randr_resource_change_t {
-    fn default() -> Struct_xcb_randr_resource_change_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_resource_change_t = Struct_xcb_randr_resource_change_t;
 #[repr(C)]
@@ -8447,42 +9021,50 @@ pub struct Struct_xcb_randr_resource_change_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_resource_change_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_resource_change_iterator_t {
-    fn default() -> Struct_xcb_randr_resource_change_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_resource_change_iterator_t =
     Struct_xcb_randr_resource_change_iterator_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Union_xcb_randr_notify_data_t {
-    pub _bindgen_data_: [u32; 7u],
+    pub _bindgen_data_: [u32; 7usize],
 }
 impl Union_xcb_randr_notify_data_t {
     pub unsafe fn cc(&mut self) -> *mut xcb_randr_crtc_change_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
     pub unsafe fn oc(&mut self) -> *mut xcb_randr_output_change_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
     pub unsafe fn op(&mut self) -> *mut xcb_randr_output_property_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
     pub unsafe fn pc(&mut self) -> *mut xcb_randr_provider_change_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
     pub unsafe fn pp(&mut self) -> *mut xcb_randr_provider_property_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
     pub unsafe fn rc(&mut self) -> *mut xcb_randr_resource_change_t {
-        ::std::mem::transmute(&self._bindgen_data_)
+        let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
+        ::std::mem::transmute(raw.offset(0))
     }
 }
+impl ::std::clone::Clone for Union_xcb_randr_notify_data_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Union_xcb_randr_notify_data_t {
-    fn default() -> Union_xcb_randr_notify_data_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_notify_data_t = Union_xcb_randr_notify_data_t;
 #[repr(C)]
@@ -8492,10 +9074,11 @@ pub struct Struct_xcb_randr_notify_data_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_notify_data_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_notify_data_iterator_t {
-    fn default() -> Struct_xcb_randr_notify_data_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_notify_data_iterator_t =
     Struct_xcb_randr_notify_data_iterator_t;
@@ -8507,10 +9090,11 @@ pub struct Struct_xcb_randr_notify_event_t {
     pub sequence: uint16_t,
     pub u: xcb_randr_notify_data_t,
 }
+impl ::std::clone::Clone for Struct_xcb_randr_notify_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_randr_notify_event_t {
-    fn default() -> Struct_xcb_randr_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_randr_notify_event_t = Struct_xcb_randr_notify_event_t;
 #[repr(C)]
@@ -8532,8 +9116,11 @@ pub struct Struct_Unnamed8 {
     pub colormap: uint32_t,
     pub cursor: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed8 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed8 {
-    fn default() -> Struct_Unnamed8 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_params_cw_t = Struct_Unnamed8;
 #[repr(C)]
@@ -8547,8 +9134,11 @@ pub struct Struct_Unnamed9 {
     pub sibling: uint32_t,
     pub stack_mode: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed9 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed9 {
-    fn default() -> Struct_Unnamed9 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_params_configure_window_t = Struct_Unnamed9;
 #[repr(C)]
@@ -8578,8 +9168,11 @@ pub struct Struct_Unnamed10 {
     pub dash_list: uint32_t,
     pub arc_mode: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed10 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed10 {
-    fn default() -> Struct_Unnamed10 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_params_gc_t = Struct_Unnamed10;
 #[repr(C)]
@@ -8594,8 +9187,11 @@ pub struct Struct_Unnamed11 {
     pub key: uint32_t,
     pub auto_repeat_mode: uint32_t,
 }
+impl ::std::clone::Clone for Struct_Unnamed11 {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_Unnamed11 {
-    fn default() -> Struct_Unnamed11 { unsafe { ::std::mem::zeroed() } }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_params_keyboard_t = Struct_Unnamed11;
 pub type xcb_shape_op_t = uint8_t;
@@ -8606,10 +9202,11 @@ pub struct Struct_xcb_shape_op_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_op_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_op_iterator_t {
-    fn default() -> Struct_xcb_shape_op_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_op_iterator_t = Struct_xcb_shape_op_iterator_t;
 pub type xcb_shape_kind_t = uint8_t;
@@ -8620,10 +9217,11 @@ pub struct Struct_xcb_shape_kind_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_kind_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_kind_iterator_t {
-    fn default() -> Struct_xcb_shape_kind_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_kind_iterator_t = Struct_xcb_shape_kind_iterator_t;
 pub type Enum_xcb_shape_so_t = ::libc::c_uint;
@@ -8651,12 +9249,13 @@ pub struct Struct_xcb_shape_notify_event_t {
     pub extents_height: uint16_t,
     pub server_time: xcb_timestamp_t,
     pub shaped: uint8_t,
-    pub pad0: [uint8_t; 11u],
+    pub pad0: [uint8_t; 11usize],
+}
+impl ::std::clone::Clone for Struct_xcb_shape_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_shape_notify_event_t {
-    fn default() -> Struct_xcb_shape_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_notify_event_t = Struct_xcb_shape_notify_event_t;
 #[repr(C)]
@@ -8664,10 +9263,11 @@ pub type xcb_shape_notify_event_t = Struct_xcb_shape_notify_event_t;
 pub struct Struct_xcb_shape_query_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_version_cookie_t {
-    fn default() -> Struct_xcb_shape_query_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_version_cookie_t =
     Struct_xcb_shape_query_version_cookie_t;
@@ -8678,10 +9278,11 @@ pub struct Struct_xcb_shape_query_version_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_version_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_version_request_t {
-    fn default() -> Struct_xcb_shape_query_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_version_request_t =
     Struct_xcb_shape_query_version_request_t;
@@ -8695,10 +9296,11 @@ pub struct Struct_xcb_shape_query_version_reply_t {
     pub major_version: uint16_t,
     pub minor_version: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_version_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_version_reply_t {
-    fn default() -> Struct_xcb_shape_query_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_version_reply_t =
     Struct_xcb_shape_query_version_reply_t;
@@ -8716,10 +9318,11 @@ pub struct Struct_xcb_shape_rectangles_request_t {
     pub x_offset: int16_t,
     pub y_offset: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_rectangles_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_rectangles_request_t {
-    fn default() -> Struct_xcb_shape_rectangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_rectangles_request_t =
     Struct_xcb_shape_rectangles_request_t;
@@ -8731,16 +9334,17 @@ pub struct Struct_xcb_shape_mask_request_t {
     pub length: uint16_t,
     pub operation: xcb_shape_op_t,
     pub destination_kind: xcb_shape_kind_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub destination_window: xcb_window_t,
     pub x_offset: int16_t,
     pub y_offset: int16_t,
     pub source_bitmap: xcb_pixmap_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_mask_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_mask_request_t {
-    fn default() -> Struct_xcb_shape_mask_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_mask_request_t = Struct_xcb_shape_mask_request_t;
 #[repr(C)]
@@ -8758,10 +9362,11 @@ pub struct Struct_xcb_shape_combine_request_t {
     pub y_offset: int16_t,
     pub source_window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_combine_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_combine_request_t {
-    fn default() -> Struct_xcb_shape_combine_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_combine_request_t = Struct_xcb_shape_combine_request_t;
 #[repr(C)]
@@ -8771,15 +9376,16 @@ pub struct Struct_xcb_shape_offset_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub destination_kind: xcb_shape_kind_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub destination_window: xcb_window_t,
     pub x_offset: int16_t,
     pub y_offset: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_offset_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_offset_request_t {
-    fn default() -> Struct_xcb_shape_offset_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_offset_request_t = Struct_xcb_shape_offset_request_t;
 #[repr(C)]
@@ -8787,10 +9393,11 @@ pub type xcb_shape_offset_request_t = Struct_xcb_shape_offset_request_t;
 pub struct Struct_xcb_shape_query_extents_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_extents_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_extents_cookie_t {
-    fn default() -> Struct_xcb_shape_query_extents_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_extents_cookie_t =
     Struct_xcb_shape_query_extents_cookie_t;
@@ -8802,10 +9409,11 @@ pub struct Struct_xcb_shape_query_extents_request_t {
     pub length: uint16_t,
     pub destination_window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_extents_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_extents_request_t {
-    fn default() -> Struct_xcb_shape_query_extents_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_extents_request_t =
     Struct_xcb_shape_query_extents_request_t;
@@ -8818,7 +9426,7 @@ pub struct Struct_xcb_shape_query_extents_reply_t {
     pub length: uint32_t,
     pub bounding_shaped: uint8_t,
     pub clip_shaped: uint8_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
     pub bounding_shape_extents_x: int16_t,
     pub bounding_shape_extents_y: int16_t,
     pub bounding_shape_extents_width: uint16_t,
@@ -8828,10 +9436,11 @@ pub struct Struct_xcb_shape_query_extents_reply_t {
     pub clip_shape_extents_width: uint16_t,
     pub clip_shape_extents_height: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_query_extents_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_query_extents_reply_t {
-    fn default() -> Struct_xcb_shape_query_extents_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_query_extents_reply_t =
     Struct_xcb_shape_query_extents_reply_t;
@@ -8843,12 +9452,13 @@ pub struct Struct_xcb_shape_select_input_request_t {
     pub length: uint16_t,
     pub destination_window: xcb_window_t,
     pub enable: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_shape_select_input_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_shape_select_input_request_t {
-    fn default() -> Struct_xcb_shape_select_input_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_select_input_request_t =
     Struct_xcb_shape_select_input_request_t;
@@ -8857,10 +9467,11 @@ pub type xcb_shape_select_input_request_t =
 pub struct Struct_xcb_shape_input_selected_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_input_selected_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_input_selected_cookie_t {
-    fn default() -> Struct_xcb_shape_input_selected_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_input_selected_cookie_t =
     Struct_xcb_shape_input_selected_cookie_t;
@@ -8872,10 +9483,11 @@ pub struct Struct_xcb_shape_input_selected_request_t {
     pub length: uint16_t,
     pub destination_window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_input_selected_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_input_selected_request_t {
-    fn default() -> Struct_xcb_shape_input_selected_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_input_selected_request_t =
     Struct_xcb_shape_input_selected_request_t;
@@ -8887,10 +9499,11 @@ pub struct Struct_xcb_shape_input_selected_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_input_selected_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_input_selected_reply_t {
-    fn default() -> Struct_xcb_shape_input_selected_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_input_selected_reply_t =
     Struct_xcb_shape_input_selected_reply_t;
@@ -8899,10 +9512,11 @@ pub type xcb_shape_input_selected_reply_t =
 pub struct Struct_xcb_shape_get_rectangles_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_shape_get_rectangles_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_shape_get_rectangles_cookie_t {
-    fn default() -> Struct_xcb_shape_get_rectangles_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_get_rectangles_cookie_t =
     Struct_xcb_shape_get_rectangles_cookie_t;
@@ -8914,12 +9528,13 @@ pub struct Struct_xcb_shape_get_rectangles_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub source_kind: xcb_shape_kind_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_shape_get_rectangles_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_shape_get_rectangles_request_t {
-    fn default() -> Struct_xcb_shape_get_rectangles_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_get_rectangles_request_t =
     Struct_xcb_shape_get_rectangles_request_t;
@@ -8931,12 +9546,13 @@ pub struct Struct_xcb_shape_get_rectangles_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub rectangles_len: uint32_t,
-    pub pad0: [uint8_t; 20u],
+    pub pad0: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_shape_get_rectangles_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_shape_get_rectangles_reply_t {
-    fn default() -> Struct_xcb_shape_get_rectangles_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_shape_get_rectangles_reply_t =
     Struct_xcb_shape_get_rectangles_reply_t;
@@ -8945,10 +9561,11 @@ pub type xcb_shape_get_rectangles_reply_t =
 pub struct Struct_xcb_xfixes_query_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_query_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_query_version_cookie_t {
-    fn default() -> Struct_xcb_xfixes_query_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_query_version_cookie_t =
     Struct_xcb_xfixes_query_version_cookie_t;
@@ -8961,10 +9578,11 @@ pub struct Struct_xcb_xfixes_query_version_request_t {
     pub client_major_version: uint32_t,
     pub client_minor_version: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_query_version_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_query_version_request_t {
-    fn default() -> Struct_xcb_xfixes_query_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_query_version_request_t =
     Struct_xcb_xfixes_query_version_request_t;
@@ -8977,12 +9595,13 @@ pub struct Struct_xcb_xfixes_query_version_reply_t {
     pub length: uint32_t,
     pub major_version: uint32_t,
     pub minor_version: uint32_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_query_version_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_query_version_reply_t {
-    fn default() -> Struct_xcb_xfixes_query_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_query_version_reply_t =
     Struct_xcb_xfixes_query_version_reply_t;
@@ -9010,10 +9629,11 @@ pub struct Struct_xcb_xfixes_change_save_set_request_t {
     pub pad0: uint8_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_change_save_set_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_change_save_set_request_t {
-    fn default() -> Struct_xcb_xfixes_change_save_set_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_change_save_set_request_t =
     Struct_xcb_xfixes_change_save_set_request_t;
@@ -9048,12 +9668,13 @@ pub struct Struct_xcb_xfixes_selection_notify_event_t {
     pub selection: xcb_atom_t,
     pub timestamp: xcb_timestamp_t,
     pub selection_timestamp: xcb_timestamp_t,
-    pub pad0: [uint8_t; 8u],
+    pub pad0: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_selection_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_selection_notify_event_t {
-    fn default() -> Struct_xcb_xfixes_selection_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_selection_notify_event_t =
     Struct_xcb_xfixes_selection_notify_event_t;
@@ -9067,11 +9688,13 @@ pub struct Struct_xcb_xfixes_select_selection_input_request_t {
     pub selection: xcb_atom_t,
     pub event_mask: uint32_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_select_selection_input_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_select_selection_input_request_t {
-    fn default() -> Struct_xcb_xfixes_select_selection_input_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_select_selection_input_request_t =
     Struct_xcb_xfixes_select_selection_input_request_t;
@@ -9092,12 +9715,13 @@ pub struct Struct_xcb_xfixes_cursor_notify_event_t {
     pub cursor_serial: uint32_t,
     pub timestamp: xcb_timestamp_t,
     pub name: xcb_atom_t,
-    pub pad0: [uint8_t; 12u],
+    pub pad0: [uint8_t; 12usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_cursor_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_cursor_notify_event_t {
-    fn default() -> Struct_xcb_xfixes_cursor_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_cursor_notify_event_t =
     Struct_xcb_xfixes_cursor_notify_event_t;
@@ -9110,11 +9734,12 @@ pub struct Struct_xcb_xfixes_select_cursor_input_request_t {
     pub window: xcb_window_t,
     pub event_mask: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_select_cursor_input_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_select_cursor_input_request_t {
-    fn default() -> Struct_xcb_xfixes_select_cursor_input_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_select_cursor_input_request_t =
     Struct_xcb_xfixes_select_cursor_input_request_t;
@@ -9123,10 +9748,11 @@ pub type xcb_xfixes_select_cursor_input_request_t =
 pub struct Struct_xcb_xfixes_get_cursor_image_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_image_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_image_cookie_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_cookie_t =
     Struct_xcb_xfixes_get_cursor_image_cookie_t;
@@ -9137,11 +9763,12 @@ pub struct Struct_xcb_xfixes_get_cursor_image_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_image_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_image_request_t
  {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_request_t =
     Struct_xcb_xfixes_get_cursor_image_request_t;
@@ -9159,12 +9786,13 @@ pub struct Struct_xcb_xfixes_get_cursor_image_reply_t {
     pub xhot: uint16_t,
     pub yhot: uint16_t,
     pub cursor_serial: uint32_t,
-    pub pad1: [uint8_t; 8u],
+    pub pad1: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_image_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_image_reply_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_reply_t =
     Struct_xcb_xfixes_get_cursor_image_reply_t;
@@ -9176,10 +9804,11 @@ pub struct Struct_xcb_xfixes_region_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_region_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_region_iterator_t {
-    fn default() -> Struct_xcb_xfixes_region_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_region_iterator_t = Struct_xcb_xfixes_region_iterator_t;
 #[repr(C)]
@@ -9189,10 +9818,11 @@ pub struct Struct_xcb_xfixes_bad_region_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_bad_region_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_bad_region_error_t {
-    fn default() -> Struct_xcb_xfixes_bad_region_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_bad_region_error_t = Struct_xcb_xfixes_bad_region_error_t;
 pub type Enum_xcb_xfixes_region_enum_t = ::libc::c_uint;
@@ -9206,10 +9836,11 @@ pub struct Struct_xcb_xfixes_create_region_request_t {
     pub length: uint16_t,
     pub region: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_create_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_create_region_request_t {
-    fn default() -> Struct_xcb_xfixes_create_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_region_request_t =
     Struct_xcb_xfixes_create_region_request_t;
@@ -9222,11 +9853,13 @@ pub struct Struct_xcb_xfixes_create_region_from_bitmap_request_t {
     pub region: xcb_xfixes_region_t,
     pub bitmap: xcb_pixmap_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_create_region_from_bitmap_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_create_region_from_bitmap_request_t {
-    fn default() -> Struct_xcb_xfixes_create_region_from_bitmap_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_region_from_bitmap_request_t =
     Struct_xcb_xfixes_create_region_from_bitmap_request_t;
@@ -9239,13 +9872,15 @@ pub struct Struct_xcb_xfixes_create_region_from_window_request_t {
     pub region: xcb_xfixes_region_t,
     pub window: xcb_window_t,
     pub kind: xcb_shape_kind_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_create_region_from_window_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_xfixes_create_region_from_window_request_t {
-    fn default() -> Struct_xcb_xfixes_create_region_from_window_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_region_from_window_request_t =
     Struct_xcb_xfixes_create_region_from_window_request_t;
@@ -9258,11 +9893,13 @@ pub struct Struct_xcb_xfixes_create_region_from_gc_request_t {
     pub region: xcb_xfixes_region_t,
     pub gc: xcb_gcontext_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_create_region_from_gc_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_create_region_from_gc_request_t {
-    fn default() -> Struct_xcb_xfixes_create_region_from_gc_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_region_from_gc_request_t =
     Struct_xcb_xfixes_create_region_from_gc_request_t;
@@ -9275,11 +9912,13 @@ pub struct Struct_xcb_xfixes_create_region_from_picture_request_t {
     pub region: xcb_xfixes_region_t,
     pub picture: xcb_render_picture_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_create_region_from_picture_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_create_region_from_picture_request_t {
-    fn default() -> Struct_xcb_xfixes_create_region_from_picture_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_region_from_picture_request_t =
     Struct_xcb_xfixes_create_region_from_picture_request_t;
@@ -9291,10 +9930,11 @@ pub struct Struct_xcb_xfixes_destroy_region_request_t {
     pub length: uint16_t,
     pub region: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_destroy_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_destroy_region_request_t {
-    fn default() -> Struct_xcb_xfixes_destroy_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_destroy_region_request_t =
     Struct_xcb_xfixes_destroy_region_request_t;
@@ -9306,10 +9946,11 @@ pub struct Struct_xcb_xfixes_set_region_request_t {
     pub length: uint16_t,
     pub region: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_set_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_set_region_request_t {
-    fn default() -> Struct_xcb_xfixes_set_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_set_region_request_t =
     Struct_xcb_xfixes_set_region_request_t;
@@ -9322,10 +9963,11 @@ pub struct Struct_xcb_xfixes_copy_region_request_t {
     pub source: xcb_xfixes_region_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_copy_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_copy_region_request_t {
-    fn default() -> Struct_xcb_xfixes_copy_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_copy_region_request_t =
     Struct_xcb_xfixes_copy_region_request_t;
@@ -9339,10 +9981,11 @@ pub struct Struct_xcb_xfixes_union_region_request_t {
     pub source2: xcb_xfixes_region_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_union_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_union_region_request_t {
-    fn default() -> Struct_xcb_xfixes_union_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_union_region_request_t =
     Struct_xcb_xfixes_union_region_request_t;
@@ -9356,11 +9999,12 @@ pub struct Struct_xcb_xfixes_intersect_region_request_t {
     pub source2: xcb_xfixes_region_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_intersect_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_intersect_region_request_t
  {
-    fn default() -> Struct_xcb_xfixes_intersect_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_intersect_region_request_t =
     Struct_xcb_xfixes_intersect_region_request_t;
@@ -9374,10 +10018,11 @@ pub struct Struct_xcb_xfixes_subtract_region_request_t {
     pub source2: xcb_xfixes_region_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_subtract_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_subtract_region_request_t {
-    fn default() -> Struct_xcb_xfixes_subtract_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_subtract_region_request_t =
     Struct_xcb_xfixes_subtract_region_request_t;
@@ -9391,10 +10036,11 @@ pub struct Struct_xcb_xfixes_invert_region_request_t {
     pub bounds: xcb_rectangle_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_invert_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_invert_region_request_t {
-    fn default() -> Struct_xcb_xfixes_invert_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_invert_region_request_t =
     Struct_xcb_xfixes_invert_region_request_t;
@@ -9408,11 +10054,12 @@ pub struct Struct_xcb_xfixes_translate_region_request_t {
     pub dx: int16_t,
     pub dy: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_translate_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_translate_region_request_t
  {
-    fn default() -> Struct_xcb_xfixes_translate_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_translate_region_request_t =
     Struct_xcb_xfixes_translate_region_request_t;
@@ -9425,10 +10072,11 @@ pub struct Struct_xcb_xfixes_region_extents_request_t {
     pub source: xcb_xfixes_region_t,
     pub destination: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_region_extents_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_region_extents_request_t {
-    fn default() -> Struct_xcb_xfixes_region_extents_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_region_extents_request_t =
     Struct_xcb_xfixes_region_extents_request_t;
@@ -9437,10 +10085,11 @@ pub type xcb_xfixes_region_extents_request_t =
 pub struct Struct_xcb_xfixes_fetch_region_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_fetch_region_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_fetch_region_cookie_t {
-    fn default() -> Struct_xcb_xfixes_fetch_region_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_fetch_region_cookie_t =
     Struct_xcb_xfixes_fetch_region_cookie_t;
@@ -9452,10 +10101,11 @@ pub struct Struct_xcb_xfixes_fetch_region_request_t {
     pub length: uint16_t,
     pub region: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_fetch_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_fetch_region_request_t {
-    fn default() -> Struct_xcb_xfixes_fetch_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_fetch_region_request_t =
     Struct_xcb_xfixes_fetch_region_request_t;
@@ -9467,12 +10117,13 @@ pub struct Struct_xcb_xfixes_fetch_region_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub extents: xcb_rectangle_t,
-    pub pad1: [uint8_t; 16u],
+    pub pad1: [uint8_t; 16usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_fetch_region_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_fetch_region_reply_t {
-    fn default() -> Struct_xcb_xfixes_fetch_region_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_fetch_region_reply_t =
     Struct_xcb_xfixes_fetch_region_reply_t;
@@ -9487,11 +10138,12 @@ pub struct Struct_xcb_xfixes_set_gc_clip_region_request_t {
     pub x_origin: int16_t,
     pub y_origin: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_set_gc_clip_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_set_gc_clip_region_request_t {
-    fn default() -> Struct_xcb_xfixes_set_gc_clip_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_set_gc_clip_region_request_t =
     Struct_xcb_xfixes_set_gc_clip_region_request_t;
@@ -9503,16 +10155,18 @@ pub struct Struct_xcb_xfixes_set_window_shape_region_request_t {
     pub length: uint16_t,
     pub dest: xcb_window_t,
     pub dest_kind: xcb_shape_kind_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub x_offset: int16_t,
     pub y_offset: int16_t,
     pub region: xcb_xfixes_region_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_set_window_shape_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_set_window_shape_region_request_t {
-    fn default() -> Struct_xcb_xfixes_set_window_shape_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_set_window_shape_region_request_t =
     Struct_xcb_xfixes_set_window_shape_region_request_t;
@@ -9527,11 +10181,13 @@ pub struct Struct_xcb_xfixes_set_picture_clip_region_request_t {
     pub x_origin: int16_t,
     pub y_origin: int16_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_set_picture_clip_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_set_picture_clip_region_request_t {
-    fn default() -> Struct_xcb_xfixes_set_picture_clip_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_set_picture_clip_region_request_t =
     Struct_xcb_xfixes_set_picture_clip_region_request_t;
@@ -9543,12 +10199,13 @@ pub struct Struct_xcb_xfixes_set_cursor_name_request_t {
     pub length: uint16_t,
     pub cursor: xcb_cursor_t,
     pub nbytes: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_set_cursor_name_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_set_cursor_name_request_t {
-    fn default() -> Struct_xcb_xfixes_set_cursor_name_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_set_cursor_name_request_t =
     Struct_xcb_xfixes_set_cursor_name_request_t;
@@ -9557,10 +10214,11 @@ pub type xcb_xfixes_set_cursor_name_request_t =
 pub struct Struct_xcb_xfixes_get_cursor_name_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_name_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_name_cookie_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_name_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_name_cookie_t =
     Struct_xcb_xfixes_get_cursor_name_cookie_t;
@@ -9572,10 +10230,11 @@ pub struct Struct_xcb_xfixes_get_cursor_name_request_t {
     pub length: uint16_t,
     pub cursor: xcb_cursor_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_name_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_name_request_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_name_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_name_request_t =
     Struct_xcb_xfixes_get_cursor_name_request_t;
@@ -9588,12 +10247,13 @@ pub struct Struct_xcb_xfixes_get_cursor_name_reply_t {
     pub length: uint32_t,
     pub atom: xcb_atom_t,
     pub nbytes: uint16_t,
-    pub pad1: [uint8_t; 18u],
+    pub pad1: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_get_cursor_name_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_xfixes_get_cursor_name_reply_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_name_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_name_reply_t =
     Struct_xcb_xfixes_get_cursor_name_reply_t;
@@ -9602,11 +10262,13 @@ pub type xcb_xfixes_get_cursor_name_reply_t =
 pub struct Struct_xcb_xfixes_get_cursor_image_and_name_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_get_cursor_image_and_name_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_get_cursor_image_and_name_cookie_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_and_name_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_and_name_cookie_t =
     Struct_xcb_xfixes_get_cursor_image_and_name_cookie_t;
@@ -9617,11 +10279,13 @@ pub struct Struct_xcb_xfixes_get_cursor_image_and_name_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_get_cursor_image_and_name_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_get_cursor_image_and_name_request_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_and_name_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_and_name_request_t =
     Struct_xcb_xfixes_get_cursor_image_and_name_request_t;
@@ -9641,13 +10305,15 @@ pub struct Struct_xcb_xfixes_get_cursor_image_and_name_reply_t {
     pub cursor_serial: uint32_t,
     pub cursor_atom: xcb_atom_t,
     pub nbytes: uint16_t,
-    pub pad1: [uint8_t; 2u],
+    pub pad1: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_get_cursor_image_and_name_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_xfixes_get_cursor_image_and_name_reply_t {
-    fn default() -> Struct_xcb_xfixes_get_cursor_image_and_name_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_get_cursor_image_and_name_reply_t =
     Struct_xcb_xfixes_get_cursor_image_and_name_reply_t;
@@ -9660,10 +10326,11 @@ pub struct Struct_xcb_xfixes_change_cursor_request_t {
     pub source: xcb_cursor_t,
     pub destination: xcb_cursor_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_change_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_change_cursor_request_t {
-    fn default() -> Struct_xcb_xfixes_change_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_change_cursor_request_t =
     Struct_xcb_xfixes_change_cursor_request_t;
@@ -9675,13 +10342,15 @@ pub struct Struct_xcb_xfixes_change_cursor_by_name_request_t {
     pub length: uint16_t,
     pub src: xcb_cursor_t,
     pub nbytes: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_xfixes_change_cursor_by_name_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_xfixes_change_cursor_by_name_request_t {
-    fn default() -> Struct_xcb_xfixes_change_cursor_by_name_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_change_cursor_by_name_request_t =
     Struct_xcb_xfixes_change_cursor_by_name_request_t;
@@ -9698,10 +10367,11 @@ pub struct Struct_xcb_xfixes_expand_region_request_t {
     pub top: uint16_t,
     pub bottom: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_expand_region_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_expand_region_request_t {
-    fn default() -> Struct_xcb_xfixes_expand_region_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_expand_region_request_t =
     Struct_xcb_xfixes_expand_region_request_t;
@@ -9713,10 +10383,11 @@ pub struct Struct_xcb_xfixes_hide_cursor_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_hide_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_hide_cursor_request_t {
-    fn default() -> Struct_xcb_xfixes_hide_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_hide_cursor_request_t =
     Struct_xcb_xfixes_hide_cursor_request_t;
@@ -9728,10 +10399,11 @@ pub struct Struct_xcb_xfixes_show_cursor_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_show_cursor_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_show_cursor_request_t {
-    fn default() -> Struct_xcb_xfixes_show_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_show_cursor_request_t =
     Struct_xcb_xfixes_show_cursor_request_t;
@@ -9743,10 +10415,11 @@ pub struct Struct_xcb_xfixes_barrier_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_xfixes_barrier_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_xfixes_barrier_iterator_t {
-    fn default() -> Struct_xcb_xfixes_barrier_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_barrier_iterator_t = Struct_xcb_xfixes_barrier_iterator_t;
 pub type Enum_xcb_xfixes_barrier_directions_t = ::libc::c_uint;
@@ -9769,14 +10442,16 @@ pub struct Struct_xcb_xfixes_create_pointer_barrier_request_t {
     pub x2: uint16_t,
     pub y2: uint16_t,
     pub directions: uint32_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub num_devices: uint16_t,
+}
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_create_pointer_barrier_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_xfixes_create_pointer_barrier_request_t {
-    fn default() -> Struct_xcb_xfixes_create_pointer_barrier_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_create_pointer_barrier_request_t =
     Struct_xcb_xfixes_create_pointer_barrier_request_t;
@@ -9788,11 +10463,13 @@ pub struct Struct_xcb_xfixes_delete_pointer_barrier_request_t {
     pub length: uint16_t,
     pub barrier: xcb_xfixes_barrier_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_xfixes_delete_pointer_barrier_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_xfixes_delete_pointer_barrier_request_t {
-    fn default() -> Struct_xcb_xfixes_delete_pointer_barrier_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_xfixes_delete_pointer_barrier_request_t =
     Struct_xcb_xfixes_delete_pointer_barrier_request_t;
@@ -9804,10 +10481,11 @@ pub struct Struct_xcb_input_event_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_event_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_event_class_iterator_t {
-    fn default() -> Struct_xcb_input_event_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_event_class_iterator_t =
     Struct_xcb_input_event_class_iterator_t;
@@ -9819,10 +10497,11 @@ pub struct Struct_xcb_input_key_code_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_code_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_code_iterator_t {
-    fn default() -> Struct_xcb_input_key_code_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_code_iterator_t = Struct_xcb_input_key_code_iterator_t;
 pub type xcb_input_device_id_t = uint16_t;
@@ -9833,10 +10512,11 @@ pub struct Struct_xcb_input_device_id_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_id_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_id_iterator_t {
-    fn default() -> Struct_xcb_input_device_id_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_id_iterator_t =
     Struct_xcb_input_device_id_iterator_t;
@@ -9848,10 +10528,11 @@ pub struct Struct_xcb_input_fp1616_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_fp1616_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_fp1616_iterator_t {
-    fn default() -> Struct_xcb_input_fp1616_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_fp1616_iterator_t = Struct_xcb_input_fp1616_iterator_t;
 #[repr(C)]
@@ -9860,10 +10541,11 @@ pub struct Struct_xcb_input_fp3232_t {
     pub integral: int32_t,
     pub frac: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_fp3232_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_fp3232_t {
-    fn default() -> Struct_xcb_input_fp3232_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_fp3232_t = Struct_xcb_input_fp3232_t;
 #[repr(C)]
@@ -9873,10 +10555,11 @@ pub struct Struct_xcb_input_fp3232_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_fp3232_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_fp3232_iterator_t {
-    fn default() -> Struct_xcb_input_fp3232_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_fp3232_iterator_t = Struct_xcb_input_fp3232_iterator_t;
 #[repr(C)]
@@ -9884,11 +10567,12 @@ pub type xcb_input_fp3232_iterator_t = Struct_xcb_input_fp3232_iterator_t;
 pub struct Struct_xcb_input_get_extension_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_extension_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_extension_version_cookie_t {
-    fn default() -> Struct_xcb_input_get_extension_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_extension_version_cookie_t =
     Struct_xcb_input_get_extension_version_cookie_t;
@@ -9899,13 +10583,15 @@ pub struct Struct_xcb_input_get_extension_version_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub name_len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_extension_version_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_extension_version_request_t {
-    fn default() -> Struct_xcb_input_get_extension_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_extension_version_request_t =
     Struct_xcb_input_get_extension_version_request_t;
@@ -9919,13 +10605,14 @@ pub struct Struct_xcb_input_get_extension_version_reply_t {
     pub server_major: uint16_t,
     pub server_minor: uint16_t,
     pub present: uint8_t,
-    pub pad1: [uint8_t; 19u],
+    pub pad1: [uint8_t; 19usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_extension_version_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_extension_version_reply_t {
-    fn default() -> Struct_xcb_input_get_extension_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_extension_version_reply_t =
     Struct_xcb_input_get_extension_version_reply_t;
@@ -9958,10 +10645,11 @@ pub struct Struct_xcb_input_device_info_t {
     pub device_use: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_info_t {
-    fn default() -> Struct_xcb_input_device_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_info_t = Struct_xcb_input_device_info_t;
 #[repr(C)]
@@ -9971,10 +10659,11 @@ pub struct Struct_xcb_input_device_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_info_iterator_t {
-    fn default() -> Struct_xcb_input_device_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_info_iterator_t =
     Struct_xcb_input_device_info_iterator_t;
@@ -9986,12 +10675,13 @@ pub struct Struct_xcb_input_key_info_t {
     pub min_keycode: xcb_input_key_code_t,
     pub max_keycode: xcb_input_key_code_t,
     pub num_keys: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_key_info_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_key_info_t {
-    fn default() -> Struct_xcb_input_key_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_info_t = Struct_xcb_input_key_info_t;
 #[repr(C)]
@@ -10001,10 +10691,11 @@ pub struct Struct_xcb_input_key_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_info_iterator_t {
-    fn default() -> Struct_xcb_input_key_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_info_iterator_t = Struct_xcb_input_key_info_iterator_t;
 #[repr(C)]
@@ -10014,10 +10705,11 @@ pub struct Struct_xcb_input_button_info_t {
     pub len: uint8_t,
     pub num_buttons: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_info_t {
-    fn default() -> Struct_xcb_input_button_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_info_t = Struct_xcb_input_button_info_t;
 #[repr(C)]
@@ -10027,10 +10719,11 @@ pub struct Struct_xcb_input_button_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_info_iterator_t {
-    fn default() -> Struct_xcb_input_button_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_info_iterator_t =
     Struct_xcb_input_button_info_iterator_t;
@@ -10041,10 +10734,11 @@ pub struct Struct_xcb_input_axis_info_t {
     pub minimum: int32_t,
     pub maximum: int32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_axis_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_axis_info_t {
-    fn default() -> Struct_xcb_input_axis_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_axis_info_t = Struct_xcb_input_axis_info_t;
 #[repr(C)]
@@ -10054,10 +10748,11 @@ pub struct Struct_xcb_input_axis_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_axis_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_axis_info_iterator_t {
-    fn default() -> Struct_xcb_input_axis_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_axis_info_iterator_t =
     Struct_xcb_input_axis_info_iterator_t;
@@ -10070,10 +10765,11 @@ pub struct Struct_xcb_input_valuator_info_t {
     pub mode: uint8_t,
     pub motion_size: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_valuator_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_valuator_info_t {
-    fn default() -> Struct_xcb_input_valuator_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_info_t = Struct_xcb_input_valuator_info_t;
 #[repr(C)]
@@ -10083,10 +10779,11 @@ pub struct Struct_xcb_input_valuator_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_valuator_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_valuator_info_iterator_t {
-    fn default() -> Struct_xcb_input_valuator_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_info_iterator_t =
     Struct_xcb_input_valuator_info_iterator_t;
@@ -10096,10 +10793,11 @@ pub struct Struct_xcb_input_input_info_t {
     pub class_id: uint8_t,
     pub len: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_info_t {
-    fn default() -> Struct_xcb_input_input_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_info_t = Struct_xcb_input_input_info_t;
 #[repr(C)]
@@ -10109,10 +10807,11 @@ pub struct Struct_xcb_input_input_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_info_iterator_t {
-    fn default() -> Struct_xcb_input_input_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_info_iterator_t =
     Struct_xcb_input_input_info_iterator_t;
@@ -10121,10 +10820,11 @@ pub type xcb_input_input_info_iterator_t =
 pub struct Struct_xcb_input_device_name_t {
     pub len: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_name_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_name_t {
-    fn default() -> Struct_xcb_input_device_name_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_name_t = Struct_xcb_input_device_name_t;
 #[repr(C)]
@@ -10134,10 +10834,11 @@ pub struct Struct_xcb_input_device_name_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_name_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_name_iterator_t {
-    fn default() -> Struct_xcb_input_device_name_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_name_iterator_t =
     Struct_xcb_input_device_name_iterator_t;
@@ -10146,11 +10847,12 @@ pub type xcb_input_device_name_iterator_t =
 pub struct Struct_xcb_input_list_input_devices_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_list_input_devices_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_list_input_devices_cookie_t
  {
-    fn default() -> Struct_xcb_input_list_input_devices_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_input_devices_cookie_t =
     Struct_xcb_input_list_input_devices_cookie_t;
@@ -10161,11 +10863,12 @@ pub struct Struct_xcb_input_list_input_devices_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_list_input_devices_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_list_input_devices_request_t
  {
-    fn default() -> Struct_xcb_input_list_input_devices_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_input_devices_request_t =
     Struct_xcb_input_list_input_devices_request_t;
@@ -10177,12 +10880,13 @@ pub struct Struct_xcb_input_list_input_devices_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub devices_len: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_list_input_devices_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_list_input_devices_reply_t {
-    fn default() -> Struct_xcb_input_list_input_devices_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_input_devices_reply_t =
     Struct_xcb_input_list_input_devices_reply_t;
@@ -10192,10 +10896,11 @@ pub struct Struct_xcb_input_input_class_info_t {
     pub class_id: uint8_t,
     pub event_type_base: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_class_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_class_info_t {
-    fn default() -> Struct_xcb_input_input_class_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_class_info_t = Struct_xcb_input_input_class_info_t;
 #[repr(C)]
@@ -10205,11 +10910,12 @@ pub struct Struct_xcb_input_input_class_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_class_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_class_info_iterator_t
  {
-    fn default() -> Struct_xcb_input_input_class_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_class_info_iterator_t =
     Struct_xcb_input_input_class_info_iterator_t;
@@ -10218,10 +10924,11 @@ pub type xcb_input_input_class_info_iterator_t =
 pub struct Struct_xcb_input_open_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_open_device_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_open_device_cookie_t {
-    fn default() -> Struct_xcb_input_open_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_open_device_cookie_t =
     Struct_xcb_input_open_device_cookie_t;
@@ -10232,12 +10939,13 @@ pub struct Struct_xcb_input_open_device_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_open_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_open_device_request_t {
-    fn default() -> Struct_xcb_input_open_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_open_device_request_t =
     Struct_xcb_input_open_device_request_t;
@@ -10249,12 +10957,13 @@ pub struct Struct_xcb_input_open_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_classes: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_open_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_open_device_reply_t {
-    fn default() -> Struct_xcb_input_open_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_open_device_reply_t = Struct_xcb_input_open_device_reply_t;
 #[repr(C)]
@@ -10264,12 +10973,13 @@ pub struct Struct_xcb_input_close_device_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_close_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_close_device_request_t {
-    fn default() -> Struct_xcb_input_close_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_close_device_request_t =
     Struct_xcb_input_close_device_request_t;
@@ -10278,10 +10988,11 @@ pub type xcb_input_close_device_request_t =
 pub struct Struct_xcb_input_set_device_mode_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_set_device_mode_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_set_device_mode_cookie_t {
-    fn default() -> Struct_xcb_input_set_device_mode_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_mode_cookie_t =
     Struct_xcb_input_set_device_mode_cookie_t;
@@ -10293,12 +11004,13 @@ pub struct Struct_xcb_input_set_device_mode_request_t {
     pub length: uint16_t,
     pub device_id: uint8_t,
     pub mode: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_set_device_mode_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_set_device_mode_request_t {
-    fn default() -> Struct_xcb_input_set_device_mode_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_mode_request_t =
     Struct_xcb_input_set_device_mode_request_t;
@@ -10310,12 +11022,13 @@ pub struct Struct_xcb_input_set_device_mode_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_set_device_mode_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_set_device_mode_reply_t {
-    fn default() -> Struct_xcb_input_set_device_mode_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_mode_reply_t =
     Struct_xcb_input_set_device_mode_reply_t;
@@ -10327,13 +11040,15 @@ pub struct Struct_xcb_input_select_extension_event_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub num_classes: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_select_extension_event_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_select_extension_event_request_t {
-    fn default() -> Struct_xcb_input_select_extension_event_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_select_extension_event_request_t =
     Struct_xcb_input_select_extension_event_request_t;
@@ -10342,11 +11057,13 @@ pub type xcb_input_select_extension_event_request_t =
 pub struct Struct_xcb_input_get_selected_extension_events_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_selected_extension_events_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_selected_extension_events_cookie_t {
-    fn default() -> Struct_xcb_input_get_selected_extension_events_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_selected_extension_events_cookie_t =
     Struct_xcb_input_get_selected_extension_events_cookie_t;
@@ -10358,11 +11075,13 @@ pub struct Struct_xcb_input_get_selected_extension_events_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_selected_extension_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_selected_extension_events_request_t {
-    fn default() -> Struct_xcb_input_get_selected_extension_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_selected_extension_events_request_t =
     Struct_xcb_input_get_selected_extension_events_request_t;
@@ -10375,13 +11094,15 @@ pub struct Struct_xcb_input_get_selected_extension_events_reply_t {
     pub length: uint32_t,
     pub num_this_classes: uint16_t,
     pub num_all_classes: uint16_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_selected_extension_events_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_selected_extension_events_reply_t {
-    fn default() -> Struct_xcb_input_get_selected_extension_events_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_selected_extension_events_reply_t =
     Struct_xcb_input_get_selected_extension_events_reply_t;
@@ -10400,12 +11121,13 @@ pub struct Struct_xcb_input_change_device_dont_propagate_list_request_t {
     pub mode: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_change_device_dont_propagate_list_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_dont_propagate_list_request_t {
-    fn default()
-     -> Struct_xcb_input_change_device_dont_propagate_list_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_dont_propagate_list_request_t =
     Struct_xcb_input_change_device_dont_propagate_list_request_t;
@@ -10414,11 +11136,13 @@ pub type xcb_input_change_device_dont_propagate_list_request_t =
 pub struct Struct_xcb_input_get_device_dont_propagate_list_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_dont_propagate_list_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_dont_propagate_list_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_dont_propagate_list_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_dont_propagate_list_cookie_t =
     Struct_xcb_input_get_device_dont_propagate_list_cookie_t;
@@ -10430,12 +11154,13 @@ pub struct Struct_xcb_input_get_device_dont_propagate_list_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_dont_propagate_list_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_dont_propagate_list_request_t {
-    fn default()
-     -> Struct_xcb_input_get_device_dont_propagate_list_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_dont_propagate_list_request_t =
     Struct_xcb_input_get_device_dont_propagate_list_request_t;
@@ -10447,13 +11172,15 @@ pub struct Struct_xcb_input_get_device_dont_propagate_list_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_classes: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_dont_propagate_list_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_dont_propagate_list_reply_t {
-    fn default() -> Struct_xcb_input_get_device_dont_propagate_list_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_dont_propagate_list_reply_t =
     Struct_xcb_input_get_device_dont_propagate_list_reply_t;
@@ -10462,10 +11189,11 @@ pub type xcb_input_get_device_dont_propagate_list_reply_t =
 pub struct Struct_xcb_input_device_time_coord_t {
     pub time: xcb_timestamp_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_time_coord_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_time_coord_t {
-    fn default() -> Struct_xcb_input_device_time_coord_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_time_coord_t = Struct_xcb_input_device_time_coord_t;
 #[repr(C)]
@@ -10475,11 +11203,12 @@ pub struct Struct_xcb_input_device_time_coord_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_time_coord_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_time_coord_iterator_t
  {
-    fn default() -> Struct_xcb_input_device_time_coord_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_time_coord_iterator_t =
     Struct_xcb_input_device_time_coord_iterator_t;
@@ -10488,11 +11217,13 @@ pub type xcb_input_device_time_coord_iterator_t =
 pub struct Struct_xcb_input_get_device_motion_events_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_motion_events_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_motion_events_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_motion_events_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_motion_events_cookie_t =
     Struct_xcb_input_get_device_motion_events_cookie_t;
@@ -10506,11 +11237,13 @@ pub struct Struct_xcb_input_get_device_motion_events_request_t {
     pub stop: xcb_timestamp_t,
     pub device_id: uint8_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_motion_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_motion_events_request_t {
-    fn default() -> Struct_xcb_input_get_device_motion_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_motion_events_request_t =
     Struct_xcb_input_get_device_motion_events_request_t;
@@ -10524,13 +11257,15 @@ pub struct Struct_xcb_input_get_device_motion_events_reply_t {
     pub num_events: uint32_t,
     pub num_axes: uint8_t,
     pub device_mode: uint8_t,
-    pub pad1: [uint8_t; 18u],
+    pub pad1: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_motion_events_reply_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_motion_events_reply_t {
-    fn default() -> Struct_xcb_input_get_device_motion_events_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_motion_events_reply_t =
     Struct_xcb_input_get_device_motion_events_reply_t;
@@ -10539,11 +11274,13 @@ pub type xcb_input_get_device_motion_events_reply_t =
 pub struct Struct_xcb_input_change_keyboard_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_keyboard_device_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_keyboard_device_cookie_t {
-    fn default() -> Struct_xcb_input_change_keyboard_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_keyboard_device_cookie_t =
     Struct_xcb_input_change_keyboard_device_cookie_t;
@@ -10554,13 +11291,15 @@ pub struct Struct_xcb_input_change_keyboard_device_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_change_keyboard_device_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_change_keyboard_device_request_t {
-    fn default() -> Struct_xcb_input_change_keyboard_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_keyboard_device_request_t =
     Struct_xcb_input_change_keyboard_device_request_t;
@@ -10572,13 +11311,14 @@ pub struct Struct_xcb_input_change_keyboard_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_change_keyboard_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_change_keyboard_device_reply_t {
-    fn default() -> Struct_xcb_input_change_keyboard_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_keyboard_device_reply_t =
     Struct_xcb_input_change_keyboard_device_reply_t;
@@ -10587,11 +11327,12 @@ pub type xcb_input_change_keyboard_device_reply_t =
 pub struct Struct_xcb_input_change_pointer_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_pointer_device_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_pointer_device_cookie_t {
-    fn default() -> Struct_xcb_input_change_pointer_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_pointer_device_cookie_t =
     Struct_xcb_input_change_pointer_device_cookie_t;
@@ -10606,11 +11347,13 @@ pub struct Struct_xcb_input_change_pointer_device_request_t {
     pub device_id: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_pointer_device_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_pointer_device_request_t {
-    fn default() -> Struct_xcb_input_change_pointer_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_pointer_device_request_t =
     Struct_xcb_input_change_pointer_device_request_t;
@@ -10622,13 +11365,14 @@ pub struct Struct_xcb_input_change_pointer_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_change_pointer_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_change_pointer_device_reply_t {
-    fn default() -> Struct_xcb_input_change_pointer_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_pointer_device_reply_t =
     Struct_xcb_input_change_pointer_device_reply_t;
@@ -10637,10 +11381,11 @@ pub type xcb_input_change_pointer_device_reply_t =
 pub struct Struct_xcb_input_grab_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_grab_device_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_grab_device_cookie_t {
-    fn default() -> Struct_xcb_input_grab_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_device_cookie_t =
     Struct_xcb_input_grab_device_cookie_t;
@@ -10657,12 +11402,13 @@ pub struct Struct_xcb_input_grab_device_request_t {
     pub other_device_mode: uint8_t,
     pub owner_events: uint8_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_grab_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_grab_device_request_t {
-    fn default() -> Struct_xcb_input_grab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_device_request_t =
     Struct_xcb_input_grab_device_request_t;
@@ -10674,12 +11420,13 @@ pub struct Struct_xcb_input_grab_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_grab_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_grab_device_reply_t {
-    fn default() -> Struct_xcb_input_grab_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_device_reply_t = Struct_xcb_input_grab_device_reply_t;
 #[repr(C)]
@@ -10691,10 +11438,11 @@ pub struct Struct_xcb_input_ungrab_device_request_t {
     pub time: xcb_timestamp_t,
     pub device_id: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ungrab_device_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_ungrab_device_request_t {
-    fn default() -> Struct_xcb_input_ungrab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ungrab_device_request_t =
     Struct_xcb_input_ungrab_device_request_t;
@@ -10713,12 +11461,13 @@ pub struct Struct_xcb_input_grab_device_key_request_t {
     pub this_device_mode: uint8_t,
     pub other_device_mode: uint8_t,
     pub owner_events: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_grab_device_key_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_grab_device_key_request_t {
-    fn default() -> Struct_xcb_input_grab_device_key_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_device_key_request_t =
     Struct_xcb_input_grab_device_key_request_t;
@@ -10734,11 +11483,12 @@ pub struct Struct_xcb_input_ungrab_device_key_request_t {
     pub key: uint8_t,
     pub grabbed_device: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ungrab_device_key_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_ungrab_device_key_request_t
  {
-    fn default() -> Struct_xcb_input_ungrab_device_key_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ungrab_device_key_request_t =
     Struct_xcb_input_ungrab_device_key_request_t;
@@ -10757,13 +11507,14 @@ pub struct Struct_xcb_input_grab_device_button_request_t {
     pub other_device_mode: uint8_t,
     pub button: uint8_t,
     pub owner_events: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_grab_device_button_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_grab_device_button_request_t
  {
-    fn default() -> Struct_xcb_input_grab_device_button_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_device_button_request_t =
     Struct_xcb_input_grab_device_button_request_t;
@@ -10779,11 +11530,12 @@ pub struct Struct_xcb_input_ungrab_device_button_request_t {
     pub button: uint8_t,
     pub grabbed_device: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ungrab_device_button_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_ungrab_device_button_request_t {
-    fn default() -> Struct_xcb_input_ungrab_device_button_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ungrab_device_button_request_t =
     Struct_xcb_input_ungrab_device_button_request_t;
@@ -10805,11 +11557,12 @@ pub struct Struct_xcb_input_allow_device_events_request_t {
     pub mode: uint8_t,
     pub device_id: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_allow_device_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_allow_device_events_request_t {
-    fn default() -> Struct_xcb_input_allow_device_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_allow_device_events_request_t =
     Struct_xcb_input_allow_device_events_request_t;
@@ -10818,10 +11571,11 @@ pub type xcb_input_allow_device_events_request_t =
 pub struct Struct_xcb_input_get_device_focus_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_focus_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_get_device_focus_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_focus_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_focus_cookie_t =
     Struct_xcb_input_get_device_focus_cookie_t;
@@ -10832,12 +11586,13 @@ pub struct Struct_xcb_input_get_device_focus_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_focus_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_get_device_focus_request_t {
-    fn default() -> Struct_xcb_input_get_device_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_focus_request_t =
     Struct_xcb_input_get_device_focus_request_t;
@@ -10851,12 +11606,13 @@ pub struct Struct_xcb_input_get_device_focus_reply_t {
     pub focus: xcb_window_t,
     pub time: xcb_timestamp_t,
     pub revert_to: uint8_t,
-    pub pad1: [uint8_t; 15u],
+    pub pad1: [uint8_t; 15usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_focus_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_get_device_focus_reply_t {
-    fn default() -> Struct_xcb_input_get_device_focus_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_focus_reply_t =
     Struct_xcb_input_get_device_focus_reply_t;
@@ -10871,10 +11627,11 @@ pub struct Struct_xcb_input_set_device_focus_request_t {
     pub revert_to: uint8_t,
     pub device_id: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_set_device_focus_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_set_device_focus_request_t {
-    fn default() -> Struct_xcb_input_set_device_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_focus_request_t =
     Struct_xcb_input_set_device_focus_request_t;
@@ -10900,12 +11657,13 @@ pub struct Struct_xcb_input_kbd_feedback_state_t {
     pub click: uint8_t,
     pub percent: uint8_t,
     pub pad0: uint8_t,
-    pub auto_repeats: [uint8_t; 32u],
+    pub auto_repeats: [uint8_t; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_kbd_feedback_state_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_kbd_feedback_state_t {
-    fn default() -> Struct_xcb_input_kbd_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_kbd_feedback_state_t =
     Struct_xcb_input_kbd_feedback_state_t;
@@ -10916,11 +11674,12 @@ pub struct Struct_xcb_input_kbd_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_kbd_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_kbd_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_kbd_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_kbd_feedback_state_iterator_t =
     Struct_xcb_input_kbd_feedback_state_iterator_t;
@@ -10930,15 +11689,16 @@ pub struct Struct_xcb_input_ptr_feedback_state_t {
     pub class_id: uint8_t,
     pub feedback_id: uint8_t,
     pub len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub accel_num: uint16_t,
     pub accel_denom: uint16_t,
     pub threshold: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ptr_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_ptr_feedback_state_t {
-    fn default() -> Struct_xcb_input_ptr_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ptr_feedback_state_t =
     Struct_xcb_input_ptr_feedback_state_t;
@@ -10949,11 +11709,12 @@ pub struct Struct_xcb_input_ptr_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ptr_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_ptr_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_ptr_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ptr_feedback_state_iterator_t =
     Struct_xcb_input_ptr_feedback_state_iterator_t;
@@ -10967,10 +11728,11 @@ pub struct Struct_xcb_input_integer_feedback_state_t {
     pub min_value: int32_t,
     pub max_value: int32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_integer_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_integer_feedback_state_t {
-    fn default() -> Struct_xcb_input_integer_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_integer_feedback_state_t =
     Struct_xcb_input_integer_feedback_state_t;
@@ -10981,11 +11743,13 @@ pub struct Struct_xcb_input_integer_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_integer_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_integer_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_integer_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_integer_feedback_state_iterator_t =
     Struct_xcb_input_integer_feedback_state_iterator_t;
@@ -10998,10 +11762,11 @@ pub struct Struct_xcb_input_string_feedback_state_t {
     pub max_symbols: uint16_t,
     pub num_keysyms: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_string_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_string_feedback_state_t {
-    fn default() -> Struct_xcb_input_string_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_string_feedback_state_t =
     Struct_xcb_input_string_feedback_state_t;
@@ -11012,11 +11777,13 @@ pub struct Struct_xcb_input_string_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_string_feedback_state_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_string_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_string_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_string_feedback_state_iterator_t =
     Struct_xcb_input_string_feedback_state_iterator_t;
@@ -11027,14 +11794,15 @@ pub struct Struct_xcb_input_bell_feedback_state_t {
     pub feedback_id: uint8_t,
     pub len: uint16_t,
     pub percent: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub pitch: uint16_t,
     pub duration: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_bell_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_bell_feedback_state_t {
-    fn default() -> Struct_xcb_input_bell_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_bell_feedback_state_t =
     Struct_xcb_input_bell_feedback_state_t;
@@ -11045,11 +11813,12 @@ pub struct Struct_xcb_input_bell_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_bell_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_bell_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_bell_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_bell_feedback_state_iterator_t =
     Struct_xcb_input_bell_feedback_state_iterator_t;
@@ -11062,10 +11831,11 @@ pub struct Struct_xcb_input_led_feedback_state_t {
     pub led_mask: uint32_t,
     pub led_values: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_led_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_led_feedback_state_t {
-    fn default() -> Struct_xcb_input_led_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_led_feedback_state_t =
     Struct_xcb_input_led_feedback_state_t;
@@ -11076,11 +11846,12 @@ pub struct Struct_xcb_input_led_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_led_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_led_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_led_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_led_feedback_state_iterator_t =
     Struct_xcb_input_led_feedback_state_iterator_t;
@@ -11091,10 +11862,11 @@ pub struct Struct_xcb_input_feedback_state_t {
     pub feedback_id: uint8_t,
     pub len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_feedback_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_feedback_state_t {
-    fn default() -> Struct_xcb_input_feedback_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_feedback_state_t = Struct_xcb_input_feedback_state_t;
 #[repr(C)]
@@ -11104,10 +11876,11 @@ pub struct Struct_xcb_input_feedback_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_feedback_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_feedback_state_iterator_t {
-    fn default() -> Struct_xcb_input_feedback_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_feedback_state_iterator_t =
     Struct_xcb_input_feedback_state_iterator_t;
@@ -11116,11 +11889,12 @@ pub type xcb_input_feedback_state_iterator_t =
 pub struct Struct_xcb_input_get_feedback_control_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_feedback_control_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_feedback_control_cookie_t {
-    fn default() -> Struct_xcb_input_get_feedback_control_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_feedback_control_cookie_t =
     Struct_xcb_input_get_feedback_control_cookie_t;
@@ -11131,13 +11905,14 @@ pub struct Struct_xcb_input_get_feedback_control_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_feedback_control_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_feedback_control_request_t {
-    fn default() -> Struct_xcb_input_get_feedback_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_feedback_control_request_t =
     Struct_xcb_input_get_feedback_control_request_t;
@@ -11149,13 +11924,14 @@ pub struct Struct_xcb_input_get_feedback_control_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_feedbacks: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_feedback_control_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_get_feedback_control_reply_t
  {
-    fn default() -> Struct_xcb_input_get_feedback_control_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_feedback_control_reply_t =
     Struct_xcb_input_get_feedback_control_reply_t;
@@ -11174,10 +11950,11 @@ pub struct Struct_xcb_input_kbd_feedback_ctl_t {
     pub led_mask: uint32_t,
     pub led_values: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_kbd_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_kbd_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_kbd_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_kbd_feedback_ctl_t = Struct_xcb_input_kbd_feedback_ctl_t;
 #[repr(C)]
@@ -11187,11 +11964,12 @@ pub struct Struct_xcb_input_kbd_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_kbd_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_kbd_feedback_ctl_iterator_t
  {
-    fn default() -> Struct_xcb_input_kbd_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_kbd_feedback_ctl_iterator_t =
     Struct_xcb_input_kbd_feedback_ctl_iterator_t;
@@ -11201,15 +11979,16 @@ pub struct Struct_xcb_input_ptr_feedback_ctl_t {
     pub class_id: uint8_t,
     pub feedback_id: uint8_t,
     pub len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub num: int16_t,
     pub denom: int16_t,
     pub threshold: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ptr_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_ptr_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_ptr_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ptr_feedback_ctl_t = Struct_xcb_input_ptr_feedback_ctl_t;
 #[repr(C)]
@@ -11219,11 +11998,12 @@ pub struct Struct_xcb_input_ptr_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_ptr_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_ptr_feedback_ctl_iterator_t
  {
-    fn default() -> Struct_xcb_input_ptr_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_ptr_feedback_ctl_iterator_t =
     Struct_xcb_input_ptr_feedback_ctl_iterator_t;
@@ -11235,10 +12015,11 @@ pub struct Struct_xcb_input_integer_feedback_ctl_t {
     pub len: uint16_t,
     pub int_to_display: int32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_integer_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_integer_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_integer_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_integer_feedback_ctl_t =
     Struct_xcb_input_integer_feedback_ctl_t;
@@ -11249,11 +12030,13 @@ pub struct Struct_xcb_input_integer_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_integer_feedback_ctl_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_integer_feedback_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_integer_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_integer_feedback_ctl_iterator_t =
     Struct_xcb_input_integer_feedback_ctl_iterator_t;
@@ -11263,13 +12046,14 @@ pub struct Struct_xcb_input_string_feedback_ctl_t {
     pub class_id: uint8_t,
     pub feedback_id: uint8_t,
     pub len: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub num_keysyms: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_string_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_string_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_string_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_string_feedback_ctl_t =
     Struct_xcb_input_string_feedback_ctl_t;
@@ -11280,11 +12064,12 @@ pub struct Struct_xcb_input_string_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_string_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_string_feedback_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_string_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_string_feedback_ctl_iterator_t =
     Struct_xcb_input_string_feedback_ctl_iterator_t;
@@ -11295,14 +12080,15 @@ pub struct Struct_xcb_input_bell_feedback_ctl_t {
     pub feedback_id: uint8_t,
     pub len: uint16_t,
     pub percent: int8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
     pub pitch: int16_t,
     pub duration: int16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_bell_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_bell_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_bell_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_bell_feedback_ctl_t = Struct_xcb_input_bell_feedback_ctl_t;
 #[repr(C)]
@@ -11312,11 +12098,12 @@ pub struct Struct_xcb_input_bell_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_bell_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_bell_feedback_ctl_iterator_t
  {
-    fn default() -> Struct_xcb_input_bell_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_bell_feedback_ctl_iterator_t =
     Struct_xcb_input_bell_feedback_ctl_iterator_t;
@@ -11329,10 +12116,11 @@ pub struct Struct_xcb_input_led_feedback_ctl_t {
     pub led_mask: uint32_t,
     pub led_values: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_led_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_led_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_led_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_led_feedback_ctl_t = Struct_xcb_input_led_feedback_ctl_t;
 #[repr(C)]
@@ -11342,11 +12130,12 @@ pub struct Struct_xcb_input_led_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_led_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_led_feedback_ctl_iterator_t
  {
-    fn default() -> Struct_xcb_input_led_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_led_feedback_ctl_iterator_t =
     Struct_xcb_input_led_feedback_ctl_iterator_t;
@@ -11357,10 +12146,11 @@ pub struct Struct_xcb_input_feedback_ctl_t {
     pub feedback_id: uint8_t,
     pub len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_feedback_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_feedback_ctl_t {
-    fn default() -> Struct_xcb_input_feedback_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_feedback_ctl_t = Struct_xcb_input_feedback_ctl_t;
 #[repr(C)]
@@ -11370,10 +12160,11 @@ pub struct Struct_xcb_input_feedback_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_feedback_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_feedback_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_feedback_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_feedback_ctl_iterator_t =
     Struct_xcb_input_feedback_ctl_iterator_t;
@@ -11387,11 +12178,13 @@ pub struct Struct_xcb_input_change_feedback_control_request_t {
     pub device_id: uint8_t,
     pub feedback_id: uint8_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_change_feedback_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_feedback_control_request_t {
-    fn default() -> Struct_xcb_input_change_feedback_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_feedback_control_request_t =
     Struct_xcb_input_change_feedback_control_request_t;
@@ -11400,11 +12193,13 @@ pub type xcb_input_change_feedback_control_request_t =
 pub struct Struct_xcb_input_get_device_key_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_key_mapping_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_key_mapping_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_key_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_key_mapping_cookie_t =
     Struct_xcb_input_get_device_key_mapping_cookie_t;
@@ -11418,11 +12213,13 @@ pub struct Struct_xcb_input_get_device_key_mapping_request_t {
     pub first_keycode: xcb_input_key_code_t,
     pub count: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_key_mapping_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_key_mapping_request_t {
-    fn default() -> Struct_xcb_input_get_device_key_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_key_mapping_request_t =
     Struct_xcb_input_get_device_key_mapping_request_t;
@@ -11434,13 +12231,14 @@ pub struct Struct_xcb_input_get_device_key_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub keysyms_per_keycode: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_key_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_key_mapping_reply_t {
-    fn default() -> Struct_xcb_input_get_device_key_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_key_mapping_reply_t =
     Struct_xcb_input_get_device_key_mapping_reply_t;
@@ -11455,11 +12253,13 @@ pub struct Struct_xcb_input_change_device_key_mapping_request_t {
     pub keysyms_per_keycode: uint8_t,
     pub keycode_count: uint8_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_change_device_key_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_key_mapping_request_t {
-    fn default() -> Struct_xcb_input_change_device_key_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_key_mapping_request_t =
     Struct_xcb_input_change_device_key_mapping_request_t;
@@ -11468,11 +12268,13 @@ pub type xcb_input_change_device_key_mapping_request_t =
 pub struct Struct_xcb_input_get_device_modifier_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_modifier_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_modifier_mapping_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_modifier_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_modifier_mapping_cookie_t =
     Struct_xcb_input_get_device_modifier_mapping_cookie_t;
@@ -11483,13 +12285,15 @@ pub struct Struct_xcb_input_get_device_modifier_mapping_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_modifier_mapping_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_modifier_mapping_request_t {
-    fn default() -> Struct_xcb_input_get_device_modifier_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_modifier_mapping_request_t =
     Struct_xcb_input_get_device_modifier_mapping_request_t;
@@ -11501,13 +12305,15 @@ pub struct Struct_xcb_input_get_device_modifier_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub keycodes_per_modifier: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_modifier_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_modifier_mapping_reply_t {
-    fn default() -> Struct_xcb_input_get_device_modifier_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_modifier_mapping_reply_t =
     Struct_xcb_input_get_device_modifier_mapping_reply_t;
@@ -11516,11 +12322,13 @@ pub type xcb_input_get_device_modifier_mapping_reply_t =
 pub struct Struct_xcb_input_set_device_modifier_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_modifier_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_set_device_modifier_mapping_cookie_t {
-    fn default() -> Struct_xcb_input_set_device_modifier_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_modifier_mapping_cookie_t =
     Struct_xcb_input_set_device_modifier_mapping_cookie_t;
@@ -11534,11 +12342,13 @@ pub struct Struct_xcb_input_set_device_modifier_mapping_request_t {
     pub keycodes_per_modifier: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_modifier_mapping_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_set_device_modifier_mapping_request_t {
-    fn default() -> Struct_xcb_input_set_device_modifier_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_modifier_mapping_request_t =
     Struct_xcb_input_set_device_modifier_mapping_request_t;
@@ -11550,13 +12360,15 @@ pub struct Struct_xcb_input_set_device_modifier_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_modifier_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_set_device_modifier_mapping_reply_t {
-    fn default() -> Struct_xcb_input_set_device_modifier_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_modifier_mapping_reply_t =
     Struct_xcb_input_set_device_modifier_mapping_reply_t;
@@ -11565,11 +12377,13 @@ pub type xcb_input_set_device_modifier_mapping_reply_t =
 pub struct Struct_xcb_input_get_device_button_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_button_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_get_device_button_mapping_cookie_t {
-    fn default() -> Struct_xcb_input_get_device_button_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_button_mapping_cookie_t =
     Struct_xcb_input_get_device_button_mapping_cookie_t;
@@ -11580,13 +12394,15 @@ pub struct Struct_xcb_input_get_device_button_mapping_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_button_mapping_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_button_mapping_request_t {
-    fn default() -> Struct_xcb_input_get_device_button_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_button_mapping_request_t =
     Struct_xcb_input_get_device_button_mapping_request_t;
@@ -11598,13 +12414,15 @@ pub struct Struct_xcb_input_get_device_button_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub map_size: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_get_device_button_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_button_mapping_reply_t {
-    fn default() -> Struct_xcb_input_get_device_button_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_button_mapping_reply_t =
     Struct_xcb_input_get_device_button_mapping_reply_t;
@@ -11613,11 +12431,13 @@ pub type xcb_input_get_device_button_mapping_reply_t =
 pub struct Struct_xcb_input_set_device_button_mapping_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_button_mapping_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_set_device_button_mapping_cookie_t {
-    fn default() -> Struct_xcb_input_set_device_button_mapping_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_button_mapping_cookie_t =
     Struct_xcb_input_set_device_button_mapping_cookie_t;
@@ -11629,13 +12449,15 @@ pub struct Struct_xcb_input_set_device_button_mapping_request_t {
     pub length: uint16_t,
     pub device_id: uint8_t,
     pub map_size: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_button_mapping_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_set_device_button_mapping_request_t {
-    fn default() -> Struct_xcb_input_set_device_button_mapping_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_button_mapping_request_t =
     Struct_xcb_input_set_device_button_mapping_request_t;
@@ -11647,13 +12469,15 @@ pub struct Struct_xcb_input_set_device_button_mapping_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_set_device_button_mapping_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_set_device_button_mapping_reply_t {
-    fn default() -> Struct_xcb_input_set_device_button_mapping_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_button_mapping_reply_t =
     Struct_xcb_input_set_device_button_mapping_reply_t;
@@ -11664,12 +12488,13 @@ pub struct Struct_xcb_input_key_state_t {
     pub len: uint8_t,
     pub num_keys: uint8_t,
     pub pad0: uint8_t,
-    pub keys: [uint8_t; 32u],
+    pub keys: [uint8_t; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_key_state_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_key_state_t {
-    fn default() -> Struct_xcb_input_key_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_state_t = Struct_xcb_input_key_state_t;
 #[repr(C)]
@@ -11679,10 +12504,11 @@ pub struct Struct_xcb_input_key_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_state_iterator_t {
-    fn default() -> Struct_xcb_input_key_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_state_iterator_t =
     Struct_xcb_input_key_state_iterator_t;
@@ -11693,12 +12519,13 @@ pub struct Struct_xcb_input_button_state_t {
     pub len: uint8_t,
     pub num_buttons: uint8_t,
     pub pad0: uint8_t,
-    pub buttons: [uint8_t; 32u],
+    pub buttons: [uint8_t; 32usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_button_state_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_button_state_t {
-    fn default() -> Struct_xcb_input_button_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_state_t = Struct_xcb_input_button_state_t;
 #[repr(C)]
@@ -11708,10 +12535,11 @@ pub struct Struct_xcb_input_button_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_state_iterator_t {
-    fn default() -> Struct_xcb_input_button_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_state_iterator_t =
     Struct_xcb_input_button_state_iterator_t;
@@ -11723,10 +12551,11 @@ pub struct Struct_xcb_input_valuator_state_t {
     pub num_valuators: uint8_t,
     pub mode: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_valuator_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_valuator_state_t {
-    fn default() -> Struct_xcb_input_valuator_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_state_t = Struct_xcb_input_valuator_state_t;
 #[repr(C)]
@@ -11736,10 +12565,11 @@ pub struct Struct_xcb_input_valuator_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_valuator_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_valuator_state_iterator_t {
-    fn default() -> Struct_xcb_input_valuator_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_state_iterator_t =
     Struct_xcb_input_valuator_state_iterator_t;
@@ -11751,10 +12581,11 @@ pub struct Struct_xcb_input_input_state_t {
     pub num_items: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_state_t {
-    fn default() -> Struct_xcb_input_input_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_state_t = Struct_xcb_input_input_state_t;
 #[repr(C)]
@@ -11764,10 +12595,11 @@ pub struct Struct_xcb_input_input_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_input_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_input_state_iterator_t {
-    fn default() -> Struct_xcb_input_input_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_input_state_iterator_t =
     Struct_xcb_input_input_state_iterator_t;
@@ -11776,11 +12608,12 @@ pub type xcb_input_input_state_iterator_t =
 pub struct Struct_xcb_input_query_device_state_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_query_device_state_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_query_device_state_cookie_t
  {
-    fn default() -> Struct_xcb_input_query_device_state_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_query_device_state_cookie_t =
     Struct_xcb_input_query_device_state_cookie_t;
@@ -11791,13 +12624,14 @@ pub struct Struct_xcb_input_query_device_state_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_query_device_state_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_query_device_state_request_t
  {
-    fn default() -> Struct_xcb_input_query_device_state_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_query_device_state_request_t =
     Struct_xcb_input_query_device_state_request_t;
@@ -11809,12 +12643,13 @@ pub struct Struct_xcb_input_query_device_state_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_classes: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_query_device_state_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_query_device_state_reply_t {
-    fn default() -> Struct_xcb_input_query_device_state_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_query_device_state_reply_t =
     Struct_xcb_input_query_device_state_reply_t;
@@ -11829,13 +12664,14 @@ pub struct Struct_xcb_input_send_extension_event_request_t {
     pub propagate: uint8_t,
     pub num_classes: uint16_t,
     pub num_events: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_send_extension_event_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_send_extension_event_request_t {
-    fn default() -> Struct_xcb_input_send_extension_event_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_send_extension_event_request_t =
     Struct_xcb_input_send_extension_event_request_t;
@@ -11850,10 +12686,11 @@ pub struct Struct_xcb_input_device_bell_request_t {
     pub feedback_class: uint8_t,
     pub percent: int8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_bell_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_bell_request_t {
-    fn default() -> Struct_xcb_input_device_bell_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_bell_request_t =
     Struct_xcb_input_device_bell_request_t;
@@ -11862,11 +12699,12 @@ pub type xcb_input_device_bell_request_t =
 pub struct Struct_xcb_input_set_device_valuators_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_set_device_valuators_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_set_device_valuators_cookie_t {
-    fn default() -> Struct_xcb_input_set_device_valuators_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_valuators_cookie_t =
     Struct_xcb_input_set_device_valuators_cookie_t;
@@ -11881,11 +12719,12 @@ pub struct Struct_xcb_input_set_device_valuators_request_t {
     pub num_valuators: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_set_device_valuators_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_set_device_valuators_request_t {
-    fn default() -> Struct_xcb_input_set_device_valuators_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_valuators_request_t =
     Struct_xcb_input_set_device_valuators_request_t;
@@ -11897,13 +12736,14 @@ pub struct Struct_xcb_input_set_device_valuators_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_set_device_valuators_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_set_device_valuators_reply_t
  {
-    fn default() -> Struct_xcb_input_set_device_valuators_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_set_device_valuators_reply_t =
     Struct_xcb_input_set_device_valuators_reply_t;
@@ -11921,10 +12761,11 @@ pub struct Struct_xcb_input_device_resolution_state_t {
     pub len: uint16_t,
     pub num_valuators: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_resolution_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_resolution_state_t {
-    fn default() -> Struct_xcb_input_device_resolution_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_resolution_state_t =
     Struct_xcb_input_device_resolution_state_t;
@@ -11935,11 +12776,13 @@ pub struct Struct_xcb_input_device_resolution_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_device_resolution_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_resolution_state_iterator_t {
-    fn default() -> Struct_xcb_input_device_resolution_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_resolution_state_iterator_t =
     Struct_xcb_input_device_resolution_state_iterator_t;
@@ -11957,10 +12800,11 @@ pub struct Struct_xcb_input_device_abs_calib_state_t {
     pub rotation: uint32_t,
     pub button_threshold: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_calib_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_abs_calib_state_t {
-    fn default() -> Struct_xcb_input_device_abs_calib_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_calib_state_t =
     Struct_xcb_input_device_abs_calib_state_t;
@@ -11971,11 +12815,13 @@ pub struct Struct_xcb_input_device_abs_calib_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_device_abs_calib_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_abs_calib_state_iterator_t {
-    fn default() -> Struct_xcb_input_device_abs_calib_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_calib_state_iterator_t =
     Struct_xcb_input_device_abs_calib_state_iterator_t;
@@ -11991,10 +12837,11 @@ pub struct Struct_xcb_input_device_abs_area_state_t {
     pub screen: uint32_t,
     pub following: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_area_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_abs_area_state_t {
-    fn default() -> Struct_xcb_input_device_abs_area_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_area_state_t =
     Struct_xcb_input_device_abs_area_state_t;
@@ -12005,11 +12852,13 @@ pub struct Struct_xcb_input_device_abs_area_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_area_state_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_abs_area_state_iterator_t {
-    fn default() -> Struct_xcb_input_device_abs_area_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_area_state_iterator_t =
     Struct_xcb_input_device_abs_area_state_iterator_t;
@@ -12020,12 +12869,13 @@ pub struct Struct_xcb_input_device_core_state_t {
     pub len: uint16_t,
     pub status: uint8_t,
     pub iscore: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_core_state_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_core_state_t {
-    fn default() -> Struct_xcb_input_device_core_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_core_state_t = Struct_xcb_input_device_core_state_t;
 #[repr(C)]
@@ -12035,11 +12885,12 @@ pub struct Struct_xcb_input_device_core_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_core_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_core_state_iterator_t
  {
-    fn default() -> Struct_xcb_input_device_core_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_core_state_iterator_t =
     Struct_xcb_input_device_core_state_iterator_t;
@@ -12049,12 +12900,13 @@ pub struct Struct_xcb_input_device_enable_state_t {
     pub control_id: uint16_t,
     pub len: uint16_t,
     pub enable: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_enable_state_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_enable_state_t {
-    fn default() -> Struct_xcb_input_device_enable_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_enable_state_t =
     Struct_xcb_input_device_enable_state_t;
@@ -12065,11 +12917,12 @@ pub struct Struct_xcb_input_device_enable_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_enable_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_enable_state_iterator_t {
-    fn default() -> Struct_xcb_input_device_enable_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_enable_state_iterator_t =
     Struct_xcb_input_device_enable_state_iterator_t;
@@ -12079,10 +12932,11 @@ pub struct Struct_xcb_input_device_state_t {
     pub control_id: uint16_t,
     pub len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_state_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_state_t {
-    fn default() -> Struct_xcb_input_device_state_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_state_t = Struct_xcb_input_device_state_t;
 #[repr(C)]
@@ -12092,10 +12946,11 @@ pub struct Struct_xcb_input_device_state_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_state_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_state_iterator_t {
-    fn default() -> Struct_xcb_input_device_state_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_state_iterator_t =
     Struct_xcb_input_device_state_iterator_t;
@@ -12104,11 +12959,12 @@ pub type xcb_input_device_state_iterator_t =
 pub struct Struct_xcb_input_get_device_control_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_control_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_get_device_control_cookie_t
  {
-    fn default() -> Struct_xcb_input_get_device_control_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_control_cookie_t =
     Struct_xcb_input_get_device_control_cookie_t;
@@ -12122,11 +12978,12 @@ pub struct Struct_xcb_input_get_device_control_request_t {
     pub device_id: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_control_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_get_device_control_request_t
  {
-    fn default() -> Struct_xcb_input_get_device_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_control_request_t =
     Struct_xcb_input_get_device_control_request_t;
@@ -12138,12 +12995,13 @@ pub struct Struct_xcb_input_get_device_control_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_control_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_get_device_control_reply_t {
-    fn default() -> Struct_xcb_input_get_device_control_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_control_reply_t =
     Struct_xcb_input_get_device_control_reply_t;
@@ -12154,12 +13012,13 @@ pub struct Struct_xcb_input_device_resolution_ctl_t {
     pub len: uint16_t,
     pub first_valuator: uint8_t,
     pub num_valuators: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_resolution_ctl_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_resolution_ctl_t {
-    fn default() -> Struct_xcb_input_device_resolution_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_resolution_ctl_t =
     Struct_xcb_input_device_resolution_ctl_t;
@@ -12170,11 +13029,13 @@ pub struct Struct_xcb_input_device_resolution_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_resolution_ctl_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_resolution_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_device_resolution_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_resolution_ctl_iterator_t =
     Struct_xcb_input_device_resolution_ctl_iterator_t;
@@ -12192,10 +13053,11 @@ pub struct Struct_xcb_input_device_abs_calib_ctl_t {
     pub rotation: uint32_t,
     pub button_threshold: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_calib_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_abs_calib_ctl_t {
-    fn default() -> Struct_xcb_input_device_abs_calib_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_calib_ctl_t =
     Struct_xcb_input_device_abs_calib_ctl_t;
@@ -12206,11 +13068,13 @@ pub struct Struct_xcb_input_device_abs_calib_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_calib_ctl_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_abs_calib_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_device_abs_calib_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_calib_ctl_iterator_t =
     Struct_xcb_input_device_abs_calib_ctl_iterator_t;
@@ -12226,10 +13090,11 @@ pub struct Struct_xcb_input_device_abs_area_ctrl_t {
     pub screen: int32_t,
     pub following: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_area_ctrl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_abs_area_ctrl_t {
-    fn default() -> Struct_xcb_input_device_abs_area_ctrl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_area_ctrl_t =
     Struct_xcb_input_device_abs_area_ctrl_t;
@@ -12240,11 +13105,13 @@ pub struct Struct_xcb_input_device_abs_area_ctrl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_abs_area_ctrl_iterator_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_abs_area_ctrl_iterator_t {
-    fn default() -> Struct_xcb_input_device_abs_area_ctrl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_abs_area_ctrl_iterator_t =
     Struct_xcb_input_device_abs_area_ctrl_iterator_t;
@@ -12254,12 +13121,13 @@ pub struct Struct_xcb_input_device_core_ctrl_t {
     pub control_id: uint16_t,
     pub len: uint16_t,
     pub status: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_core_ctrl_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_core_ctrl_t {
-    fn default() -> Struct_xcb_input_device_core_ctrl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_core_ctrl_t = Struct_xcb_input_device_core_ctrl_t;
 #[repr(C)]
@@ -12269,11 +13137,12 @@ pub struct Struct_xcb_input_device_core_ctrl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_core_ctrl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_core_ctrl_iterator_t
  {
-    fn default() -> Struct_xcb_input_device_core_ctrl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_core_ctrl_iterator_t =
     Struct_xcb_input_device_core_ctrl_iterator_t;
@@ -12283,12 +13152,13 @@ pub struct Struct_xcb_input_device_enable_ctrl_t {
     pub control_id: uint16_t,
     pub len: uint16_t,
     pub enable: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_enable_ctrl_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_enable_ctrl_t {
-    fn default() -> Struct_xcb_input_device_enable_ctrl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_enable_ctrl_t =
     Struct_xcb_input_device_enable_ctrl_t;
@@ -12299,11 +13169,12 @@ pub struct Struct_xcb_input_device_enable_ctrl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_enable_ctrl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_device_enable_ctrl_iterator_t {
-    fn default() -> Struct_xcb_input_device_enable_ctrl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_enable_ctrl_iterator_t =
     Struct_xcb_input_device_enable_ctrl_iterator_t;
@@ -12313,10 +13184,11 @@ pub struct Struct_xcb_input_device_ctl_t {
     pub control_id: uint16_t,
     pub len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_ctl_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_ctl_t {
-    fn default() -> Struct_xcb_input_device_ctl_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_ctl_t = Struct_xcb_input_device_ctl_t;
 #[repr(C)]
@@ -12326,10 +13198,11 @@ pub struct Struct_xcb_input_device_ctl_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_ctl_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_ctl_iterator_t {
-    fn default() -> Struct_xcb_input_device_ctl_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_ctl_iterator_t =
     Struct_xcb_input_device_ctl_iterator_t;
@@ -12338,11 +13211,12 @@ pub type xcb_input_device_ctl_iterator_t =
 pub struct Struct_xcb_input_change_device_control_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_device_control_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_control_cookie_t {
-    fn default() -> Struct_xcb_input_change_device_control_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_control_cookie_t =
     Struct_xcb_input_change_device_control_cookie_t;
@@ -12356,11 +13230,13 @@ pub struct Struct_xcb_input_change_device_control_request_t {
     pub device_id: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_device_control_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_control_request_t {
-    fn default() -> Struct_xcb_input_change_device_control_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_control_request_t =
     Struct_xcb_input_change_device_control_request_t;
@@ -12372,13 +13248,14 @@ pub struct Struct_xcb_input_change_device_control_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_change_device_control_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_change_device_control_reply_t {
-    fn default() -> Struct_xcb_input_change_device_control_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_control_reply_t =
     Struct_xcb_input_change_device_control_reply_t;
@@ -12387,11 +13264,13 @@ pub type xcb_input_change_device_control_reply_t =
 pub struct Struct_xcb_input_list_device_properties_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_list_device_properties_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_list_device_properties_cookie_t {
-    fn default() -> Struct_xcb_input_list_device_properties_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_device_properties_cookie_t =
     Struct_xcb_input_list_device_properties_cookie_t;
@@ -12402,13 +13281,15 @@ pub struct Struct_xcb_input_list_device_properties_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_list_device_properties_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_list_device_properties_request_t {
-    fn default() -> Struct_xcb_input_list_device_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_device_properties_request_t =
     Struct_xcb_input_list_device_properties_request_t;
@@ -12420,13 +13301,14 @@ pub struct Struct_xcb_input_list_device_properties_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_atoms: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_list_device_properties_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_list_device_properties_reply_t {
-    fn default() -> Struct_xcb_input_list_device_properties_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_list_device_properties_reply_t =
     Struct_xcb_input_list_device_properties_reply_t;
@@ -12442,11 +13324,12 @@ pub struct Struct_xcb_input_change_device_property_items_t {
     pub data16: *mut uint16_t,
     pub data32: *mut uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_device_property_items_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_property_items_t {
-    fn default() -> Struct_xcb_input_change_device_property_items_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_property_items_t =
     Struct_xcb_input_change_device_property_items_t;
@@ -12464,11 +13347,13 @@ pub struct Struct_xcb_input_change_device_property_request_t {
     pub pad0: uint8_t,
     pub num_items: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_change_device_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_change_device_property_request_t {
-    fn default() -> Struct_xcb_input_change_device_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_property_request_t =
     Struct_xcb_input_change_device_property_request_t;
@@ -12480,13 +13365,15 @@ pub struct Struct_xcb_input_delete_device_property_request_t {
     pub length: uint16_t,
     pub property: xcb_atom_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_delete_device_property_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_delete_device_property_request_t {
-    fn default() -> Struct_xcb_input_delete_device_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_delete_device_property_request_t =
     Struct_xcb_input_delete_device_property_request_t;
@@ -12495,11 +13382,12 @@ pub type xcb_input_delete_device_property_request_t =
 pub struct Struct_xcb_input_get_device_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_get_device_property_cookie_t
  {
-    fn default() -> Struct_xcb_input_get_device_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_property_cookie_t =
     Struct_xcb_input_get_device_property_cookie_t;
@@ -12515,13 +13403,14 @@ pub struct Struct_xcb_input_get_device_property_request_t {
     pub len: uint32_t,
     pub device_id: uint8_t,
     pub _delete: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_get_device_property_request_t {
-    fn default() -> Struct_xcb_input_get_device_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_property_request_t =
     Struct_xcb_input_get_device_property_request_t;
@@ -12532,11 +13421,12 @@ pub struct Struct_xcb_input_get_device_property_items_t {
     pub data16: *mut uint16_t,
     pub data32: *mut uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_get_device_property_items_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_get_device_property_items_t
  {
-    fn default() -> Struct_xcb_input_get_device_property_items_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_property_items_t =
     Struct_xcb_input_get_device_property_items_t;
@@ -12552,13 +13442,14 @@ pub struct Struct_xcb_input_get_device_property_reply_t {
     pub num_items: uint32_t,
     pub format: uint8_t,
     pub device_id: uint8_t,
-    pub pad1: [uint8_t; 10u],
+    pub pad1: [uint8_t; 10usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_get_device_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_get_device_property_reply_t
  {
-    fn default() -> Struct_xcb_input_get_device_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_get_device_property_reply_t =
     Struct_xcb_input_get_device_property_reply_t;
@@ -12574,10 +13465,11 @@ pub struct Struct_xcb_input_group_info_t {
     pub locked: uint8_t,
     pub effective: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_group_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_group_info_t {
-    fn default() -> Struct_xcb_input_group_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_group_info_t = Struct_xcb_input_group_info_t;
 #[repr(C)]
@@ -12587,10 +13479,11 @@ pub struct Struct_xcb_input_group_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_group_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_group_info_iterator_t {
-    fn default() -> Struct_xcb_input_group_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_group_info_iterator_t =
     Struct_xcb_input_group_info_iterator_t;
@@ -12602,10 +13495,11 @@ pub struct Struct_xcb_input_modifier_info_t {
     pub locked: uint32_t,
     pub effective: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_modifier_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_modifier_info_t {
-    fn default() -> Struct_xcb_input_modifier_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_modifier_info_t = Struct_xcb_input_modifier_info_t;
 #[repr(C)]
@@ -12615,10 +13509,11 @@ pub struct Struct_xcb_input_modifier_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_modifier_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_modifier_info_iterator_t {
-    fn default() -> Struct_xcb_input_modifier_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_modifier_info_iterator_t =
     Struct_xcb_input_modifier_info_iterator_t;
@@ -12627,10 +13522,11 @@ pub type xcb_input_modifier_info_iterator_t =
 pub struct Struct_xcb_input_xi_query_pointer_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_pointer_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_query_pointer_cookie_t {
-    fn default() -> Struct_xcb_input_xi_query_pointer_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_pointer_cookie_t =
     Struct_xcb_input_xi_query_pointer_cookie_t;
@@ -12642,12 +13538,13 @@ pub struct Struct_xcb_input_xi_query_pointer_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_pointer_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_query_pointer_request_t {
-    fn default() -> Struct_xcb_input_xi_query_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_pointer_request_t =
     Struct_xcb_input_xi_query_pointer_request_t;
@@ -12670,10 +13567,11 @@ pub struct Struct_xcb_input_xi_query_pointer_reply_t {
     pub mods: xcb_input_modifier_info_t,
     pub group: xcb_input_group_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_pointer_reply_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_query_pointer_reply_t {
-    fn default() -> Struct_xcb_input_xi_query_pointer_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_pointer_reply_t =
     Struct_xcb_input_xi_query_pointer_reply_t;
@@ -12692,12 +13590,13 @@ pub struct Struct_xcb_input_xi_warp_pointer_request_t {
     pub dst_x: xcb_input_fp1616_t,
     pub dst_y: xcb_input_fp1616_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_warp_pointer_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_warp_pointer_request_t {
-    fn default() -> Struct_xcb_input_xi_warp_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_warp_pointer_request_t =
     Struct_xcb_input_xi_warp_pointer_request_t;
@@ -12710,12 +13609,13 @@ pub struct Struct_xcb_input_xi_change_cursor_request_t {
     pub window: xcb_window_t,
     pub cursor: xcb_cursor_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_change_cursor_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_change_cursor_request_t {
-    fn default() -> Struct_xcb_input_xi_change_cursor_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_change_cursor_request_t =
     Struct_xcb_input_xi_change_cursor_request_t;
@@ -12739,10 +13639,11 @@ pub struct Struct_xcb_input_add_master_t {
     pub send_core: uint8_t,
     pub enable: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_add_master_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_add_master_t {
-    fn default() -> Struct_xcb_input_add_master_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_add_master_t = Struct_xcb_input_add_master_t;
 #[repr(C)]
@@ -12752,10 +13653,11 @@ pub struct Struct_xcb_input_add_master_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_add_master_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_add_master_iterator_t {
-    fn default() -> Struct_xcb_input_add_master_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_add_master_iterator_t =
     Struct_xcb_input_add_master_iterator_t;
@@ -12770,10 +13672,11 @@ pub struct Struct_xcb_input_remove_master_t {
     pub return_pointer: xcb_input_device_id_t,
     pub return_keyboard: xcb_input_device_id_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_remove_master_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_remove_master_t {
-    fn default() -> Struct_xcb_input_remove_master_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_remove_master_t = Struct_xcb_input_remove_master_t;
 #[repr(C)]
@@ -12783,10 +13686,11 @@ pub struct Struct_xcb_input_remove_master_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_remove_master_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_remove_master_iterator_t {
-    fn default() -> Struct_xcb_input_remove_master_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_remove_master_iterator_t =
     Struct_xcb_input_remove_master_iterator_t;
@@ -12798,10 +13702,11 @@ pub struct Struct_xcb_input_attach_slave_t {
     pub deviceid: xcb_input_device_id_t,
     pub master: xcb_input_device_id_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_attach_slave_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_attach_slave_t {
-    fn default() -> Struct_xcb_input_attach_slave_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_attach_slave_t = Struct_xcb_input_attach_slave_t;
 #[repr(C)]
@@ -12811,10 +13716,11 @@ pub struct Struct_xcb_input_attach_slave_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_attach_slave_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_attach_slave_iterator_t {
-    fn default() -> Struct_xcb_input_attach_slave_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_attach_slave_iterator_t =
     Struct_xcb_input_attach_slave_iterator_t;
@@ -12824,12 +13730,13 @@ pub struct Struct_xcb_input_detach_slave_t {
     pub _type: uint16_t,
     pub len: uint16_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_detach_slave_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_detach_slave_t {
-    fn default() -> Struct_xcb_input_detach_slave_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_detach_slave_t = Struct_xcb_input_detach_slave_t;
 #[repr(C)]
@@ -12839,10 +13746,11 @@ pub struct Struct_xcb_input_detach_slave_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_detach_slave_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_detach_slave_iterator_t {
-    fn default() -> Struct_xcb_input_detach_slave_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_detach_slave_iterator_t =
     Struct_xcb_input_detach_slave_iterator_t;
@@ -12852,10 +13760,11 @@ pub struct Struct_xcb_input_hierarchy_change_t {
     pub _type: uint16_t,
     pub len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_hierarchy_change_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_hierarchy_change_t {
-    fn default() -> Struct_xcb_input_hierarchy_change_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_hierarchy_change_t = Struct_xcb_input_hierarchy_change_t;
 #[repr(C)]
@@ -12865,11 +13774,12 @@ pub struct Struct_xcb_input_hierarchy_change_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_hierarchy_change_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_hierarchy_change_iterator_t
  {
-    fn default() -> Struct_xcb_input_hierarchy_change_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_hierarchy_change_iterator_t =
     Struct_xcb_input_hierarchy_change_iterator_t;
@@ -12880,13 +13790,14 @@ pub struct Struct_xcb_input_xi_change_hierarchy_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub num_changes: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_change_hierarchy_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_change_hierarchy_request_t {
-    fn default() -> Struct_xcb_input_xi_change_hierarchy_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_change_hierarchy_request_t =
     Struct_xcb_input_xi_change_hierarchy_request_t;
@@ -12898,13 +13809,15 @@ pub struct Struct_xcb_input_xi_set_client_pointer_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_set_client_pointer_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_set_client_pointer_request_t {
-    fn default() -> Struct_xcb_input_xi_set_client_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_set_client_pointer_request_t =
     Struct_xcb_input_xi_set_client_pointer_request_t;
@@ -12913,11 +13826,12 @@ pub type xcb_input_xi_set_client_pointer_request_t =
 pub struct Struct_xcb_input_xi_get_client_pointer_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_client_pointer_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_client_pointer_cookie_t {
-    fn default() -> Struct_xcb_input_xi_get_client_pointer_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_client_pointer_cookie_t =
     Struct_xcb_input_xi_get_client_pointer_cookie_t;
@@ -12929,11 +13843,13 @@ pub struct Struct_xcb_input_xi_get_client_pointer_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_client_pointer_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_client_pointer_request_t {
-    fn default() -> Struct_xcb_input_xi_get_client_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_client_pointer_request_t =
     Struct_xcb_input_xi_get_client_pointer_request_t;
@@ -12947,13 +13863,14 @@ pub struct Struct_xcb_input_xi_get_client_pointer_reply_t {
     pub set: uint8_t,
     pub pad1: uint8_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad2: [uint8_t; 20u],
+    pub pad2: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_client_pointer_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_client_pointer_reply_t {
-    fn default() -> Struct_xcb_input_xi_get_client_pointer_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_client_pointer_reply_t =
     Struct_xcb_input_xi_get_client_pointer_reply_t;
@@ -12991,10 +13908,11 @@ pub struct Struct_xcb_input_event_mask_t {
     pub deviceid: xcb_input_device_id_t,
     pub mask_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_event_mask_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_event_mask_t {
-    fn default() -> Struct_xcb_input_event_mask_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_event_mask_t = Struct_xcb_input_event_mask_t;
 #[repr(C)]
@@ -13004,10 +13922,11 @@ pub struct Struct_xcb_input_event_mask_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_event_mask_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_event_mask_iterator_t {
-    fn default() -> Struct_xcb_input_event_mask_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_event_mask_iterator_t =
     Struct_xcb_input_event_mask_iterator_t;
@@ -13019,12 +13938,13 @@ pub struct Struct_xcb_input_xi_select_events_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
     pub num_mask: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_select_events_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_select_events_request_t {
-    fn default() -> Struct_xcb_input_xi_select_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_select_events_request_t =
     Struct_xcb_input_xi_select_events_request_t;
@@ -13033,10 +13953,11 @@ pub type xcb_input_xi_select_events_request_t =
 pub struct Struct_xcb_input_xi_query_version_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_version_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_query_version_cookie_t {
-    fn default() -> Struct_xcb_input_xi_query_version_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_version_cookie_t =
     Struct_xcb_input_xi_query_version_cookie_t;
@@ -13049,10 +13970,11 @@ pub struct Struct_xcb_input_xi_query_version_request_t {
     pub major_version: uint16_t,
     pub minor_version: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_version_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_query_version_request_t {
-    fn default() -> Struct_xcb_input_xi_query_version_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_version_request_t =
     Struct_xcb_input_xi_query_version_request_t;
@@ -13065,12 +13987,13 @@ pub struct Struct_xcb_input_xi_query_version_reply_t {
     pub length: uint32_t,
     pub major_version: uint16_t,
     pub minor_version: uint16_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_version_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_query_version_reply_t {
-    fn default() -> Struct_xcb_input_xi_query_version_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_version_reply_t =
     Struct_xcb_input_xi_query_version_reply_t;
@@ -13108,10 +14031,11 @@ pub struct Struct_xcb_input_button_class_t {
     pub sourceid: xcb_input_device_id_t,
     pub num_buttons: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_class_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_class_t {
-    fn default() -> Struct_xcb_input_button_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_class_t = Struct_xcb_input_button_class_t;
 #[repr(C)]
@@ -13121,10 +14045,11 @@ pub struct Struct_xcb_input_button_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_class_iterator_t {
-    fn default() -> Struct_xcb_input_button_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_class_iterator_t =
     Struct_xcb_input_button_class_iterator_t;
@@ -13136,10 +14061,11 @@ pub struct Struct_xcb_input_key_class_t {
     pub sourceid: xcb_input_device_id_t,
     pub num_keys: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_class_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_class_t {
-    fn default() -> Struct_xcb_input_key_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_class_t = Struct_xcb_input_key_class_t;
 #[repr(C)]
@@ -13149,10 +14075,11 @@ pub struct Struct_xcb_input_key_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_class_iterator_t {
-    fn default() -> Struct_xcb_input_key_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_class_iterator_t =
     Struct_xcb_input_key_class_iterator_t;
@@ -13164,14 +14091,15 @@ pub struct Struct_xcb_input_scroll_class_t {
     pub sourceid: xcb_input_device_id_t,
     pub number: uint16_t,
     pub scroll_type: uint16_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
     pub increment: xcb_input_fp3232_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_scroll_class_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_scroll_class_t {
-    fn default() -> Struct_xcb_input_scroll_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_scroll_class_t = Struct_xcb_input_scroll_class_t;
 #[repr(C)]
@@ -13181,10 +14109,11 @@ pub struct Struct_xcb_input_scroll_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_scroll_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_scroll_class_iterator_t {
-    fn default() -> Struct_xcb_input_scroll_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_scroll_class_iterator_t =
     Struct_xcb_input_scroll_class_iterator_t;
@@ -13197,10 +14126,11 @@ pub struct Struct_xcb_input_touch_class_t {
     pub mode: uint8_t,
     pub num_touches: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_touch_class_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_touch_class_t {
-    fn default() -> Struct_xcb_input_touch_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_touch_class_t = Struct_xcb_input_touch_class_t;
 #[repr(C)]
@@ -13210,10 +14140,11 @@ pub struct Struct_xcb_input_touch_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_touch_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_touch_class_iterator_t {
-    fn default() -> Struct_xcb_input_touch_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_touch_class_iterator_t =
     Struct_xcb_input_touch_class_iterator_t;
@@ -13230,12 +14161,13 @@ pub struct Struct_xcb_input_valuator_class_t {
     pub value: xcb_input_fp3232_t,
     pub resolution: uint32_t,
     pub mode: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_valuator_class_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_valuator_class_t {
-    fn default() -> Struct_xcb_input_valuator_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_class_t = Struct_xcb_input_valuator_class_t;
 #[repr(C)]
@@ -13245,10 +14177,11 @@ pub struct Struct_xcb_input_valuator_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_valuator_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_valuator_class_iterator_t {
-    fn default() -> Struct_xcb_input_valuator_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_valuator_class_iterator_t =
     Struct_xcb_input_valuator_class_iterator_t;
@@ -13258,12 +14191,13 @@ pub struct Struct_xcb_input_device_class_t {
     pub _type: uint16_t,
     pub len: uint16_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_class_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_class_t {
-    fn default() -> Struct_xcb_input_device_class_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_class_t = Struct_xcb_input_device_class_t;
 #[repr(C)]
@@ -13273,10 +14207,11 @@ pub struct Struct_xcb_input_device_class_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_class_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_class_iterator_t {
-    fn default() -> Struct_xcb_input_device_class_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_class_iterator_t =
     Struct_xcb_input_device_class_iterator_t;
@@ -13291,10 +14226,11 @@ pub struct Struct_xcb_input_xi_device_info_t {
     pub enabled: uint8_t,
     pub pad0: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_device_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_device_info_t {
-    fn default() -> Struct_xcb_input_xi_device_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_device_info_t = Struct_xcb_input_xi_device_info_t;
 #[repr(C)]
@@ -13304,10 +14240,11 @@ pub struct Struct_xcb_input_xi_device_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_device_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_device_info_iterator_t {
-    fn default() -> Struct_xcb_input_xi_device_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_device_info_iterator_t =
     Struct_xcb_input_xi_device_info_iterator_t;
@@ -13316,10 +14253,11 @@ pub type xcb_input_xi_device_info_iterator_t =
 pub struct Struct_xcb_input_xi_query_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_device_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_query_device_cookie_t {
-    fn default() -> Struct_xcb_input_xi_query_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_device_cookie_t =
     Struct_xcb_input_xi_query_device_cookie_t;
@@ -13330,12 +14268,13 @@ pub struct Struct_xcb_input_xi_query_device_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_query_device_request_t {
-    fn default() -> Struct_xcb_input_xi_query_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_device_request_t =
     Struct_xcb_input_xi_query_device_request_t;
@@ -13347,12 +14286,13 @@ pub struct Struct_xcb_input_xi_query_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_infos: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_query_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_query_device_reply_t {
-    fn default() -> Struct_xcb_input_xi_query_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_query_device_reply_t =
     Struct_xcb_input_xi_query_device_reply_t;
@@ -13365,12 +14305,13 @@ pub struct Struct_xcb_input_xi_set_focus_request_t {
     pub window: xcb_window_t,
     pub time: xcb_timestamp_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_set_focus_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_set_focus_request_t {
-    fn default() -> Struct_xcb_input_xi_set_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_set_focus_request_t =
     Struct_xcb_input_xi_set_focus_request_t;
@@ -13379,10 +14320,11 @@ pub type xcb_input_xi_set_focus_request_t =
 pub struct Struct_xcb_input_xi_get_focus_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_focus_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_get_focus_cookie_t {
-    fn default() -> Struct_xcb_input_xi_get_focus_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_focus_cookie_t =
     Struct_xcb_input_xi_get_focus_cookie_t;
@@ -13393,12 +14335,13 @@ pub struct Struct_xcb_input_xi_get_focus_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_focus_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_get_focus_request_t {
-    fn default() -> Struct_xcb_input_xi_get_focus_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_focus_request_t =
     Struct_xcb_input_xi_get_focus_request_t;
@@ -13410,12 +14353,13 @@ pub struct Struct_xcb_input_xi_get_focus_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub focus: xcb_window_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_focus_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_get_focus_reply_t {
-    fn default() -> Struct_xcb_input_xi_get_focus_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_focus_reply_t =
     Struct_xcb_input_xi_get_focus_reply_t;
@@ -13428,10 +14372,11 @@ pub type xcb_input_grab_owner_t = Enum_xcb_input_grab_owner_t;
 pub struct Struct_xcb_input_xi_grab_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_grab_device_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_grab_device_cookie_t {
-    fn default() -> Struct_xcb_input_xi_grab_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_grab_device_cookie_t =
     Struct_xcb_input_xi_grab_device_cookie_t;
@@ -13451,10 +14396,11 @@ pub struct Struct_xcb_input_xi_grab_device_request_t {
     pub pad0: uint8_t,
     pub mask_len: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_grab_device_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_grab_device_request_t {
-    fn default() -> Struct_xcb_input_xi_grab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_grab_device_request_t =
     Struct_xcb_input_xi_grab_device_request_t;
@@ -13466,12 +14412,13 @@ pub struct Struct_xcb_input_xi_grab_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub status: uint8_t,
-    pub pad1: [uint8_t; 23u],
+    pub pad1: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_grab_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_grab_device_reply_t {
-    fn default() -> Struct_xcb_input_xi_grab_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_grab_device_reply_t =
     Struct_xcb_input_xi_grab_device_reply_t;
@@ -13483,12 +14430,13 @@ pub struct Struct_xcb_input_xi_ungrab_device_request_t {
     pub length: uint16_t,
     pub time: xcb_timestamp_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_ungrab_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_ungrab_device_request_t {
-    fn default() -> Struct_xcb_input_xi_ungrab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_ungrab_device_request_t =
     Struct_xcb_input_xi_ungrab_device_request_t;
@@ -13515,10 +14463,11 @@ pub struct Struct_xcb_input_xi_allow_events_request_t {
     pub touchid: uint32_t,
     pub grab_window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_allow_events_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_allow_events_request_t {
-    fn default() -> Struct_xcb_input_xi_allow_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_allow_events_request_t =
     Struct_xcb_input_xi_allow_events_request_t;
@@ -13535,19 +14484,20 @@ pub const XCB_INPUT_GRAB_TYPE_FOCUS_IN: ::libc::c_uint = 3;
 pub const XCB_INPUT_GRAB_TYPE_TOUCH_BEGIN: ::libc::c_uint = 4;
 pub type xcb_input_grab_type_t = Enum_xcb_input_grab_type_t;
 pub type Enum_xcb_input_modifier_mask_t = ::libc::c_uint;
-pub const XCB_INPUT_MODIFIER_MASK_ANY: ::libc::c_uint = -2147483648;
+pub const XCB_INPUT_MODIFIER_MASK_ANY: ::libc::c_uint = 2147483648;
 pub type xcb_input_modifier_mask_t = Enum_xcb_input_modifier_mask_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_xcb_input_grab_modifier_info_t {
     pub modifiers: uint32_t,
     pub status: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_grab_modifier_info_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_grab_modifier_info_t {
-    fn default() -> Struct_xcb_input_grab_modifier_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_modifier_info_t =
     Struct_xcb_input_grab_modifier_info_t;
@@ -13558,11 +14508,12 @@ pub struct Struct_xcb_input_grab_modifier_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_grab_modifier_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_grab_modifier_info_iterator_t {
-    fn default() -> Struct_xcb_input_grab_modifier_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_grab_modifier_info_iterator_t =
     Struct_xcb_input_grab_modifier_info_iterator_t;
@@ -13571,11 +14522,13 @@ pub type xcb_input_grab_modifier_info_iterator_t =
 pub struct Struct_xcb_input_xi_passive_grab_device_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_passive_grab_device_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_passive_grab_device_cookie_t {
-    fn default() -> Struct_xcb_input_xi_passive_grab_device_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_passive_grab_device_cookie_t =
     Struct_xcb_input_xi_passive_grab_device_cookie_t;
@@ -13596,13 +14549,15 @@ pub struct Struct_xcb_input_xi_passive_grab_device_request_t {
     pub grab_mode: uint8_t,
     pub paired_device_mode: uint8_t,
     pub owner_events: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_passive_grab_device_request_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_passive_grab_device_request_t {
-    fn default() -> Struct_xcb_input_xi_passive_grab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_passive_grab_device_request_t =
     Struct_xcb_input_xi_passive_grab_device_request_t;
@@ -13614,13 +14569,14 @@ pub struct Struct_xcb_input_xi_passive_grab_device_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_modifiers: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_passive_grab_device_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_passive_grab_device_reply_t {
-    fn default() -> Struct_xcb_input_xi_passive_grab_device_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_passive_grab_device_reply_t =
     Struct_xcb_input_xi_passive_grab_device_reply_t;
@@ -13635,13 +14591,15 @@ pub struct Struct_xcb_input_xi_passive_ungrab_device_request_t {
     pub deviceid: xcb_input_device_id_t,
     pub num_modifiers: uint16_t,
     pub grab_type: uint8_t,
-    pub pad0: [uint8_t; 3u],
+    pub pad0: [uint8_t; 3usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_xi_passive_ungrab_device_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_passive_ungrab_device_request_t {
-    fn default() -> Struct_xcb_input_xi_passive_ungrab_device_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_passive_ungrab_device_request_t =
     Struct_xcb_input_xi_passive_ungrab_device_request_t;
@@ -13650,11 +14608,12 @@ pub type xcb_input_xi_passive_ungrab_device_request_t =
 pub struct Struct_xcb_input_xi_list_properties_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_list_properties_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_list_properties_cookie_t
  {
-    fn default() -> Struct_xcb_input_xi_list_properties_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_list_properties_cookie_t =
     Struct_xcb_input_xi_list_properties_cookie_t;
@@ -13665,13 +14624,14 @@ pub struct Struct_xcb_input_xi_list_properties_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_list_properties_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_list_properties_request_t
  {
-    fn default() -> Struct_xcb_input_xi_list_properties_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_list_properties_request_t =
     Struct_xcb_input_xi_list_properties_request_t;
@@ -13683,12 +14643,13 @@ pub struct Struct_xcb_input_xi_list_properties_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_properties: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_list_properties_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_list_properties_reply_t {
-    fn default() -> Struct_xcb_input_xi_list_properties_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_list_properties_reply_t =
     Struct_xcb_input_xi_list_properties_reply_t;
@@ -13699,10 +14660,11 @@ pub struct Struct_xcb_input_xi_change_property_items_t {
     pub data16: *mut uint16_t,
     pub data32: *mut uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_change_property_items_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_change_property_items_t {
-    fn default() -> Struct_xcb_input_xi_change_property_items_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_change_property_items_t =
     Struct_xcb_input_xi_change_property_items_t;
@@ -13719,11 +14681,12 @@ pub struct Struct_xcb_input_xi_change_property_request_t {
     pub _type: xcb_atom_t,
     pub num_items: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_change_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_change_property_request_t
  {
-    fn default() -> Struct_xcb_input_xi_change_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_change_property_request_t =
     Struct_xcb_input_xi_change_property_request_t;
@@ -13734,14 +14697,15 @@ pub struct Struct_xcb_input_xi_delete_property_request_t {
     pub minor_opcode: uint8_t,
     pub length: uint16_t,
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub property: xcb_atom_t,
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_delete_property_request_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_delete_property_request_t
  {
-    fn default() -> Struct_xcb_input_xi_delete_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_delete_property_request_t =
     Struct_xcb_input_xi_delete_property_request_t;
@@ -13750,10 +14714,11 @@ pub type xcb_input_xi_delete_property_request_t =
 pub struct Struct_xcb_input_xi_get_property_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_property_cookie_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_get_property_cookie_t {
-    fn default() -> Struct_xcb_input_xi_get_property_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_property_cookie_t =
     Struct_xcb_input_xi_get_property_cookie_t;
@@ -13771,10 +14736,11 @@ pub struct Struct_xcb_input_xi_get_property_request_t {
     pub offset: uint32_t,
     pub len: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_property_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_get_property_request_t {
-    fn default() -> Struct_xcb_input_xi_get_property_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_property_request_t =
     Struct_xcb_input_xi_get_property_request_t;
@@ -13785,10 +14751,11 @@ pub struct Struct_xcb_input_xi_get_property_items_t {
     pub data16: *mut uint16_t,
     pub data32: *mut uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_property_items_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_xi_get_property_items_t {
-    fn default() -> Struct_xcb_input_xi_get_property_items_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_property_items_t =
     Struct_xcb_input_xi_get_property_items_t;
@@ -13803,12 +14770,13 @@ pub struct Struct_xcb_input_xi_get_property_reply_t {
     pub bytes_after: uint32_t,
     pub num_items: uint32_t,
     pub format: uint8_t,
-    pub pad1: [uint8_t; 11u],
+    pub pad1: [uint8_t; 11usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_property_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_xi_get_property_reply_t {
-    fn default() -> Struct_xcb_input_xi_get_property_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_property_reply_t =
     Struct_xcb_input_xi_get_property_reply_t;
@@ -13817,11 +14785,13 @@ pub type xcb_input_xi_get_property_reply_t =
 pub struct Struct_xcb_input_xi_get_selected_events_cookie_t {
     pub sequence: ::libc::c_uint,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_selected_events_cookie_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_selected_events_cookie_t {
-    fn default() -> Struct_xcb_input_xi_get_selected_events_cookie_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_selected_events_cookie_t =
     Struct_xcb_input_xi_get_selected_events_cookie_t;
@@ -13833,11 +14803,13 @@ pub struct Struct_xcb_input_xi_get_selected_events_request_t {
     pub length: uint16_t,
     pub window: xcb_window_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_selected_events_request_t
+ {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_selected_events_request_t {
-    fn default() -> Struct_xcb_input_xi_get_selected_events_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_selected_events_request_t =
     Struct_xcb_input_xi_get_selected_events_request_t;
@@ -13849,13 +14821,14 @@ pub struct Struct_xcb_input_xi_get_selected_events_reply_t {
     pub sequence: uint16_t,
     pub length: uint32_t,
     pub num_masks: uint16_t,
-    pub pad1: [uint8_t; 22u],
+    pub pad1: [uint8_t; 22usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_xi_get_selected_events_reply_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_xi_get_selected_events_reply_t {
-    fn default() -> Struct_xcb_input_xi_get_selected_events_reply_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_get_selected_events_reply_t =
     Struct_xcb_input_xi_get_selected_events_reply_t;
@@ -13863,15 +14836,16 @@ pub type xcb_input_xi_get_selected_events_reply_t =
 #[derive(Copy)]
 pub struct Struct_xcb_input_barrier_release_pointer_info_t {
     pub deviceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub barrier: xcb_xfixes_barrier_t,
     pub eventid: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_barrier_release_pointer_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_barrier_release_pointer_info_t {
-    fn default() -> Struct_xcb_input_barrier_release_pointer_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_barrier_release_pointer_info_t =
     Struct_xcb_input_barrier_release_pointer_info_t;
@@ -13882,11 +14856,13 @@ pub struct Struct_xcb_input_barrier_release_pointer_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_barrier_release_pointer_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_barrier_release_pointer_info_iterator_t {
-    fn default() -> Struct_xcb_input_barrier_release_pointer_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_barrier_release_pointer_info_iterator_t =
     Struct_xcb_input_barrier_release_pointer_info_iterator_t;
@@ -13898,11 +14874,13 @@ pub struct Struct_xcb_input_xi_barrier_release_pointer_request_t {
     pub length: uint16_t,
     pub num_barriers: uint32_t,
 }
+impl ::std::clone::Clone for
+ Struct_xcb_input_xi_barrier_release_pointer_request_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for
  Struct_xcb_input_xi_barrier_release_pointer_request_t {
-    fn default() -> Struct_xcb_input_xi_barrier_release_pointer_request_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_xi_barrier_release_pointer_request_t =
     Struct_xcb_input_xi_barrier_release_pointer_request_t;
@@ -13915,12 +14893,13 @@ pub struct Struct_xcb_input_device_valuator_event_t {
     pub device_state: uint16_t,
     pub num_valuators: uint8_t,
     pub first_valuator: uint8_t,
-    pub valuators: [int32_t; 6u],
+    pub valuators: [int32_t; 6usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_valuator_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_valuator_event_t {
-    fn default() -> Struct_xcb_input_device_valuator_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_valuator_event_t =
     Struct_xcb_input_device_valuator_event_t;
@@ -13942,10 +14921,11 @@ pub struct Struct_xcb_input_device_key_press_event_t {
     pub same_screen: uint8_t,
     pub device_id: uint8_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_key_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_key_press_event_t {
-    fn default() -> Struct_xcb_input_device_key_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_key_press_event_t =
     Struct_xcb_input_device_key_press_event_t;
@@ -13967,12 +14947,13 @@ pub struct Struct_xcb_input_device_focus_in_event_t {
     pub window: xcb_window_t,
     pub mode: uint8_t,
     pub device_id: uint8_t,
-    pub pad0: [uint8_t; 18u],
+    pub pad0: [uint8_t; 18usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_focus_in_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_focus_in_event_t {
-    fn default() -> Struct_xcb_input_device_focus_in_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_focus_in_event_t =
     Struct_xcb_input_device_focus_in_event_t;
@@ -13991,15 +14972,16 @@ pub struct Struct_xcb_input_device_state_notify_event_t {
     pub num_buttons: uint8_t,
     pub num_valuators: uint8_t,
     pub classes_reported: uint8_t,
-    pub buttons: [uint8_t; 4u],
-    pub keys: [uint8_t; 4u],
-    pub valuators: [uint32_t; 3u],
+    pub buttons: [uint8_t; 4usize],
+    pub keys: [uint8_t; 4usize],
+    pub valuators: [uint32_t; 3usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_state_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_device_state_notify_event_t
  {
-    fn default() -> Struct_xcb_input_device_state_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_state_notify_event_t =
     Struct_xcb_input_device_state_notify_event_t;
@@ -14014,13 +14996,14 @@ pub struct Struct_xcb_input_device_mapping_notify_event_t {
     pub count: uint8_t,
     pub pad0: uint8_t,
     pub time: xcb_timestamp_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_mapping_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_device_mapping_notify_event_t {
-    fn default() -> Struct_xcb_input_device_mapping_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_mapping_notify_event_t =
     Struct_xcb_input_device_mapping_notify_event_t;
@@ -14032,13 +15015,14 @@ pub struct Struct_xcb_input_change_device_notify_event_t {
     pub sequence: uint16_t,
     pub time: xcb_timestamp_t,
     pub request: uint8_t,
-    pub pad0: [uint8_t; 23u],
+    pub pad0: [uint8_t; 23usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_change_device_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_change_device_notify_event_t
  {
-    fn default() -> Struct_xcb_input_change_device_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_change_device_notify_event_t =
     Struct_xcb_input_change_device_notify_event_t;
@@ -14048,13 +15032,15 @@ pub struct Struct_xcb_input_device_key_state_notify_event_t {
     pub response_type: uint8_t,
     pub device_id: uint8_t,
     pub sequence: uint16_t,
-    pub keys: [uint8_t; 28u],
+    pub keys: [uint8_t; 28usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_key_state_notify_event_t
+ {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_device_key_state_notify_event_t {
-    fn default() -> Struct_xcb_input_device_key_state_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_key_state_notify_event_t =
     Struct_xcb_input_device_key_state_notify_event_t;
@@ -14064,13 +15050,15 @@ pub struct Struct_xcb_input_device_button_state_notify_event_t {
     pub response_type: uint8_t,
     pub device_id: uint8_t,
     pub sequence: uint16_t,
-    pub buttons: [uint8_t; 28u],
+    pub buttons: [uint8_t; 28usize],
+}
+impl ::std::clone::Clone for
+ Struct_xcb_input_device_button_state_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_device_button_state_notify_event_t {
-    fn default() -> Struct_xcb_input_device_button_state_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_button_state_notify_event_t =
     Struct_xcb_input_device_button_state_notify_event_t;
@@ -14092,13 +15080,14 @@ pub struct Struct_xcb_input_device_presence_notify_event_t {
     pub devchange: uint8_t,
     pub device_id: uint8_t,
     pub control: uint16_t,
-    pub pad1: [uint8_t; 20u],
+    pub pad1: [uint8_t; 20usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_presence_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_device_presence_notify_event_t {
-    fn default() -> Struct_xcb_input_device_presence_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_presence_notify_event_t =
     Struct_xcb_input_device_presence_notify_event_t;
@@ -14110,14 +15099,15 @@ pub struct Struct_xcb_input_device_property_notify_event_t {
     pub sequence: uint16_t,
     pub time: xcb_timestamp_t,
     pub property: xcb_atom_t,
-    pub pad0: [uint8_t; 19u],
+    pub pad0: [uint8_t; 19usize],
     pub device_id: uint8_t,
+}
+impl ::std::clone::Clone for Struct_xcb_input_device_property_notify_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for
  Struct_xcb_input_device_property_notify_event_t {
-    fn default() -> Struct_xcb_input_device_property_notify_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_property_notify_event_t =
     Struct_xcb_input_device_property_notify_event_t;
@@ -14138,13 +15128,14 @@ pub struct Struct_xcb_input_device_changed_event_t {
     pub num_classes: uint16_t,
     pub sourceid: xcb_input_device_id_t,
     pub reason: uint8_t,
-    pub pad0: [uint8_t; 11u],
+    pub pad0: [uint8_t; 11usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_changed_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_changed_event_t {
-    fn default() -> Struct_xcb_input_device_changed_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_changed_event_t =
     Struct_xcb_input_device_changed_event_t;
@@ -14173,15 +15164,16 @@ pub struct Struct_xcb_input_key_press_event_t {
     pub buttons_len: uint16_t,
     pub valuators_len: uint16_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
     pub mods: xcb_input_modifier_info_t,
     pub group: xcb_input_group_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_key_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_key_press_event_t {
-    fn default() -> Struct_xcb_input_key_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_key_press_event_t = Struct_xcb_input_key_press_event_t;
 pub type xcb_input_key_release_event_t = xcb_input_key_press_event_t;
@@ -14212,15 +15204,16 @@ pub struct Struct_xcb_input_button_press_event_t {
     pub buttons_len: uint16_t,
     pub valuators_len: uint16_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
     pub mods: xcb_input_modifier_info_t,
     pub group: xcb_input_group_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_button_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_button_press_event_t {
-    fn default() -> Struct_xcb_input_button_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_button_press_event_t =
     Struct_xcb_input_button_press_event_t;
@@ -14271,10 +15264,11 @@ pub struct Struct_xcb_input_enter_event_t {
     pub mods: xcb_input_modifier_info_t,
     pub group: xcb_input_group_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_enter_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_enter_event_t {
-    fn default() -> Struct_xcb_input_enter_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_enter_event_t = Struct_xcb_input_enter_event_t;
 pub type xcb_input_leave_event_t = xcb_input_enter_event_t;
@@ -14297,13 +15291,14 @@ pub struct Struct_xcb_input_hierarchy_info_t {
     pub attachment: xcb_input_device_id_t,
     pub _type: uint8_t,
     pub enabled: uint8_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_hierarchy_info_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_hierarchy_info_t {
-    fn default() -> Struct_xcb_input_hierarchy_info_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_hierarchy_info_t = Struct_xcb_input_hierarchy_info_t;
 #[repr(C)]
@@ -14313,10 +15308,11 @@ pub struct Struct_xcb_input_hierarchy_info_iterator_t {
     pub rem: ::libc::c_int,
     pub index: ::libc::c_int,
 }
+impl ::std::clone::Clone for Struct_xcb_input_hierarchy_info_iterator_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_hierarchy_info_iterator_t {
-    fn default() -> Struct_xcb_input_hierarchy_info_iterator_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_hierarchy_info_iterator_t =
     Struct_xcb_input_hierarchy_info_iterator_t;
@@ -14332,13 +15328,14 @@ pub struct Struct_xcb_input_hierarchy_event_t {
     pub time: xcb_timestamp_t,
     pub flags: uint32_t,
     pub num_infos: uint16_t,
-    pub pad0: [uint8_t; 10u],
+    pub pad0: [uint8_t; 10usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_hierarchy_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_hierarchy_event_t {
-    fn default() -> Struct_xcb_input_hierarchy_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_hierarchy_event_t = Struct_xcb_input_hierarchy_event_t;
 pub type Enum_xcb_input_property_flag_t = ::libc::c_uint;
@@ -14358,13 +15355,14 @@ pub struct Struct_xcb_input_property_event_t {
     pub time: xcb_timestamp_t,
     pub property: xcb_atom_t,
     pub what: uint8_t,
-    pub pad0: [uint8_t; 11u],
+    pub pad0: [uint8_t; 11usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_property_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_property_event_t {
-    fn default() -> Struct_xcb_input_property_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_property_event_t = Struct_xcb_input_property_event_t;
 #[repr(C)]
@@ -14381,13 +15379,14 @@ pub struct Struct_xcb_input_raw_key_press_event_t {
     pub sourceid: xcb_input_device_id_t,
     pub valuators_len: uint16_t,
     pub flags: uint32_t,
-    pub pad0: [uint8_t; 4u],
+    pub pad0: [uint8_t; 4usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_raw_key_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_raw_key_press_event_t {
-    fn default() -> Struct_xcb_input_raw_key_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_raw_key_press_event_t =
     Struct_xcb_input_raw_key_press_event_t;
@@ -14406,13 +15405,14 @@ pub struct Struct_xcb_input_raw_button_press_event_t {
     pub sourceid: xcb_input_device_id_t,
     pub valuators_len: uint16_t,
     pub flags: uint32_t,
-    pub pad0: [uint8_t; 4u],
+    pub pad0: [uint8_t; 4usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_raw_button_press_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_raw_button_press_event_t {
-    fn default() -> Struct_xcb_input_raw_button_press_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_raw_button_press_event_t =
     Struct_xcb_input_raw_button_press_event_t;
@@ -14448,15 +15448,16 @@ pub struct Struct_xcb_input_touch_begin_event_t {
     pub buttons_len: uint16_t,
     pub valuators_len: uint16_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
     pub mods: xcb_input_modifier_info_t,
     pub group: xcb_input_group_info_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_touch_begin_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_touch_begin_event_t {
-    fn default() -> Struct_xcb_input_touch_begin_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_touch_begin_event_t = Struct_xcb_input_touch_begin_event_t;
 pub type xcb_input_touch_update_event_t = xcb_input_touch_begin_event_t;
@@ -14481,14 +15482,15 @@ pub struct Struct_xcb_input_touch_ownership_event_t {
     pub child: xcb_window_t,
     pub full_sequence: uint32_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub flags: uint32_t,
-    pub pad1: [uint8_t; 8u],
+    pub pad1: [uint8_t; 8usize],
+}
+impl ::std::clone::Clone for Struct_xcb_input_touch_ownership_event_t {
+    fn clone(&self) -> Self { *self }
 }
 impl ::std::default::Default for Struct_xcb_input_touch_ownership_event_t {
-    fn default() -> Struct_xcb_input_touch_ownership_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_touch_ownership_event_t =
     Struct_xcb_input_touch_ownership_event_t;
@@ -14506,13 +15508,14 @@ pub struct Struct_xcb_input_raw_touch_begin_event_t {
     pub sourceid: xcb_input_device_id_t,
     pub valuators_len: uint16_t,
     pub flags: uint32_t,
-    pub pad0: [uint8_t; 4u],
+    pub pad0: [uint8_t; 4usize],
     pub full_sequence: uint32_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_raw_touch_begin_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_raw_touch_begin_event_t {
-    fn default() -> Struct_xcb_input_raw_touch_begin_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_raw_touch_begin_event_t =
     Struct_xcb_input_raw_touch_begin_event_t;
@@ -14537,16 +15540,17 @@ pub struct Struct_xcb_input_barrier_hit_event_t {
     pub dtime: uint32_t,
     pub flags: uint32_t,
     pub sourceid: xcb_input_device_id_t,
-    pub pad0: [uint8_t; 2u],
+    pub pad0: [uint8_t; 2usize],
     pub root_x: xcb_input_fp1616_t,
     pub root_y: xcb_input_fp1616_t,
     pub dx: xcb_input_fp3232_t,
     pub dy: xcb_input_fp3232_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_barrier_hit_event_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_barrier_hit_event_t {
-    fn default() -> Struct_xcb_input_barrier_hit_event_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_barrier_hit_event_t = Struct_xcb_input_barrier_hit_event_t;
 pub type xcb_input_barrier_leave_event_t = xcb_input_barrier_hit_event_t;
@@ -14557,10 +15561,11 @@ pub struct Struct_xcb_input_device_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_error_t {
-    fn default() -> Struct_xcb_input_device_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_error_t = Struct_xcb_input_device_error_t;
 #[repr(C)]
@@ -14570,10 +15575,11 @@ pub struct Struct_xcb_input_event_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_event_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_event_error_t {
-    fn default() -> Struct_xcb_input_event_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_event_error_t = Struct_xcb_input_event_error_t;
 #[repr(C)]
@@ -14583,10 +15589,11 @@ pub struct Struct_xcb_input_mode_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_mode_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_mode_error_t {
-    fn default() -> Struct_xcb_input_mode_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_mode_error_t = Struct_xcb_input_mode_error_t;
 #[repr(C)]
@@ -14596,10 +15603,11 @@ pub struct Struct_xcb_input_device_busy_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_device_busy_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_device_busy_error_t {
-    fn default() -> Struct_xcb_input_device_busy_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_device_busy_error_t = Struct_xcb_input_device_busy_error_t;
 #[repr(C)]
@@ -14609,10 +15617,11 @@ pub struct Struct_xcb_input_class_error_t {
     pub error_code: uint8_t,
     pub sequence: uint16_t,
 }
+impl ::std::clone::Clone for Struct_xcb_input_class_error_t {
+    fn clone(&self) -> Self { *self }
+}
 impl ::std::default::Default for Struct_xcb_input_class_error_t {
-    fn default() -> Struct_xcb_input_class_error_t {
-        unsafe { ::std::mem::zeroed() }
-    }
+    fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 pub type xcb_input_class_error_t = Struct_xcb_input_class_error_t;
 #[link(name = "xcb")]
@@ -14629,53 +15638,53 @@ extern "C" {
 #[link(name = "xcb-randr")]
 #[link(name = "xcb-xinput")]
 extern "C" {
-    pub fn xcb_char2b_next(i: *mut xcb_char2b_iterator_t);
+    pub fn xcb_char2b_next(i: *mut xcb_char2b_iterator_t) -> ();
     pub fn xcb_char2b_end(i: xcb_char2b_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_window_next(i: *mut xcb_window_iterator_t);
+    pub fn xcb_window_next(i: *mut xcb_window_iterator_t) -> ();
     pub fn xcb_window_end(i: xcb_window_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_pixmap_next(i: *mut xcb_pixmap_iterator_t);
+    pub fn xcb_pixmap_next(i: *mut xcb_pixmap_iterator_t) -> ();
     pub fn xcb_pixmap_end(i: xcb_pixmap_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_cursor_next(i: *mut xcb_cursor_iterator_t);
+    pub fn xcb_cursor_next(i: *mut xcb_cursor_iterator_t) -> ();
     pub fn xcb_cursor_end(i: xcb_cursor_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_font_next(i: *mut xcb_font_iterator_t);
+    pub fn xcb_font_next(i: *mut xcb_font_iterator_t) -> ();
     pub fn xcb_font_end(i: xcb_font_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_gcontext_next(i: *mut xcb_gcontext_iterator_t);
+    pub fn xcb_gcontext_next(i: *mut xcb_gcontext_iterator_t) -> ();
     pub fn xcb_gcontext_end(i: xcb_gcontext_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_colormap_next(i: *mut xcb_colormap_iterator_t);
+    pub fn xcb_colormap_next(i: *mut xcb_colormap_iterator_t) -> ();
     pub fn xcb_colormap_end(i: xcb_colormap_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_atom_next(i: *mut xcb_atom_iterator_t);
+    pub fn xcb_atom_next(i: *mut xcb_atom_iterator_t) -> ();
     pub fn xcb_atom_end(i: xcb_atom_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_drawable_next(i: *mut xcb_drawable_iterator_t);
+    pub fn xcb_drawable_next(i: *mut xcb_drawable_iterator_t) -> ();
     pub fn xcb_drawable_end(i: xcb_drawable_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_fontable_next(i: *mut xcb_fontable_iterator_t);
+    pub fn xcb_fontable_next(i: *mut xcb_fontable_iterator_t) -> ();
     pub fn xcb_fontable_end(i: xcb_fontable_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_visualid_next(i: *mut xcb_visualid_iterator_t);
+    pub fn xcb_visualid_next(i: *mut xcb_visualid_iterator_t) -> ();
     pub fn xcb_visualid_end(i: xcb_visualid_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_timestamp_next(i: *mut xcb_timestamp_iterator_t);
+    pub fn xcb_timestamp_next(i: *mut xcb_timestamp_iterator_t) -> ();
     pub fn xcb_timestamp_end(i: xcb_timestamp_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_keysym_next(i: *mut xcb_keysym_iterator_t);
+    pub fn xcb_keysym_next(i: *mut xcb_keysym_iterator_t) -> ();
     pub fn xcb_keysym_end(i: xcb_keysym_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_keycode_next(i: *mut xcb_keycode_iterator_t);
+    pub fn xcb_keycode_next(i: *mut xcb_keycode_iterator_t) -> ();
     pub fn xcb_keycode_end(i: xcb_keycode_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_button_next(i: *mut xcb_button_iterator_t);
+    pub fn xcb_button_next(i: *mut xcb_button_iterator_t) -> ();
     pub fn xcb_button_end(i: xcb_button_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_point_next(i: *mut xcb_point_iterator_t);
+    pub fn xcb_point_next(i: *mut xcb_point_iterator_t) -> ();
     pub fn xcb_point_end(i: xcb_point_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_rectangle_next(i: *mut xcb_rectangle_iterator_t);
+    pub fn xcb_rectangle_next(i: *mut xcb_rectangle_iterator_t) -> ();
     pub fn xcb_rectangle_end(i: xcb_rectangle_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_arc_next(i: *mut xcb_arc_iterator_t);
+    pub fn xcb_arc_next(i: *mut xcb_arc_iterator_t) -> ();
     pub fn xcb_arc_end(i: xcb_arc_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_format_next(i: *mut xcb_format_iterator_t);
+    pub fn xcb_format_next(i: *mut xcb_format_iterator_t) -> ();
     pub fn xcb_format_end(i: xcb_format_iterator_t) -> xcb_generic_iterator_t;
-    pub fn xcb_visualtype_next(i: *mut xcb_visualtype_iterator_t);
+    pub fn xcb_visualtype_next(i: *mut xcb_visualtype_iterator_t) -> ();
     pub fn xcb_visualtype_end(i: xcb_visualtype_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_depth_sizeof(_buffer: *const ::libc::c_void) -> ::libc::c_int;
@@ -14683,14 +15692,14 @@ extern "C" {
     pub fn xcb_depth_visuals_length(R: *const xcb_depth_t) -> ::libc::c_int;
     pub fn xcb_depth_visuals_iterator(R: *const xcb_depth_t)
      -> xcb_visualtype_iterator_t;
-    pub fn xcb_depth_next(i: *mut xcb_depth_iterator_t);
+    pub fn xcb_depth_next(i: *mut xcb_depth_iterator_t) -> ();
     pub fn xcb_depth_end(i: xcb_depth_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_screen_sizeof(_buffer: *const ::libc::c_void) -> ::libc::c_int;
     pub fn xcb_screen_allowed_depths_length(R: *const xcb_screen_t)
      -> ::libc::c_int;
     pub fn xcb_screen_allowed_depths_iterator(R: *const xcb_screen_t)
      -> xcb_depth_iterator_t;
-    pub fn xcb_screen_next(i: *mut xcb_screen_iterator_t);
+    pub fn xcb_screen_next(i: *mut xcb_screen_iterator_t) -> ();
     pub fn xcb_screen_end(i: xcb_screen_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_setup_request_sizeof(_buffer: *const ::libc::c_void)
      -> ::libc::c_int;
@@ -14712,7 +15721,7 @@ extern "C" {
     pub fn xcb_setup_request_authorization_protocol_data_end(R:
                                                                  *const xcb_setup_request_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_setup_request_next(i: *mut xcb_setup_request_iterator_t);
+    pub fn xcb_setup_request_next(i: *mut xcb_setup_request_iterator_t) -> ();
     pub fn xcb_setup_request_end(i: xcb_setup_request_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_setup_failed_sizeof(_buffer: *const ::libc::c_void)
@@ -14723,7 +15732,7 @@ extern "C" {
      -> ::libc::c_int;
     pub fn xcb_setup_failed_reason_end(R: *const xcb_setup_failed_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_setup_failed_next(i: *mut xcb_setup_failed_iterator_t);
+    pub fn xcb_setup_failed_next(i: *mut xcb_setup_failed_iterator_t) -> ();
     pub fn xcb_setup_failed_end(i: xcb_setup_failed_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_setup_authenticate_sizeof(_buffer: *const ::libc::c_void)
@@ -14737,7 +15746,8 @@ extern "C" {
                                                  *const xcb_setup_authenticate_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_setup_authenticate_next(i:
-                                           *mut xcb_setup_authenticate_iterator_t);
+                                           *mut xcb_setup_authenticate_iterator_t)
+     -> ();
     pub fn xcb_setup_authenticate_end(i: xcb_setup_authenticate_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_setup_sizeof(_buffer: *const ::libc::c_void) -> ::libc::c_int;
@@ -14754,10 +15764,11 @@ extern "C" {
     pub fn xcb_setup_roots_length(R: *const xcb_setup_t) -> ::libc::c_int;
     pub fn xcb_setup_roots_iterator(R: *const xcb_setup_t)
      -> xcb_screen_iterator_t;
-    pub fn xcb_setup_next(i: *mut xcb_setup_iterator_t);
+    pub fn xcb_setup_next(i: *mut xcb_setup_iterator_t) -> ();
     pub fn xcb_setup_end(i: xcb_setup_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_client_message_data_next(i:
-                                            *mut xcb_client_message_data_iterator_t);
+                                            *mut xcb_client_message_data_iterator_t)
+     -> ();
     pub fn xcb_client_message_data_end(i: xcb_client_message_data_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_create_window_sizeof(_buffer: *const ::libc::c_void)
@@ -15136,7 +16147,7 @@ extern "C" {
                                    cookie: xcb_query_pointer_cookie_t,
                                    e: *mut *mut xcb_generic_error_t)
      -> *mut xcb_query_pointer_reply_t;
-    pub fn xcb_timecoord_next(i: *mut xcb_timecoord_iterator_t);
+    pub fn xcb_timecoord_next(i: *mut xcb_timecoord_iterator_t) -> ();
     pub fn xcb_timecoord_end(i: xcb_timecoord_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_get_motion_events_sizeof(_buffer: *const ::libc::c_void)
@@ -15227,10 +16238,10 @@ extern "C" {
      -> xcb_void_cookie_t;
     pub fn xcb_close_font(c: *mut xcb_connection_t, font: xcb_font_t)
      -> xcb_void_cookie_t;
-    pub fn xcb_fontprop_next(i: *mut xcb_fontprop_iterator_t);
+    pub fn xcb_fontprop_next(i: *mut xcb_fontprop_iterator_t) -> ();
     pub fn xcb_fontprop_end(i: xcb_fontprop_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_charinfo_next(i: *mut xcb_charinfo_iterator_t);
+    pub fn xcb_charinfo_next(i: *mut xcb_charinfo_iterator_t) -> ();
     pub fn xcb_charinfo_end(i: xcb_charinfo_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_query_font_sizeof(_buffer: *const ::libc::c_void)
@@ -15279,7 +16290,7 @@ extern "C" {
     pub fn xcb_str_name(R: *const xcb_str_t) -> *mut ::libc::c_char;
     pub fn xcb_str_name_length(R: *const xcb_str_t) -> ::libc::c_int;
     pub fn xcb_str_name_end(R: *const xcb_str_t) -> xcb_generic_iterator_t;
-    pub fn xcb_str_next(i: *mut xcb_str_iterator_t);
+    pub fn xcb_str_next(i: *mut xcb_str_iterator_t) -> ();
     pub fn xcb_str_end(i: xcb_str_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_list_fonts_sizeof(_buffer: *const ::libc::c_void)
      -> ::libc::c_int;
@@ -15488,7 +16499,7 @@ extern "C" {
                          drawable: xcb_drawable_t, gc: xcb_gcontext_t,
                          points_len: uint32_t, points: *const xcb_point_t)
      -> xcb_void_cookie_t;
-    pub fn xcb_segment_next(i: *mut xcb_segment_iterator_t);
+    pub fn xcb_segment_next(i: *mut xcb_segment_iterator_t) -> ();
     pub fn xcb_segment_end(i: xcb_segment_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_poly_segment_sizeof(_buffer: *const ::libc::c_void,
@@ -15800,7 +16811,7 @@ extern "C" {
     pub fn xcb_free_colors(c: *mut xcb_connection_t, cmap: xcb_colormap_t,
                            plane_mask: uint32_t, pixels_len: uint32_t,
                            pixels: *const uint32_t) -> xcb_void_cookie_t;
-    pub fn xcb_coloritem_next(i: *mut xcb_coloritem_iterator_t);
+    pub fn xcb_coloritem_next(i: *mut xcb_coloritem_iterator_t) -> ();
     pub fn xcb_coloritem_end(i: xcb_coloritem_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_store_colors_sizeof(_buffer: *const ::libc::c_void,
@@ -15825,7 +16836,7 @@ extern "C" {
                                  name_len: uint16_t,
                                  name: *const ::libc::c_char)
      -> xcb_void_cookie_t;
-    pub fn xcb_rgb_next(i: *mut xcb_rgb_iterator_t);
+    pub fn xcb_rgb_next(i: *mut xcb_rgb_iterator_t) -> ();
     pub fn xcb_rgb_end(i: xcb_rgb_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_query_colors_sizeof(_buffer: *const ::libc::c_void,
                                    pixels_len: uint32_t) -> ::libc::c_int;
@@ -16071,7 +17082,7 @@ extern "C" {
     pub fn xcb_host_address_length(R: *const xcb_host_t) -> ::libc::c_int;
     pub fn xcb_host_address_end(R: *const xcb_host_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_host_next(i: *mut xcb_host_iterator_t);
+    pub fn xcb_host_next(i: *mut xcb_host_iterator_t) -> ();
     pub fn xcb_host_end(i: xcb_host_iterator_t) -> xcb_generic_iterator_t;
     pub fn xcb_list_hosts_sizeof(_buffer: *const ::libc::c_void)
      -> ::libc::c_int;
@@ -16190,7 +17201,8 @@ extern "C" {
     pub fn xcb_flush(c: *mut xcb_connection_t) -> ::libc::c_int;
     pub fn xcb_get_maximum_request_length(c: *mut xcb_connection_t)
      -> uint32_t;
-    pub fn xcb_prefetch_maximum_request_length(c: *mut xcb_connection_t);
+    pub fn xcb_prefetch_maximum_request_length(c: *mut xcb_connection_t)
+     -> ();
     pub fn xcb_wait_for_event(c: *mut xcb_connection_t)
      -> *mut xcb_generic_event_t;
     pub fn xcb_poll_for_event(c: *mut xcb_connection_t)
@@ -16208,17 +17220,18 @@ extern "C" {
                                         eid: uint32_t, stamp: *mut uint32_t)
      -> *mut xcb_special_event_t;
     pub fn xcb_unregister_for_special_event(c: *mut xcb_connection_t,
-                                            se: *mut xcb_special_event_t);
+                                            se: *mut xcb_special_event_t)
+     -> ();
     pub fn xcb_request_check(c: *mut xcb_connection_t,
                              cookie: xcb_void_cookie_t)
      -> *mut xcb_generic_error_t;
     pub fn xcb_discard_reply(c: *mut xcb_connection_t,
-                             sequence: ::libc::c_uint);
+                             sequence: ::libc::c_uint) -> ();
     pub fn xcb_get_extension_data(c: *mut xcb_connection_t,
                                   ext: *mut xcb_extension_t)
      -> *const Struct_xcb_query_extension_reply_t;
     pub fn xcb_prefetch_extension_data(c: *mut xcb_connection_t,
-                                       ext: *mut xcb_extension_t);
+                                       ext: *mut xcb_extension_t) -> ();
     pub fn xcb_get_setup(c: *mut xcb_connection_t)
      -> *const Struct_xcb_setup_t;
     pub fn xcb_get_file_descriptor(c: *mut xcb_connection_t) -> ::libc::c_int;
@@ -16227,7 +17240,7 @@ extern "C" {
     pub fn xcb_connect_to_fd(fd: ::libc::c_int,
                              auth_info: *mut xcb_auth_info_t)
      -> *mut xcb_connection_t;
-    pub fn xcb_disconnect(c: *mut xcb_connection_t);
+    pub fn xcb_disconnect(c: *mut xcb_connection_t) -> ();
     pub fn xcb_parse_display(name: *const ::libc::c_char,
                              host: *mut *mut ::libc::c_char,
                              display: *mut ::libc::c_int,
@@ -16244,12 +17257,12 @@ extern "C" {
                             vector: *mut Struct_iovec,
                             request: *const xcb_protocol_request_t)
      -> ::libc::c_uint;
-    pub fn xcb_send_fd(c: *mut xcb_connection_t, fd: ::libc::c_int);
+    pub fn xcb_send_fd(c: *mut xcb_connection_t, fd: ::libc::c_int) -> ();
     pub fn xcb_take_socket(c: *mut xcb_connection_t,
                            return_socket:
-                               ::std::option::Option<extern "C" fn
-                                                         (closure:
-                                                              *mut ::libc::c_void)>,
+                               ::std::option::Option<extern "C" fn(closure:
+                                                                       *mut ::libc::c_void)
+                                                         -> ()>,
                            closure: *mut ::libc::c_void, flags: ::libc::c_int,
                            sent: *mut uint64_t) -> ::libc::c_int;
     pub fn xcb_writev(c: *mut xcb_connection_t, vector: *mut Struct_iovec,
@@ -16269,32 +17282,38 @@ extern "C" {
      -> *mut ::libc::c_int;
     pub fn xcb_popcount(mask: uint32_t) -> ::libc::c_int;
     pub fn xcb_sumof(list: *mut uint8_t, len: ::libc::c_int) -> ::libc::c_int;
-    pub fn xcb_render_glyph_next(i: *mut xcb_render_glyph_iterator_t);
+    pub fn xcb_render_glyph_next(i: *mut xcb_render_glyph_iterator_t) -> ();
     pub fn xcb_render_glyph_end(i: xcb_render_glyph_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_glyphset_next(i: *mut xcb_render_glyphset_iterator_t);
+    pub fn xcb_render_glyphset_next(i: *mut xcb_render_glyphset_iterator_t)
+     -> ();
     pub fn xcb_render_glyphset_end(i: xcb_render_glyphset_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_picture_next(i: *mut xcb_render_picture_iterator_t);
+    pub fn xcb_render_picture_next(i: *mut xcb_render_picture_iterator_t)
+     -> ();
     pub fn xcb_render_picture_end(i: xcb_render_picture_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_pictformat_next(i:
-                                          *mut xcb_render_pictformat_iterator_t);
+                                          *mut xcb_render_pictformat_iterator_t)
+     -> ();
     pub fn xcb_render_pictformat_end(i: xcb_render_pictformat_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_fixed_next(i: *mut xcb_render_fixed_iterator_t);
+    pub fn xcb_render_fixed_next(i: *mut xcb_render_fixed_iterator_t) -> ();
     pub fn xcb_render_fixed_end(i: xcb_render_fixed_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_directformat_next(i:
-                                            *mut xcb_render_directformat_iterator_t);
+                                            *mut xcb_render_directformat_iterator_t)
+     -> ();
     pub fn xcb_render_directformat_end(i: xcb_render_directformat_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_pictforminfo_next(i:
-                                            *mut xcb_render_pictforminfo_iterator_t);
+                                            *mut xcb_render_pictforminfo_iterator_t)
+     -> ();
     pub fn xcb_render_pictforminfo_end(i: xcb_render_pictforminfo_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_pictvisual_next(i:
-                                          *mut xcb_render_pictvisual_iterator_t);
+                                          *mut xcb_render_pictvisual_iterator_t)
+     -> ();
     pub fn xcb_render_pictvisual_end(i: xcb_render_pictvisual_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_pictdepth_sizeof(_buffer: *const ::libc::c_void)
@@ -16307,7 +17326,8 @@ extern "C" {
     pub fn xcb_render_pictdepth_visuals_iterator(R:
                                                      *const xcb_render_pictdepth_t)
      -> xcb_render_pictvisual_iterator_t;
-    pub fn xcb_render_pictdepth_next(i: *mut xcb_render_pictdepth_iterator_t);
+    pub fn xcb_render_pictdepth_next(i: *mut xcb_render_pictdepth_iterator_t)
+     -> ();
     pub fn xcb_render_pictdepth_end(i: xcb_render_pictdepth_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_pictscreen_sizeof(_buffer: *const ::libc::c_void)
@@ -16319,29 +17339,36 @@ extern "C" {
                                                      *const xcb_render_pictscreen_t)
      -> xcb_render_pictdepth_iterator_t;
     pub fn xcb_render_pictscreen_next(i:
-                                          *mut xcb_render_pictscreen_iterator_t);
+                                          *mut xcb_render_pictscreen_iterator_t)
+     -> ();
     pub fn xcb_render_pictscreen_end(i: xcb_render_pictscreen_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_indexvalue_next(i:
-                                          *mut xcb_render_indexvalue_iterator_t);
+                                          *mut xcb_render_indexvalue_iterator_t)
+     -> ();
     pub fn xcb_render_indexvalue_end(i: xcb_render_indexvalue_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_color_next(i: *mut xcb_render_color_iterator_t);
+    pub fn xcb_render_color_next(i: *mut xcb_render_color_iterator_t) -> ();
     pub fn xcb_render_color_end(i: xcb_render_color_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_pointfix_next(i: *mut xcb_render_pointfix_iterator_t);
+    pub fn xcb_render_pointfix_next(i: *mut xcb_render_pointfix_iterator_t)
+     -> ();
     pub fn xcb_render_pointfix_end(i: xcb_render_pointfix_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_linefix_next(i: *mut xcb_render_linefix_iterator_t);
+    pub fn xcb_render_linefix_next(i: *mut xcb_render_linefix_iterator_t)
+     -> ();
     pub fn xcb_render_linefix_end(i: xcb_render_linefix_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_triangle_next(i: *mut xcb_render_triangle_iterator_t);
+    pub fn xcb_render_triangle_next(i: *mut xcb_render_triangle_iterator_t)
+     -> ();
     pub fn xcb_render_triangle_end(i: xcb_render_triangle_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_trapezoid_next(i: *mut xcb_render_trapezoid_iterator_t);
+    pub fn xcb_render_trapezoid_next(i: *mut xcb_render_trapezoid_iterator_t)
+     -> ();
     pub fn xcb_render_trapezoid_end(i: xcb_render_trapezoid_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_glyphinfo_next(i: *mut xcb_render_glyphinfo_iterator_t);
+    pub fn xcb_render_glyphinfo_next(i: *mut xcb_render_glyphinfo_iterator_t)
+     -> ();
     pub fn xcb_render_glyphinfo_end(i: xcb_render_glyphinfo_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_query_version(c: *mut xcb_connection_t,
@@ -16736,7 +17763,8 @@ extern "C" {
                                     cid: xcb_cursor_t,
                                     source: xcb_render_picture_t, x: uint16_t,
                                     y: uint16_t) -> xcb_void_cookie_t;
-    pub fn xcb_render_transform_next(i: *mut xcb_render_transform_iterator_t);
+    pub fn xcb_render_transform_next(i: *mut xcb_render_transform_iterator_t)
+     -> ();
     pub fn xcb_render_transform_end(i: xcb_render_transform_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_set_picture_transform_checked(c: *mut xcb_connection_t,
@@ -16799,7 +17827,8 @@ extern "C" {
                                          values: *const xcb_render_fixed_t)
      -> xcb_void_cookie_t;
     pub fn xcb_render_animcursorelt_next(i:
-                                             *mut xcb_render_animcursorelt_iterator_t);
+                                             *mut xcb_render_animcursorelt_iterator_t)
+     -> ();
     pub fn xcb_render_animcursorelt_end(i:
                                             xcb_render_animcursorelt_iterator_t)
      -> xcb_generic_iterator_t;
@@ -16819,10 +17848,11 @@ extern "C" {
                                          cursors:
                                              *const xcb_render_animcursorelt_t)
      -> xcb_void_cookie_t;
-    pub fn xcb_render_spanfix_next(i: *mut xcb_render_spanfix_iterator_t);
+    pub fn xcb_render_spanfix_next(i: *mut xcb_render_spanfix_iterator_t)
+     -> ();
     pub fn xcb_render_spanfix_end(i: xcb_render_spanfix_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_render_trap_next(i: *mut xcb_render_trap_iterator_t);
+    pub fn xcb_render_trap_next(i: *mut xcb_render_trap_iterator_t) -> ();
     pub fn xcb_render_trap_end(i: xcb_render_trap_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_render_add_traps_sizeof(_buffer: *const ::libc::c_void,
@@ -16929,20 +17959,22 @@ extern "C" {
                                               colors:
                                                   *const xcb_render_color_t)
      -> xcb_void_cookie_t;
-    pub fn xcb_randr_mode_next(i: *mut xcb_randr_mode_iterator_t);
+    pub fn xcb_randr_mode_next(i: *mut xcb_randr_mode_iterator_t) -> ();
     pub fn xcb_randr_mode_end(i: xcb_randr_mode_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_randr_crtc_next(i: *mut xcb_randr_crtc_iterator_t);
+    pub fn xcb_randr_crtc_next(i: *mut xcb_randr_crtc_iterator_t) -> ();
     pub fn xcb_randr_crtc_end(i: xcb_randr_crtc_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_randr_output_next(i: *mut xcb_randr_output_iterator_t);
+    pub fn xcb_randr_output_next(i: *mut xcb_randr_output_iterator_t) -> ();
     pub fn xcb_randr_output_end(i: xcb_randr_output_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_randr_provider_next(i: *mut xcb_randr_provider_iterator_t);
+    pub fn xcb_randr_provider_next(i: *mut xcb_randr_provider_iterator_t)
+     -> ();
     pub fn xcb_randr_provider_end(i: xcb_randr_provider_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_screen_size_next(i:
-                                          *mut xcb_randr_screen_size_iterator_t);
+                                          *mut xcb_randr_screen_size_iterator_t)
+     -> ();
     pub fn xcb_randr_screen_size_end(i: xcb_randr_screen_size_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_refresh_rates_sizeof(_buffer: *const ::libc::c_void)
@@ -16956,7 +17988,8 @@ extern "C" {
                                                  *const xcb_randr_refresh_rates_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_refresh_rates_next(i:
-                                            *mut xcb_randr_refresh_rates_iterator_t);
+                                            *mut xcb_randr_refresh_rates_iterator_t)
+     -> ();
     pub fn xcb_randr_refresh_rates_end(i: xcb_randr_refresh_rates_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_query_version(c: *mut xcb_connection_t,
@@ -17052,7 +18085,8 @@ extern "C" {
                                      height: uint16_t, mm_width: uint32_t,
                                      mm_height: uint32_t)
      -> xcb_void_cookie_t;
-    pub fn xcb_randr_mode_info_next(i: *mut xcb_randr_mode_info_iterator_t);
+    pub fn xcb_randr_mode_info_next(i: *mut xcb_randr_mode_info_iterator_t)
+     -> ();
     pub fn xcb_randr_mode_info_end(i: xcb_randr_mode_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_get_screen_resources_sizeof(_buffer:
@@ -17920,35 +18954,42 @@ extern "C" {
                                                      *mut *mut xcb_generic_error_t)
      -> *mut xcb_randr_get_provider_property_reply_t;
     pub fn xcb_randr_crtc_change_next(i:
-                                          *mut xcb_randr_crtc_change_iterator_t);
+                                          *mut xcb_randr_crtc_change_iterator_t)
+     -> ();
     pub fn xcb_randr_crtc_change_end(i: xcb_randr_crtc_change_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_output_change_next(i:
-                                            *mut xcb_randr_output_change_iterator_t);
+                                            *mut xcb_randr_output_change_iterator_t)
+     -> ();
     pub fn xcb_randr_output_change_end(i: xcb_randr_output_change_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_output_property_next(i:
-                                              *mut xcb_randr_output_property_iterator_t);
+                                              *mut xcb_randr_output_property_iterator_t)
+     -> ();
     pub fn xcb_randr_output_property_end(i:
                                              xcb_randr_output_property_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_provider_change_next(i:
-                                              *mut xcb_randr_provider_change_iterator_t);
+                                              *mut xcb_randr_provider_change_iterator_t)
+     -> ();
     pub fn xcb_randr_provider_change_end(i:
                                              xcb_randr_provider_change_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_provider_property_next(i:
-                                                *mut xcb_randr_provider_property_iterator_t);
+                                                *mut xcb_randr_provider_property_iterator_t)
+     -> ();
     pub fn xcb_randr_provider_property_end(i:
                                                xcb_randr_provider_property_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_resource_change_next(i:
-                                              *mut xcb_randr_resource_change_iterator_t);
+                                              *mut xcb_randr_resource_change_iterator_t)
+     -> ();
     pub fn xcb_randr_resource_change_end(i:
                                              xcb_randr_resource_change_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_randr_notify_data_next(i:
-                                          *mut xcb_randr_notify_data_iterator_t);
+                                          *mut xcb_randr_notify_data_iterator_t)
+     -> ();
     pub fn xcb_randr_notify_data_end(i: xcb_randr_notify_data_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_atom_name_by_screen(base: *const ::libc::c_char,
@@ -17973,7 +19014,7 @@ extern "C" {
     pub fn xcb_aux_find_visual_by_attrs(screen: *mut xcb_screen_t,
                                         class_: int8_t, depth: int8_t)
      -> *mut xcb_visualtype_t;
-    pub fn xcb_aux_sync(c: *mut xcb_connection_t);
+    pub fn xcb_aux_sync(c: *mut xcb_connection_t) -> ();
     pub fn xcb_aux_create_window(c: *mut xcb_connection_t, depth: uint8_t,
                                  wid: xcb_window_t, parent: xcb_window_t,
                                  x: int16_t, y: int16_t, width: uint16_t,
@@ -18046,10 +19087,10 @@ extern "C" {
     pub fn xcb_event_get_error_label(_type: uint8_t) -> *const ::libc::c_char;
     pub fn xcb_event_get_request_label(_type: uint8_t)
      -> *const ::libc::c_char;
-    pub fn xcb_shape_op_next(i: *mut xcb_shape_op_iterator_t);
+    pub fn xcb_shape_op_next(i: *mut xcb_shape_op_iterator_t) -> ();
     pub fn xcb_shape_op_end(i: xcb_shape_op_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_shape_kind_next(i: *mut xcb_shape_kind_iterator_t);
+    pub fn xcb_shape_kind_next(i: *mut xcb_shape_kind_iterator_t) -> ();
     pub fn xcb_shape_kind_end(i: xcb_shape_kind_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_shape_query_version(c: *mut xcb_connection_t)
@@ -18234,7 +19275,7 @@ extern "C" {
                                                  xcb_xfixes_get_cursor_image_cookie_t,
                                              e: *mut *mut xcb_generic_error_t)
      -> *mut xcb_xfixes_get_cursor_image_reply_t;
-    pub fn xcb_xfixes_region_next(i: *mut xcb_xfixes_region_iterator_t);
+    pub fn xcb_xfixes_region_next(i: *mut xcb_xfixes_region_iterator_t) -> ();
     pub fn xcb_xfixes_region_end(i: xcb_xfixes_region_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_xfixes_create_region_sizeof(_buffer: *const ::libc::c_void,
@@ -18555,7 +19596,8 @@ extern "C" {
      -> xcb_void_cookie_t;
     pub fn xcb_xfixes_show_cursor(c: *mut xcb_connection_t,
                                   window: xcb_window_t) -> xcb_void_cookie_t;
-    pub fn xcb_xfixes_barrier_next(i: *mut xcb_xfixes_barrier_iterator_t);
+    pub fn xcb_xfixes_barrier_next(i: *mut xcb_xfixes_barrier_iterator_t)
+     -> ();
     pub fn xcb_xfixes_barrier_end(i: xcb_xfixes_barrier_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_xfixes_create_pointer_barrier_sizeof(_buffer:
@@ -18590,19 +19632,22 @@ extern "C" {
                                              barrier: xcb_xfixes_barrier_t)
      -> xcb_void_cookie_t;
     pub fn xcb_input_event_class_next(i:
-                                          *mut xcb_input_event_class_iterator_t);
+                                          *mut xcb_input_event_class_iterator_t)
+     -> ();
     pub fn xcb_input_event_class_end(i: xcb_input_event_class_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_key_code_next(i: *mut xcb_input_key_code_iterator_t);
+    pub fn xcb_input_key_code_next(i: *mut xcb_input_key_code_iterator_t)
+     -> ();
     pub fn xcb_input_key_code_end(i: xcb_input_key_code_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_device_id_next(i: *mut xcb_input_device_id_iterator_t);
+    pub fn xcb_input_device_id_next(i: *mut xcb_input_device_id_iterator_t)
+     -> ();
     pub fn xcb_input_device_id_end(i: xcb_input_device_id_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_fp1616_next(i: *mut xcb_input_fp1616_iterator_t);
+    pub fn xcb_input_fp1616_next(i: *mut xcb_input_fp1616_iterator_t) -> ();
     pub fn xcb_input_fp1616_end(i: xcb_input_fp1616_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_fp3232_next(i: *mut xcb_input_fp3232_iterator_t);
+    pub fn xcb_input_fp3232_next(i: *mut xcb_input_fp3232_iterator_t) -> ();
     pub fn xcb_input_fp3232_end(i: xcb_input_fp3232_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_get_extension_version_sizeof(_buffer:
@@ -18624,17 +19669,21 @@ extern "C" {
                                                      *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_get_extension_version_reply_t;
     pub fn xcb_input_device_info_next(i:
-                                          *mut xcb_input_device_info_iterator_t);
+                                          *mut xcb_input_device_info_iterator_t)
+     -> ();
     pub fn xcb_input_device_info_end(i: xcb_input_device_info_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_key_info_next(i: *mut xcb_input_key_info_iterator_t);
+    pub fn xcb_input_key_info_next(i: *mut xcb_input_key_info_iterator_t)
+     -> ();
     pub fn xcb_input_key_info_end(i: xcb_input_key_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_button_info_next(i:
-                                          *mut xcb_input_button_info_iterator_t);
+                                          *mut xcb_input_button_info_iterator_t)
+     -> ();
     pub fn xcb_input_button_info_end(i: xcb_input_button_info_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_axis_info_next(i: *mut xcb_input_axis_info_iterator_t);
+    pub fn xcb_input_axis_info_next(i: *mut xcb_input_axis_info_iterator_t)
+     -> ();
     pub fn xcb_input_axis_info_end(i: xcb_input_axis_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_valuator_info_sizeof(_buffer: *const ::libc::c_void)
@@ -18648,10 +19697,12 @@ extern "C" {
                                                      *const xcb_input_valuator_info_t)
      -> xcb_input_axis_info_iterator_t;
     pub fn xcb_input_valuator_info_next(i:
-                                            *mut xcb_input_valuator_info_iterator_t);
+                                            *mut xcb_input_valuator_info_iterator_t)
+     -> ();
     pub fn xcb_input_valuator_info_end(i: xcb_input_valuator_info_iterator_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_input_info_next(i: *mut xcb_input_input_info_iterator_t);
+    pub fn xcb_input_input_info_next(i: *mut xcb_input_input_info_iterator_t)
+     -> ();
     pub fn xcb_input_input_info_end(i: xcb_input_input_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_name_sizeof(_buffer: *const ::libc::c_void)
@@ -18664,7 +19715,8 @@ extern "C" {
     pub fn xcb_input_device_name_string_end(R: *const xcb_input_device_name_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_name_next(i:
-                                          *mut xcb_input_device_name_iterator_t);
+                                          *mut xcb_input_device_name_iterator_t)
+     -> ();
     pub fn xcb_input_device_name_end(i: xcb_input_device_name_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_list_input_devices_sizeof(_buffer: *const ::libc::c_void)
@@ -18689,7 +19741,8 @@ extern "C" {
                                                   *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_list_input_devices_reply_t;
     pub fn xcb_input_input_class_info_next(i:
-                                               *mut xcb_input_input_class_info_iterator_t);
+                                               *mut xcb_input_input_class_info_iterator_t)
+     -> ();
     pub fn xcb_input_input_class_info_end(i:
                                               xcb_input_input_class_info_iterator_t)
      -> xcb_generic_iterator_t;
@@ -18830,7 +19883,8 @@ extern "C" {
                                                               *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_get_device_dont_propagate_list_reply_t;
     pub fn xcb_input_device_time_coord_next(i:
-                                                *mut xcb_input_device_time_coord_iterator_t);
+                                                *mut xcb_input_device_time_coord_iterator_t)
+     -> ();
     pub fn xcb_input_device_time_coord_end(i:
                                                xcb_input_device_time_coord_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19025,17 +20079,20 @@ extern "C" {
                                       revert_to: uint8_t, device_id: uint8_t)
      -> xcb_void_cookie_t;
     pub fn xcb_input_kbd_feedback_state_next(i:
-                                                 *mut xcb_input_kbd_feedback_state_iterator_t);
+                                                 *mut xcb_input_kbd_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_kbd_feedback_state_end(i:
                                                 xcb_input_kbd_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_ptr_feedback_state_next(i:
-                                                 *mut xcb_input_ptr_feedback_state_iterator_t);
+                                                 *mut xcb_input_ptr_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_ptr_feedback_state_end(i:
                                                 xcb_input_ptr_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_integer_feedback_state_next(i:
-                                                     *mut xcb_input_integer_feedback_state_iterator_t);
+                                                     *mut xcb_input_integer_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_integer_feedback_state_end(i:
                                                     xcb_input_integer_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19052,17 +20109,20 @@ extern "C" {
                                                            *const xcb_input_string_feedback_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_string_feedback_state_next(i:
-                                                    *mut xcb_input_string_feedback_state_iterator_t);
+                                                    *mut xcb_input_string_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_string_feedback_state_end(i:
                                                    xcb_input_string_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_bell_feedback_state_next(i:
-                                                  *mut xcb_input_bell_feedback_state_iterator_t);
+                                                  *mut xcb_input_bell_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_bell_feedback_state_end(i:
                                                  xcb_input_bell_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_led_feedback_state_next(i:
-                                                 *mut xcb_input_led_feedback_state_iterator_t);
+                                                 *mut xcb_input_led_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_led_feedback_state_end(i:
                                                 xcb_input_led_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19078,7 +20138,8 @@ extern "C" {
                                                                *const xcb_input_feedback_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_feedback_state_next(i:
-                                             *mut xcb_input_feedback_state_iterator_t);
+                                             *mut xcb_input_feedback_state_iterator_t)
+     -> ();
     pub fn xcb_input_feedback_state_end(i:
                                             xcb_input_feedback_state_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19104,17 +20165,20 @@ extern "C" {
                                                     *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_get_feedback_control_reply_t;
     pub fn xcb_input_kbd_feedback_ctl_next(i:
-                                               *mut xcb_input_kbd_feedback_ctl_iterator_t);
+                                               *mut xcb_input_kbd_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_kbd_feedback_ctl_end(i:
                                               xcb_input_kbd_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_ptr_feedback_ctl_next(i:
-                                               *mut xcb_input_ptr_feedback_ctl_iterator_t);
+                                               *mut xcb_input_ptr_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_ptr_feedback_ctl_end(i:
                                               xcb_input_ptr_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_integer_feedback_ctl_next(i:
-                                                   *mut xcb_input_integer_feedback_ctl_iterator_t);
+                                                   *mut xcb_input_integer_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_integer_feedback_ctl_end(i:
                                                   xcb_input_integer_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19131,17 +20195,20 @@ extern "C" {
                                                          *const xcb_input_string_feedback_ctl_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_string_feedback_ctl_next(i:
-                                                  *mut xcb_input_string_feedback_ctl_iterator_t);
+                                                  *mut xcb_input_string_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_string_feedback_ctl_end(i:
                                                  xcb_input_string_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_bell_feedback_ctl_next(i:
-                                                *mut xcb_input_bell_feedback_ctl_iterator_t);
+                                                *mut xcb_input_bell_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_bell_feedback_ctl_end(i:
                                                xcb_input_bell_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_led_feedback_ctl_next(i:
-                                               *mut xcb_input_led_feedback_ctl_iterator_t);
+                                               *mut xcb_input_led_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_led_feedback_ctl_end(i:
                                               xcb_input_led_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19157,7 +20224,8 @@ extern "C" {
                                                              *const xcb_input_feedback_ctl_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_feedback_ctl_next(i:
-                                           *mut xcb_input_feedback_ctl_iterator_t);
+                                           *mut xcb_input_feedback_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_feedback_ctl_end(i: xcb_input_feedback_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_change_feedback_control_sizeof(_buffer:
@@ -19325,11 +20393,13 @@ extern "C" {
                                                      e:
                                                          *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_set_device_button_mapping_reply_t;
-    pub fn xcb_input_key_state_next(i: *mut xcb_input_key_state_iterator_t);
+    pub fn xcb_input_key_state_next(i: *mut xcb_input_key_state_iterator_t)
+     -> ();
     pub fn xcb_input_key_state_end(i: xcb_input_key_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_button_state_next(i:
-                                           *mut xcb_input_button_state_iterator_t);
+                                           *mut xcb_input_button_state_iterator_t)
+     -> ();
     pub fn xcb_input_button_state_end(i: xcb_input_button_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_valuator_state_sizeof(_buffer: *const ::libc::c_void)
@@ -19344,7 +20414,8 @@ extern "C" {
                                                       *const xcb_input_valuator_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_valuator_state_next(i:
-                                             *mut xcb_input_valuator_state_iterator_t);
+                                             *mut xcb_input_valuator_state_iterator_t)
+     -> ();
     pub fn xcb_input_valuator_state_end(i:
                                             xcb_input_valuator_state_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19360,7 +20431,8 @@ extern "C" {
                                                             *const xcb_input_input_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_input_state_next(i:
-                                          *mut xcb_input_input_state_iterator_t);
+                                          *mut xcb_input_input_state_iterator_t)
+     -> ();
     pub fn xcb_input_input_state_end(i: xcb_input_input_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_query_device_state_sizeof(_buffer: *const ::libc::c_void)
@@ -19468,27 +20540,32 @@ extern "C" {
                                                                     *const xcb_input_device_resolution_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_resolution_state_next(i:
-                                                      *mut xcb_input_device_resolution_state_iterator_t);
+                                                      *mut xcb_input_device_resolution_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_resolution_state_end(i:
                                                      xcb_input_device_resolution_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_abs_calib_state_next(i:
-                                                     *mut xcb_input_device_abs_calib_state_iterator_t);
+                                                     *mut xcb_input_device_abs_calib_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_abs_calib_state_end(i:
                                                     xcb_input_device_abs_calib_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_abs_area_state_next(i:
-                                                    *mut xcb_input_device_abs_area_state_iterator_t);
+                                                    *mut xcb_input_device_abs_area_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_abs_area_state_end(i:
                                                    xcb_input_device_abs_area_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_core_state_next(i:
-                                                *mut xcb_input_device_core_state_iterator_t);
+                                                *mut xcb_input_device_core_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_core_state_end(i:
                                                xcb_input_device_core_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_enable_state_next(i:
-                                                  *mut xcb_input_device_enable_state_iterator_t);
+                                                  *mut xcb_input_device_enable_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_enable_state_end(i:
                                                  xcb_input_device_enable_state_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19504,7 +20581,8 @@ extern "C" {
                                                              *const xcb_input_device_state_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_state_next(i:
-                                           *mut xcb_input_device_state_iterator_t);
+                                           *mut xcb_input_device_state_iterator_t)
+     -> ();
     pub fn xcb_input_device_state_end(i: xcb_input_device_state_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_get_device_control_sizeof(_buffer: *const ::libc::c_void)
@@ -19539,27 +20617,32 @@ extern "C" {
                                                                      *const xcb_input_device_resolution_ctl_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_resolution_ctl_next(i:
-                                                    *mut xcb_input_device_resolution_ctl_iterator_t);
+                                                    *mut xcb_input_device_resolution_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_device_resolution_ctl_end(i:
                                                    xcb_input_device_resolution_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_abs_calib_ctl_next(i:
-                                                   *mut xcb_input_device_abs_calib_ctl_iterator_t);
+                                                   *mut xcb_input_device_abs_calib_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_device_abs_calib_ctl_end(i:
                                                   xcb_input_device_abs_calib_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_abs_area_ctrl_next(i:
-                                                   *mut xcb_input_device_abs_area_ctrl_iterator_t);
+                                                   *mut xcb_input_device_abs_area_ctrl_iterator_t)
+     -> ();
     pub fn xcb_input_device_abs_area_ctrl_end(i:
                                                   xcb_input_device_abs_area_ctrl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_core_ctrl_next(i:
-                                               *mut xcb_input_device_core_ctrl_iterator_t);
+                                               *mut xcb_input_device_core_ctrl_iterator_t)
+     -> ();
     pub fn xcb_input_device_core_ctrl_end(i:
                                               xcb_input_device_core_ctrl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_enable_ctrl_next(i:
-                                                 *mut xcb_input_device_enable_ctrl_iterator_t);
+                                                 *mut xcb_input_device_enable_ctrl_iterator_t)
+     -> ();
     pub fn xcb_input_device_enable_ctrl_end(i:
                                                 xcb_input_device_enable_ctrl_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19574,7 +20657,8 @@ extern "C" {
     pub fn xcb_input_device_ctl_uninterpreted_data_end(R:
                                                            *const xcb_input_device_ctl_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_device_ctl_next(i: *mut xcb_input_device_ctl_iterator_t);
+    pub fn xcb_input_device_ctl_next(i: *mut xcb_input_device_ctl_iterator_t)
+     -> ();
     pub fn xcb_input_device_ctl_end(i: xcb_input_device_ctl_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_change_device_control_sizeof(_buffer:
@@ -19810,11 +20894,13 @@ extern "C" {
                                                e:
                                                    *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_get_device_property_reply_t;
-    pub fn xcb_input_group_info_next(i: *mut xcb_input_group_info_iterator_t);
+    pub fn xcb_input_group_info_next(i: *mut xcb_input_group_info_iterator_t)
+     -> ();
     pub fn xcb_input_group_info_end(i: xcb_input_group_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_modifier_info_next(i:
-                                            *mut xcb_input_modifier_info_iterator_t);
+                                            *mut xcb_input_modifier_info_iterator_t)
+     -> ();
     pub fn xcb_input_modifier_info_end(i: xcb_input_modifier_info_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_xi_query_pointer_sizeof(_buffer: *const ::libc::c_void)
@@ -19882,19 +20968,23 @@ extern "C" {
      -> ::libc::c_int;
     pub fn xcb_input_add_master_name_end(R: *const xcb_input_add_master_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_add_master_next(i: *mut xcb_input_add_master_iterator_t);
+    pub fn xcb_input_add_master_next(i: *mut xcb_input_add_master_iterator_t)
+     -> ();
     pub fn xcb_input_add_master_end(i: xcb_input_add_master_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_remove_master_next(i:
-                                            *mut xcb_input_remove_master_iterator_t);
+                                            *mut xcb_input_remove_master_iterator_t)
+     -> ();
     pub fn xcb_input_remove_master_end(i: xcb_input_remove_master_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_attach_slave_next(i:
-                                           *mut xcb_input_attach_slave_iterator_t);
+                                           *mut xcb_input_attach_slave_iterator_t)
+     -> ();
     pub fn xcb_input_attach_slave_end(i: xcb_input_attach_slave_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_detach_slave_next(i:
-                                           *mut xcb_input_detach_slave_iterator_t);
+                                           *mut xcb_input_detach_slave_iterator_t)
+     -> ();
     pub fn xcb_input_detach_slave_end(i: xcb_input_detach_slave_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_hierarchy_change_sizeof(_buffer: *const ::libc::c_void)
@@ -19909,7 +20999,8 @@ extern "C" {
                                                                  *const xcb_input_hierarchy_change_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_hierarchy_change_next(i:
-                                               *mut xcb_input_hierarchy_change_iterator_t);
+                                               *mut xcb_input_hierarchy_change_iterator_t)
+     -> ();
     pub fn xcb_input_hierarchy_change_end(i:
                                               xcb_input_hierarchy_change_iterator_t)
      -> xcb_generic_iterator_t;
@@ -19955,7 +21046,8 @@ extern "C" {
      -> ::libc::c_int;
     pub fn xcb_input_event_mask_mask_end(R: *const xcb_input_event_mask_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_event_mask_next(i: *mut xcb_input_event_mask_iterator_t);
+    pub fn xcb_input_event_mask_next(i: *mut xcb_input_event_mask_iterator_t)
+     -> ();
     pub fn xcb_input_event_mask_end(i: xcb_input_event_mask_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_xi_select_events_sizeof(_buffer: *const ::libc::c_void)
@@ -20003,7 +21095,8 @@ extern "C" {
                                                  *const xcb_input_button_class_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_button_class_next(i:
-                                           *mut xcb_input_button_class_iterator_t);
+                                           *mut xcb_input_button_class_iterator_t)
+     -> ();
     pub fn xcb_input_button_class_end(i: xcb_input_button_class_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_key_class_sizeof(_buffer: *const ::libc::c_void)
@@ -20014,19 +21107,23 @@ extern "C" {
      -> ::libc::c_int;
     pub fn xcb_input_key_class_keys_end(R: *const xcb_input_key_class_t)
      -> xcb_generic_iterator_t;
-    pub fn xcb_input_key_class_next(i: *mut xcb_input_key_class_iterator_t);
+    pub fn xcb_input_key_class_next(i: *mut xcb_input_key_class_iterator_t)
+     -> ();
     pub fn xcb_input_key_class_end(i: xcb_input_key_class_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_scroll_class_next(i:
-                                           *mut xcb_input_scroll_class_iterator_t);
+                                           *mut xcb_input_scroll_class_iterator_t)
+     -> ();
     pub fn xcb_input_scroll_class_end(i: xcb_input_scroll_class_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_touch_class_next(i:
-                                          *mut xcb_input_touch_class_iterator_t);
+                                          *mut xcb_input_touch_class_iterator_t)
+     -> ();
     pub fn xcb_input_touch_class_end(i: xcb_input_touch_class_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_valuator_class_next(i:
-                                             *mut xcb_input_valuator_class_iterator_t);
+                                             *mut xcb_input_valuator_class_iterator_t)
+     -> ();
     pub fn xcb_input_valuator_class_end(i:
                                             xcb_input_valuator_class_iterator_t)
      -> xcb_generic_iterator_t;
@@ -20042,7 +21139,8 @@ extern "C" {
                                                              *const xcb_input_device_class_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_device_class_next(i:
-                                           *mut xcb_input_device_class_iterator_t);
+                                           *mut xcb_input_device_class_iterator_t)
+     -> ();
     pub fn xcb_input_device_class_end(i: xcb_input_device_class_iterator_t)
      -> xcb_generic_iterator_t;
     pub fn xcb_input_xi_device_info_sizeof(_buffer: *const ::libc::c_void)
@@ -20062,7 +21160,8 @@ extern "C" {
                                                          *const xcb_input_xi_device_info_t)
      -> xcb_input_device_class_iterator_t;
     pub fn xcb_input_xi_device_info_next(i:
-                                             *mut xcb_input_xi_device_info_iterator_t);
+                                             *mut xcb_input_xi_device_info_iterator_t)
+     -> ();
     pub fn xcb_input_xi_device_info_end(i:
                                             xcb_input_xi_device_info_iterator_t)
      -> xcb_generic_iterator_t;
@@ -20156,7 +21255,8 @@ extern "C" {
                                      grab_window: xcb_window_t)
      -> xcb_void_cookie_t;
     pub fn xcb_input_grab_modifier_info_next(i:
-                                                 *mut xcb_input_grab_modifier_info_iterator_t);
+                                                 *mut xcb_input_grab_modifier_info_iterator_t)
+     -> ();
     pub fn xcb_input_grab_modifier_info_end(i:
                                                 xcb_input_grab_modifier_info_iterator_t)
      -> xcb_generic_iterator_t;
@@ -20469,7 +21569,8 @@ extern "C" {
                                                       *mut *mut xcb_generic_error_t)
      -> *mut xcb_input_xi_get_selected_events_reply_t;
     pub fn xcb_input_barrier_release_pointer_info_next(i:
-                                                           *mut xcb_input_barrier_release_pointer_info_iterator_t);
+                                                           *mut xcb_input_barrier_release_pointer_info_iterator_t)
+     -> ();
     pub fn xcb_input_barrier_release_pointer_info_end(i:
                                                           xcb_input_barrier_release_pointer_info_iterator_t)
      -> xcb_generic_iterator_t;
@@ -20509,7 +21610,8 @@ extern "C" {
     pub fn xcb_input_focus_out_sizeof(_buffer: *const ::libc::c_void)
      -> ::libc::c_int;
     pub fn xcb_input_hierarchy_info_next(i:
-                                             *mut xcb_input_hierarchy_info_iterator_t);
+                                             *mut xcb_input_hierarchy_info_iterator_t)
+     -> ();
     pub fn xcb_input_hierarchy_info_end(i:
                                             xcb_input_hierarchy_info_iterator_t)
      -> xcb_generic_iterator_t;

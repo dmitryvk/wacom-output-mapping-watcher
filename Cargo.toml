@@ -3,3 +3,7 @@
 name = "wacom-output-mapping-watcher"
 version = "0.1.0"
 authors = ["Dmitry Kalyanov <Kalyanov.Dmitry@gmail.com>"]
+
+[dependencies]
+libc = "0.1.8"
+getopts = "0.2.11"

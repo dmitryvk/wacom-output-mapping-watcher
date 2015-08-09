@@ -1,21 +1,14 @@
-#![feature(globs)]
-#![feature(unsafe_destructor)]
-#![feature(associated_types)]
-
 extern crate getopts;
 extern crate libc;
 
 use xcb::*;
-use std::num::FromPrimitive;
-use std::io::timer::sleep;
-use std::time::duration::Duration;
-use getopts::{optflag,optopt,getopts,usage};
-use std::os;
+use getopts::Options;
+use std::env;
 
 // FFI is build with:
 // LD_PRELOAD=/usr/lib/libclang.so ./bindgen -lxcb -lxcb-randr -lxcb-xinput -I /usr/lib/clang/3.5.0/include -match /usr/include/xcb/ -o ~/develop/rust-wacom-randr/src/ffi.rs ~/develop/rust-wacom-randr/src/ffi-input.h
 mod ffi {
-    #![allow(dead_code, non_camel_case_types, raw_pointer_deriving, non_snake_case)]
+    #![allow(dead_code, non_camel_case_types, raw_pointer_derive, non_snake_case)]
     use libc::*;
     
     #[repr(C)]
@@ -34,22 +27,23 @@ struct CliOptions {
 }
 
 fn parse_options() -> Option<CliOptions> {
-    let args: Vec<String> = os::args();
+    let args: Vec<String> = env::args().collect();
 
     let program = args[0].clone();
-
-    let opts = &[
-        optflag("w", "watch", "watch for RANDR events and reconfigure Wacom tablets"),
-        optopt("o", "output", "name of X RANDR output to which Wacom tables will be mapped", "OUTPUT"),
-        optflag("h", "help", "print this help menu")
-    ];
-    let matches = match getopts(args.tail(), opts) {
+    
+    let mut opts = Options::new();
+    
+    opts.optflag("w", "watch", "watch for RANDR events and reconfigure Wacom tablets");
+    opts.optopt("o", "output", "name of X RANDR output to which Wacom tables will be mapped", "OUTPUT");
+    opts.optflag("h", "help", "print this help menu");
+    
+    let matches = match opts.parse(&args[1..]) {
         Ok(m) => { m }
         Err(f) => { panic!(f.to_string()) }
     };
     if matches.opt_present("h") || !matches.opt_present("o") {
         let brief = format!("Usage: {} [options]", program);
-        print!("{}", usage(brief.as_slice(), opts));
+        print!("{}", opts.usage(&brief));
         return None;
     }
     
@@ -74,7 +68,7 @@ fn get_active_outputs(randr: &XcbRandr, resources: &XcbScreenResources) -> Vec<(
     result
 }
 
-#[derive(Show,PartialEq,Eq)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct XcbOutputDescription {
     pub name: String,
     pub x: i16,
@@ -94,10 +88,17 @@ fn describe_output_and_crtc(x: &(XcbRandrOutputInfo, XcbRandrCrtcInfo)) -> XcbOu
 }
 
 fn update_wacom_tablets(connection: &XcbConnection, input: &XcbInput, outputs: &[XcbOutputDescription], to_out_name: &str) {
-    let to_out_opt = outputs.iter().filter(|o| o.name.as_slice() == to_out_name).nth(0);
+    //println!("update_wacom_tablets(_, _, {:?}, {:?})", outputs, to_out_name);
+    let to_out_opt = outputs.iter().filter(|o| o.name == to_out_name).nth(0);
     let to_out = match to_out_opt {
         Some(out) => out,
-        None => outputs.get(0).unwrap()
+        None => match outputs.get(0) {
+            Some(out) => out,
+            None => {
+                //println!("All outputs are disabled");
+                return;
+            }
+        }
     };
     let min_x: f32 = outputs.iter().map(|o| o.x).min().unwrap() as f32;
     let min_y: f32 = outputs.iter().map(|o| o.y).min().unwrap() as f32;
@@ -115,14 +116,16 @@ fn update_wacom_tablets(connection: &XcbConnection, input: &XcbInput, outputs: &
         0.0,  0.0,  1.0
     );
     
+    println!("New Coordinate Transformation Matrix = {:?}", transform_matrix);
+    
     for device in input.get_devices().unwrap().devices.iter() {
         if device.name.starts_with("Wacom") {
             for property in input.get_device_properties(device.deviceid).unwrap().iter() {
-                if property.as_slice() == "Coordinate Transformation Matrix" {
-                    let property_name_atom = connection.intern_atom(property.as_slice(), true).unwrap();
+                if property == "Coordinate Transformation Matrix" {
+                    let property_name_atom = connection.intern_atom(property, true).unwrap();
                     let property_type_atom = connection.intern_atom("FLOAT", true).unwrap();
                     println!("Updating {}", device.name);
-                    input.set_property_value(device.deviceid, property_name_atom, property_type_atom, 32, transform_matrix.as_slice()).unwrap();
+                    input.set_property_value(device.deviceid, property_name_atom, property_type_atom, 32, &transform_matrix).unwrap();
                     
                     /*{
                         let data = input.get_property_value::<f32>(device.deviceid, property_name_atom);
@@ -154,11 +157,11 @@ fn main() {
         .iter()
         .map(describe_output_and_crtc)
         .collect();
-    println!("Active outputs: {}", active_outputs);
+    println!("Active outputs: {:?}", active_outputs);
     
     let input = XcbInput::init(&c).unwrap();
     
-    update_wacom_tablets(&c, &input, active_outputs.as_slice(), options.output.as_slice());
+    update_wacom_tablets(&c, &input, &active_outputs, &options.output);
     
     if options.watch {
         randr.select_input(root_window_id).unwrap();
@@ -172,15 +175,16 @@ fn main() {
             if event.response_type >= randr.extension.first_event
                 && event.response_type <= randr.extension.first_event + (ffi::XCB_RANDR_NOTIFY_RESOURCE_CHANGE as u8)
             {
-                let event_type: XcbRandrEventType = FromPrimitive::from_u8(event.response_type - randr.extension.first_event).expect("Invalid value");
+                let event_type: XcbRandrEventType = XcbRandrEventType::from_u8(event.response_type - randr.extension.first_event).expect("Invalid value");
+                println!("Got RANDR event: {:?}", event_type);
                 let active_outputs: Vec<_> = get_active_outputs(&randr, &resources)
                     .iter()
                     .map(describe_output_and_crtc)
                     .collect();
                 if active_outputs != prev_outputs {
-                    println!("Active outputs have changed from {} to {}", prev_outputs, active_outputs);
+                    println!("Active outputs have changed from {:?} to {:?}", prev_outputs, active_outputs);
     
-                    update_wacom_tablets(&c, &input, active_outputs.as_slice(), options.output.as_slice());
+                    update_wacom_tablets(&c, &input, &active_outputs, &options.output);
                     prev_outputs = active_outputs;
                 }
             } else if event.response_type == 35 /* XCB_GE_GENERIC */ {
@@ -189,7 +193,7 @@ fn main() {
                     if ge.event_type == 11 /* XINPUT Hierarchy event */ {
                         println!("Device hierarchy changed");
                         //sleep(Duration::seconds(1));
-                        update_wacom_tablets(&c, &input, prev_outputs.as_slice(), options.output.as_slice());
+                        update_wacom_tablets(&c, &input, &prev_outputs, &options.output);
                     }
                 }
             }
