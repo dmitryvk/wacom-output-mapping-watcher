@@ -25,4 +25,4 @@ To start automatically with X session, use `~/.xprofile` (this file is executed 
 
     cargo build
 
-(tested with `rustc 0.13.0-dev (fe7e285d0 2015-01-03 14:20:47 +0000)` and `cargo 0.0.1-pre-nightly (764644a 2014-12-25 00:13:40 +0000)`)
+(tested with Rust 1.1)
